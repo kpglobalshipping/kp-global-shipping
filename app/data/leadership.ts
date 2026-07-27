@@ -6,6 +6,7 @@ export const leadership = [
     experience: "Philippine Power Business Consultant • Defense Business Consultant • Former Pan Ocean CEO",
     initials: "CP",
     category: "Executive",
+    photo: "/images/Charlie Park.jpg",
   },
   {
     name: "J.B. Jang",
@@ -14,6 +15,7 @@ export const leadership = [
     experience: "Former H-Line CMO • Pan Ocean S&P, Chartering & Operations",
     initials: "JB",
     category: "Executive",
+    photo: "",
   },
   {
     name: "Sahlee C. Gutierrez",
@@ -21,6 +23,7 @@ export const leadership = [
     experience: "27 years in Ship Agency Experience",
     initials: "SG",
     category: "Management",
+    photo: "/images/Sahlee C. Gutierrez.jpg",
   },
   {
     name: "Lezel G.Bersamin",
@@ -28,6 +31,7 @@ export const leadership = [
     experience: "25 years in Ship Agency Experience",
     initials: "LB",
     category: "Management",
+    photo: "/images/Lezel G.Bersamin.jpg",
   },
   {
     name: "Rene A. Mendoza",
@@ -35,6 +39,7 @@ export const leadership = [
     experience: "10 years in Ship Agency Experience",
     initials: "RM",
     category: "Operations Department",
+    photo: "/images/Rene A. Mendoza.jpg",
   },
     {
     name: "Julie Ann T. Rosete",
@@ -42,6 +47,7 @@ export const leadership = [
     experience: "6 years in Ship Agency Experience",
     initials: "JR",
     category: "Operations Department",
+    photo: "/images/Julie Ann T. Rosete.jpg",
   },
   {
     name: "Niño T. Cerilo",
@@ -49,20 +55,23 @@ export const leadership = [
     experience: "4 years in Ship Agency Experience",
     initials: "NC",
     category: "Operations Department",
+    photo: "/images/Niño T. Cerilo.jpg",
   },
   {
     name: "Christ Jian Ruiz",
     position: "Operations Staff",
     experience: "2 years in Ship Agency Experience",
     initials: "CR",
-    category: "Operations Department"
+    category: "Operations Department",
+    photo: "/images/Christ Jian Ruiz.jpg",
   },
    {
-    name: "Joy Abegail C. Dela Cruz",
+    name: "Joy Abegail C. Bustamante",
     position: "Operations Staff",
     experience: "2 years in Ship Agency Experience",
     initials: "JD",
     category: "Operations Department",
+    photo: "/images/Joy Abegail C. Bustamante.jpg",
   },
   {
     name: "Thrisha Mae C. Dela Cruz",
@@ -70,6 +79,7 @@ export const leadership = [
     experience: "2 years in Ship Agency Experience",
     initials: "TD",
     category: "Procurement Department",
+    photo: "/images/Trisha Lei C. Dela Cruz.jpg",
   },
   {
     name: "Rizza V. Aynera",
@@ -77,6 +87,7 @@ export const leadership = [
     experience: "10 years in Ship & project management experience",
     initials: "RA",
     category: "Project Business Management",
+    photo: "/images/Rizza V. Aynera.jpg",
   },
   {
     name: "Marian Antonet Reyes",
@@ -84,6 +95,7 @@ export const leadership = [
     experience: "2 years in project management experience",
     initials: "MR",
     category: "Project Business Management",
+    photo: "/images/Marian Antonet Reyes.jpg",
   },
   {
     name: "Vicky Jean P. Veloso",
@@ -91,6 +103,7 @@ export const leadership = [
     experience: "12 years in Ship Agency & Accounting Experience",
     initials: "VV",
     category: "Management",
+    photo: "/images/Vicky Jean P. Veloso.jpg",
   },
   {
     name: "Jeanky M. Cabaruan",
@@ -98,6 +111,7 @@ export const leadership = [
     experience: "10 years in Ship Agency & Accounting Experience",
     initials: "JC",
     category: "Accounting Department",
+    photo: "/images/Jeanky M. Cabaruan.jpg",
   },
   {
     name: "Rona Vee D. Cadiao",
@@ -105,6 +119,7 @@ export const leadership = [
     experience: "2 years in Accounting Service",
     initials: "RV",
     category: "Accounting Department",
+    photo: "/images/Rona Vee D. Cadiao.jpg",
   },
   {
     name: "Marcus Jin Lee",
@@ -112,6 +127,7 @@ export const leadership = [
     experience: "Founder, Philippine Korean Chamber of Commerce",
     initials: "ML",
     category: "Consultant",
+    photo: "",
   },
   {
     name: "Meldin Al G. Roy",
@@ -119,5 +135,6 @@ export const leadership = [
     experience: "President, ACM Landholdings • President, Udenna Corp.",
     initials: "MR",
     category: "Consultant",
+    photo: "",
   },
 ];
