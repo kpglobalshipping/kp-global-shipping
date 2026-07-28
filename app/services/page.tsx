@@ -30,20 +30,40 @@ export default function ServicesPage() {
 
       {/* Port Agency */}
 
-      <div className="bg-white rounded-2xl border border-gray-200 shadow-lg p-8 hover:shadow-2xl transition duration-300">
+     {/* Port Agency */}
 
-        <div className="text-5xl mb-5">⚓</div>
+<div className="bg-white rounded-2xl border border-gray-200 shadow-lg p-8 flex flex-col hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
 
-        <h3 className="text-2xl font-bold text-blue-900">
-          Port Agency
-        </h3>
+  <div className="text-5xl mb-5">
+    ⚓
+  </div>
 
-        <p className="mt-4 text-gray-600 leading-7">
-          Complete vessel attendance, port clearance,
-          documentation and coordination with authorities.
-        </p>
+  <h3 className="text-2xl font-bold text-blue-900">
+    Port Agency
+  </h3>
 
-      </div>
+  <p className="mt-4 text-gray-600 leading-7">
+    Complete vessel attendance,
+    port clearance,
+    documentation and coordination
+    with all local authorities.
+  </p>
+
+  <ul className="mt-6 space-y-2 text-gray-600">
+
+    <li>✔ Port Entry Clearance</li>
+
+    <li>✔ Government Coordination</li>
+
+    <li>✔ Departure Clearance</li>
+
+  </ul>
+
+  <span className="inline-block mt-auto pt-8 text-blue-900 font-bold">
+  Learn More →
+</span>
+
+</div>
       <a
   href="/services/port-agency"
   className="inline-block mt-6 text-blue-900 font-bold hover:text-yellow-500 transition"
