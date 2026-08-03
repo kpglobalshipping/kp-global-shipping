@@ -38,7 +38,7 @@ export default function CrewChangePage() {
       />
 
       <WhyChooseKP
-        title="Why Choose KP Global Shipping?"
+        heading="Why Choose KP Global Shipping?"
         subtitle="Professional Crew Change Management"
         reasons={[
           "Experienced Operations Team",
