@@ -1,0 +1,1 @@
+export const shipSupplyProcess = [ "Receive Vessel Supply Request", "Review Specifications & Quantities", "Source from Accredited Suppliers", "Coordinate Delivery Logistics", "Deliver Supplies to the Vessel", "Confirm Delivery & Final Documentation", ];
