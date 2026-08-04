@@ -206,7 +206,7 @@ export default function ServicesPage() {
 
       </div>
       <a
-  href="/services/port-agency"
+  href="/services/ship-supply"
   className="inline-block mt-6 text-blue-900 font-bold hover:text-yellow-500 transition"
 >
   Learn More →
@@ -229,7 +229,7 @@ export default function ServicesPage() {
 
       </div>
       <a
-  href="/services/port-agency"
+  href="/services/offshore-support"
   className="inline-block mt-6 text-blue-900 font-bold hover:text-yellow-500 transition"
 >
   Learn More →
