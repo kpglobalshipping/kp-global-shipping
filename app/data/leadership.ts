@@ -9,7 +9,7 @@ export const leadership = [
     photo: "/images/Charlie Park.jpg",
   },
   {
-    name: "J.B. Jang",
+    name: "JB Jang",
     koreanName: "장종빈",
     position: "President (KP Korea Head)",
     experience: "Former H-Line CMO • Pan Ocean S&P, Chartering & Operations",
@@ -26,7 +26,7 @@ export const leadership = [
     photo: "/images/Sahlee C. Gutierrez.jpg",
   },
   {
-    name: "Lezel G.Bersamin",
+    name: "Lezel G. Bersamin",
     position: "Operations Manager",
     experience: "25 years in Ship Agency Experience",
     initials: "LB",
@@ -43,7 +43,7 @@ export const leadership = [
   },
     {
     name: "Julie Ann T. Rosete",
-    position: "Operations Staff",
+    position: "Operations Associate",
     experience: "6 years in Ship Agency Experience",
     initials: "JR",
     category: "Operations Department",
@@ -58,7 +58,7 @@ export const leadership = [
     photo: "/images/Niño T. Cerilo.jpg",
   },
   {
-    name: "Christ Jian Ruiz",
+    name: "Christ Jian S. Ruiz",
     position: "Operations Staff",
     experience: "2 years in Ship Agency Experience",
     initials: "CR",
@@ -66,7 +66,7 @@ export const leadership = [
     photo: "/images/Christ Jian Ruiz.jpg",
   },
    {
-    name: "Joy Abegail C. Bustamante",
+    name: "Joy Avegail L. Bustamante",
     position: "Operations Staff",
     experience: "2 years in Ship Agency Experience",
     initials: "JD",
@@ -74,7 +74,7 @@ export const leadership = [
     photo: "/images/Joy Abegail C. Bustamante.jpg",
   },
   {
-    name: "Thrisha Mae C. Dela Cruz",
+    name: "Thrisha Lei B. Dela Cruz",
     position: "Procurement Staff",
     experience: "2 years in Ship Agency Experience",
     initials: "TD",
@@ -82,7 +82,7 @@ export const leadership = [
     photo: "/images/Trisha Lei C. Dela Cruz.jpg",
   },
   {
-    name: "Rizza V. Aynera",
+    name: "Ma.Rizza V. Aynera",
     position: "Project Manager",
     experience: "10 years in Ship & project management experience",
     initials: "RA",
@@ -90,7 +90,7 @@ export const leadership = [
     photo: "/images/Rizza V. Aynera.jpg",
   },
   {
-    name: "Marian Antonet Reyes",
+    name: "Marian Antonet M. Reyes",
     position: "Project Assistant",
     experience: "2 years in project management experience",
     initials: "MR",
@@ -107,8 +107,8 @@ export const leadership = [
   },
   {
     name: "Jeanky M. Cabaruan",
-    position: "Accounting Staff",
-    experience: "10 years in Ship Agency & Accounting Experience",
+    position: "Accounting Associate",
+    experience: "12 years in Ship Agency & Accounting Experience",
     initials: "JC",
     category: "Accounting Department",
     photo: "/images/Jeanky M. Cabaruan.jpg",
