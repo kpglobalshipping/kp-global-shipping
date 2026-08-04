@@ -51,6 +51,44 @@ export const batangasPort = {
     "Days Hotel Batangas",
     "Acuatico Beach Resort",
   ],
+  quickFacts: [
+  {
+    label: "Province",
+    value: "Batangas",
+  },
+  {
+    label: "Port Authority",
+    value: "Philippine Ports Authority",
+  },
+  {
+    label: "Nearest Airport",
+    value: "NAIA",
+  },
+  {
+    label: "Travel Time",
+    value: "Approximately 2 Hours",
+  },
+  {
+    label: "Pilotage",
+    value: "Compulsory",
+  },
+  {
+    label: "Tug Assistance",
+    value: "Available",
+  },
+  {
+    label: "Fresh Water",
+    value: "Available",
+  },
+  {
+    label: "Bunkering",
+    value: "Available",
+  },
+  {
+    label: "Garbage Disposal",
+    value: "Available",
+  },
+],
 
   cta: {
     title: "Need Port Agency Assistance in Batangas?",

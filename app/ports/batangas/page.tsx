@@ -1,5 +1,6 @@
 import PortHero from "../../components/PortHero";
 import PortOverview from "../../components/PortOverview";
+import QuickFacts from "../../components/QuickFacts";
 import PortFacilities from "../../components/PortFacilities";
 import PortServices from "../../components/PortServices";
 import PortRestrictions from "../../components/PortRestrictions";
@@ -22,7 +23,9 @@ export default function BatangasPortPage() {
         title={batangasPort.overview.title}
         description={batangasPort.overview.description}
       />
-
+<QuickFacts
+  facts={batangasPort.quickFacts}
+/>
       <PortFacilities
         facilities={batangasPort.facilities}
       />

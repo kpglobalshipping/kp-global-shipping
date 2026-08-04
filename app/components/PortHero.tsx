@@ -8,20 +8,31 @@ export default function PortHero({
   subtitle,
 }: PortHeroProps) {
   return (
-    <section className="bg-gradient-to-r from-blue-900 to-sky-700 text-white py-24">
+    <section
+      className="relative h-[75vh] bg-cover bg-center flex items-center justify-center"
+      style={{
+        backgroundImage: "url('/images/batangas-port.jpg')",
+      }}
+    >
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/60"></div>
 
-      <div className="max-w-7xl mx-auto px-6 text-center">
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white">
 
-        <h1 className="text-5xl md:text-6xl font-extrabold">
+        <span className="inline-block bg-yellow-500 text-blue-900 font-bold px-5 py-2 rounded-full mb-6 tracking-wide uppercase">
+          Philippine Port Information Center
+        </span>
+
+        <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
           {title}
         </h1>
 
-        <p className="mt-6 text-xl max-w-3xl mx-auto text-blue-100">
+        <p className="mt-8 text-xl md:text-2xl text-blue-100 leading-9 max-w-4xl mx-auto">
           {subtitle}
         </p>
 
       </div>
-
     </section>
   );
 }
