@@ -1,5 +1,7 @@
 import { ports } from "../data/ports";
 import PortDirectoryCard from "../components/PortDirectoryCard";
+import DashboardStats from "../components/DashboardStats";
+import { dashboardStats } from "../data/dashboard";
 
 export default function PortsPage() {
   return (
@@ -28,6 +30,7 @@ export default function PortsPage() {
         </div>
 
       </section>
+<DashboardStats stats={dashboardStats} />
 
       {/* Directory */}
 
