@@ -1,4 +1,5 @@
 import PortHero from "../../components/PortHero";
+import PortStats from "../../components/PortStats";
 import PortOverview from "../../components/PortOverview";
 import QuickFacts from "../../components/QuickFacts";
 import PortFacilities from "../../components/PortFacilities";
@@ -7,6 +8,7 @@ import PortRestrictions from "../../components/PortRestrictions";
 import NearbyAirport from "../../components/NearbyAirport";
 import NearbyHotels from "../../components/NearbyHotels";
 import PortCTA from "../../components/PortCTA";
+import PortMap from "../../components/PortMap";
 
 import { batangasPort } from "../../data/batangasPort";
 
@@ -18,7 +20,9 @@ export default function BatangasPortPage() {
         title={batangasPort.hero.title}
         subtitle={batangasPort.hero.subtitle}
       />
-
+<PortStats
+   stats={batangasPort.stats}
+/>
       <PortOverview
         title={batangasPort.overview.title}
         description={batangasPort.overview.description}
@@ -26,6 +30,7 @@ export default function BatangasPortPage() {
 <QuickFacts
   facts={batangasPort.quickFacts}
 />
+
       <PortFacilities
         facilities={batangasPort.facilities}
       />
@@ -46,12 +51,15 @@ export default function BatangasPortPage() {
       <NearbyHotels
         hotels={batangasPort.hotels}
       />
-
+ <PortMap
+  title={batangasPort.map.title}
+  mapUrl={batangasPort.map.url}
+/>
       <PortCTA
         title={batangasPort.cta.title}
         description={batangasPort.cta.description}
       />
-
+     
     </main>
   );
 }

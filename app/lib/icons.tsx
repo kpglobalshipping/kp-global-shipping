@@ -1,0 +1,31 @@
+import {
+  Anchor,
+  Ship,
+  Users,
+  Package,
+  Plane,
+  Hotel,
+  MapPin,
+  Shield,
+  Wrench,
+  ClipboardList,
+  Truck,
+  Droplets,
+  Fuel,
+} from "lucide-react";
+
+export const KPIcons = {
+  anchor: Anchor,
+  ship: Ship,
+  users: Users,
+  package: Package,
+  plane: Plane,
+  hotel: Hotel,
+  map: MapPin,
+  shield: Shield,
+  wrench: Wrench,
+  clipboard: ClipboardList,
+  truck: Truck,
+  water: Droplets,
+  fuel: Fuel,
+};

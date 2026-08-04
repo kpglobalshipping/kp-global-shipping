@@ -4,6 +4,28 @@ export const batangasPort = {
     subtitle:
       "Comprehensive Port Information for Vessel Owners, Operators, and Ship Managers",
   },
+  stats: [
+  {
+    icon: "anchor" as const,
+    title: "Port Classification",
+    value: "International Port",
+  },
+  {
+    icon: "ship" as const,
+    title: "Primary Operations",
+    value: "Cargo & RoRo",
+  },
+  {
+    icon: "globe" as const,
+    title: "Strategic Location",
+    value: "Southern Luzon Gateway",
+  },
+  {
+    icon: "clock" as const,
+    title: "Operations",
+    value: "24/7",
+  },
+],
 
   overview: {
     title: "Port Overview",
@@ -95,4 +117,8 @@ export const batangasPort = {
     description:
       "KP Global Shipping Inc. provides complete port agency, crew change, technical attendance, customs clearance, ship supply, and marine logistics services for vessels calling at the Port of Batangas.",
   },
+  map: {
+  title: "Port of Batangas Location",
+  url: "https://www.google.com/maps?q=Port+of+Batangas&output=embed",
+},
 };
