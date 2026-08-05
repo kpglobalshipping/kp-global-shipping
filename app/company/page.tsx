@@ -235,20 +235,25 @@ export default function CompanyPage() {
           Delivering with Excellence
         </h2>
 
-        <p className="text-xl leading-10 text-blue-100">
-          At KP Global Shipping Inc., we believe that trust is earned
-          through professionalism, reliability, and consistent service.
-          Every vessel we handle represents a commitment to safety,
-          operational excellence, and long-term partnership.
+        <p className="text-xl leading-7 text-blue-100">
+          Welcome to KP Global Shipping.
+
+Since our establishment, our mission has been simple: to provide reliable, responsive, and professional maritime services that our clients can trust. In an industry where every hour counts and every decision matters, we believe that true service goes beyond completing a task—it is about standing beside our clients every step of the way.
+
+Our guiding principle, "Quick, Prompt, and Stand-beside YOU," reflects who we are and how we serve. It is more than a slogan; it is our commitment to delivering timely solutions, maintaining open communication, and providing dependable support whenever and wherever our clients need us.
+
+The maritime industry continues to evolve, presenting new opportunities and challenges. At KP Global Shipping, we embrace innovation while remaining grounded in the values of integrity, accountability, professionalism, and teamwork. These principles enable us to build lasting partnerships with ship owners, operators, charterers, and business partners from around the world.
+
+Our greatest strength is our people. Their dedication, expertise, and unwavering commitment to excellence allow us to consistently deliver safe, efficient, and customer-focused services throughout the Philippines. Together, we strive not only to meet expectations but to exceed them.
+
+As we look toward the future, we remain committed to expanding our capabilities, strengthening our partnerships, and raising the standard of maritime agency and logistics services. Every vessel we serve and every client we support is an opportunity to demonstrate our commitment to excellence.
+
+On behalf of the entire KP Global Shipping family, thank you for your trust and confidence. We look forward to serving you with professionalism, integrity, and the unwavering commitment that defines who we are.
+
+Together, let us navigate the future with confidence.
         </p>
 
-        <p className="mt-8 text-xl leading-10 text-blue-100">
-          Since our establishment in 2017, our dedicated team has
-          continued to support shipowners, charterers, operators,
-          and technical managers with efficient maritime solutions
-          throughout the Philippines.
-        </p>
-
+        
         <div className="mt-12">
 
           <h3 className="text-3xl font-bold">
