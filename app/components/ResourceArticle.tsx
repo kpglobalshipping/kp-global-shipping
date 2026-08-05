@@ -16,41 +16,37 @@ export default function ResourceArticle({
   children,
 }: ResourceArticleProps) {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-slate-100">
 
       {/* Hero */}
 
-      <section className="bg-blue-900 text-white py-24">
+      <section className="bg-blue-900 text-white pt-24 pb-40">
 
         <div className="max-w-5xl mx-auto px-6">
 
-          <span className="inline-block bg-yellow-400 text-blue-900 font-bold px-4 py-2 rounded-full mb-6">
+          <span className="inline-flex items-center rounded-full bg-yellow-400 px-5 py-2 text-sm font-bold text-blue-900 shadow-md">
 
             {category}
 
           </span>
 
-          <h1 className="text-5xl font-extrabold leading-tight">
+          <h1 className="mt-8 text-5xl font-extrabold leading-tight md:text-6xl">
 
             {title}
 
           </h1>
 
-          <p className="mt-6 text-xl leading-8 text-blue-100">
+          <p className="mt-6 max-w-3xl text-xl leading-9 text-blue-100">
 
             {description}
 
           </p>
 
-          <div className="flex gap-6 mt-10 text-blue-200 text-sm">
+          <div className="mt-10 flex flex-wrap gap-8 text-sm text-blue-200">
 
-            <span>
-              Last Updated: {lastUpdated}
-            </span>
+            <span>📅 Last Updated: {lastUpdated}</span>
 
-            <span>
-              Reading Time: {readingTime}
-            </span>
+            <span>⏱ {readingTime} Read</span>
 
           </div>
 
@@ -60,11 +56,19 @@ export default function ResourceArticle({
 
       {/* Article */}
 
-      <section className="py-20">
+      <section className="-mt-24 pb-24">
 
-        <div className="max-w-5xl mx-auto px-6 prose prose-lg max-w-none">
+        <div className="max-w-5xl mx-auto px-6">
 
-          {children}
+          <article className="rounded-3xl bg-white shadow-xl border border-gray-100 p-10 md:p-14">
+
+            <div className="prose prose-lg max-w-none prose-headings:text-blue-900 prose-headings:font-bold prose-p:text-gray-700 prose-p:leading-8">
+
+              {children}
+
+            </div>
+
+          </article>
 
         </div>
 

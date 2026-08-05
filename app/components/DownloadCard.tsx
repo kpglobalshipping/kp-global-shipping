@@ -12,27 +12,27 @@ export default function DownloadCard({
   available = false,
 }: DownloadCardProps) {
   return (
-    <section className="my-12">
+    <section className="my-16">
 
-      <div className="rounded-2xl border border-blue-200 bg-blue-50 p-8">
+      <div className="overflow-hidden rounded-3xl border border-blue-200 bg-gradient-to-br from-blue-50 to-white shadow-xl">
 
-        <div className="flex items-center justify-between flex-col md:flex-row gap-6">
+        <div className="flex flex-col items-center justify-between gap-8 p-10 md:flex-row">
 
           <div>
 
-            <p className="text-sm uppercase font-bold text-blue-700">
+            <p className="tracking-widest text-sm font-bold uppercase text-yellow-600">
 
               Download
 
             </p>
 
-            <h3 className="text-2xl font-bold text-blue-900 mt-2">
+            <h3 className="mt-3 text-3xl font-extrabold text-blue-900">
 
               {title}
 
             </h3>
 
-            <p className="text-gray-700 mt-3">
+            <p className="mt-4 max-w-2xl leading-8 text-gray-700">
 
               {description}
 
@@ -40,9 +40,9 @@ export default function DownloadCard({
 
           </div>
 
-          <div className="text-center">
+          <div className="rounded-2xl bg-white p-6 text-center shadow-md">
 
-            <span className="block font-bold text-blue-900">
+            <span className="block text-lg font-bold text-blue-900">
 
               {fileType}
 
@@ -50,13 +50,13 @@ export default function DownloadCard({
 
             <button
               disabled={!available}
-              className={`mt-4 px-6 py-3 rounded-xl font-semibold transition ${
+              className={`mt-5 rounded-xl px-8 py-3 font-semibold transition-all duration-300 ${
                 available
-                  ? "bg-blue-900 text-white hover:bg-blue-800"
+                  ? "bg-blue-900 text-white shadow-lg hover:-translate-y-1 hover:bg-blue-800"
                   : "bg-gray-300 text-gray-600 cursor-not-allowed"
               }`}
             >
-              {available ? "Download" : "Coming Soon"}
+              {available ? "Download PDF" : "Coming Soon"}
             </button>
 
           </div>
