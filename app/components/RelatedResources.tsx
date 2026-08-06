@@ -16,10 +16,8 @@ export default function RelatedResources({
     <section className="my-16 rounded-3xl border border-gray-200 bg-white shadow-xl overflow-hidden">
 
       <h2 className="flex items-center gap-3 bg-blue-900 px-8 py-5 text-2xl font-bold text-white">
-        <>
-  <span className="text-3xl">📚</span>
-  Related Resources
-</>
+        <span className="text-3xl">📚</span>
+        Related Resources
       </h2>
 
       <div className="grid gap-6 p-8 md:grid-cols-2">
@@ -35,13 +33,14 @@ export default function RelatedResources({
             <h3 className="text-2xl font-bold text-blue-900 transition-colors group-hover:text-yellow-600">
               {resource.title}
             </h3>
-<p className="mb-4 text-gray-600">
-  Continue exploring our maritime knowledge library.
-            <p className="mt-5 flex items-center font-semibold text-blue-700 transition-all group-hover:translate-x-1">
-              
-</p>
-              Read Guide →
+
+            <p className="mb-4 mt-3 text-gray-600">
+              Continue exploring our maritime knowledge library.
             </p>
+
+            <div className="mt-5 flex items-center font-semibold text-blue-700 transition-all group-hover:translate-x-1">
+              Read Guide →
+            </div>
 
           </Link>
 
