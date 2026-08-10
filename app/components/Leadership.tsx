@@ -12,10 +12,7 @@ export default function Leadership() {
       name: "Sahlee Gutierrez",
       position: "General Manager",
     },
-    {
-      name: "Lezel Bersamin",
-      position: "Operations Manager",
-    },
+    
   ];
 
   return (

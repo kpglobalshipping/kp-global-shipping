@@ -1,5 +1,5 @@
 import ExecutiveLeadership from "../components/ExecutiveLeadership";
-
+import Image from "next/image";
 export default function CompanyPage() {
   return (
     <main className="min-h-screen bg-white">
@@ -210,15 +210,28 @@ export default function CompanyPage() {
 
       {/* CEO Photo */}
 
-      <div className="flex justify-center">
+      <div className="flex flex-col items-center justify-center">
 
-        <div className="w-72 h-72 rounded-full bg-white/10 border-4 border-yellow-400 flex items-center justify-center">
+        <div className="relative h-72 w-72 overflow-hidden rounded-full border-4 border-yellow-400 shadow-2xl">
 
-          <span className="text-7xl font-bold text-yellow-400">
-            CP
-          </span>
+          <Image
+  src="/images/charlie-park-2026.png"
+  alt="Charlie Park, Chief Executive Officer"
+  fill
+  priority
+  sizes="288px"
+  className="object-cover object-top"
+/>
 
         </div>
+
+        <h3 className="mt-6 text-2xl font-bold text-white">
+          Charlie Park
+        </h3>
+
+        <p className="mt-1 text-sm font-semibold uppercase tracking-wider text-yellow-400">
+          Chief Executive Officer
+        </p>
 
       </div>
 
@@ -232,28 +245,74 @@ export default function CompanyPage() {
 
         <h2 className="text-5xl font-extrabold mb-8">
           Leading with Trust,
+          <br />
           Delivering with Excellence
         </h2>
 
         <p className="text-xl leading-7 text-blue-100">
           Welcome to KP Global Shipping.
 
-Since our establishment, our mission has been simple: to provide reliable, responsive, and professional maritime services that our clients can trust. In an industry where every hour counts and every decision matters, we believe that true service goes beyond completing a task—it is about standing beside our clients every step of the way.
+          <br />
+          <br />
 
-Our guiding principle, "Quick, Prompt, and Stand-beside YOU," reflects who we are and how we serve. It is more than a slogan; it is our commitment to delivering timely solutions, maintaining open communication, and providing dependable support whenever and wherever our clients need us.
+          Since our establishment, our mission has been simple: to provide
+          reliable, responsive, and professional maritime services that our
+          clients can trust. In an industry where every hour counts and every
+          decision matters, we believe that true service goes beyond
+          completing a task—it is about standing beside our clients every
+          step of the way.
 
-The maritime industry continues to evolve, presenting new opportunities and challenges. At KP Global Shipping, we embrace innovation while remaining grounded in the values of integrity, accountability, professionalism, and teamwork. These principles enable us to build lasting partnerships with ship owners, operators, charterers, and business partners from around the world.
+          <br />
+          <br />
 
-Our greatest strength is our people. Their dedication, expertise, and unwavering commitment to excellence allow us to consistently deliver safe, efficient, and customer-focused services throughout the Philippines. Together, we strive not only to meet expectations but to exceed them.
+          Our guiding principle, "Quick, Prompt, and Stand-beside YOU,"
+          reflects who we are and how we serve. It is more than a slogan; it
+          is our commitment to delivering timely solutions, maintaining open
+          communication, and providing dependable support whenever and
+          wherever our clients need us.
 
-As we look toward the future, we remain committed to expanding our capabilities, strengthening our partnerships, and raising the standard of maritime agency and logistics services. Every vessel we serve and every client we support is an opportunity to demonstrate our commitment to excellence.
+          <br />
+          <br />
 
-On behalf of the entire KP Global Shipping family, thank you for your trust and confidence. We look forward to serving you with professionalism, integrity, and the unwavering commitment that defines who we are.
+          The maritime industry continues to evolve, presenting new
+          opportunities and challenges. At KP Global Shipping, we embrace
+          innovation while remaining grounded in the values of integrity,
+          accountability, professionalism, and teamwork. These principles
+          enable us to build lasting partnerships with ship owners, operators,
+          charterers, and business partners from around the world.
 
-Together, let us navigate the future with confidence.
+          <br />
+          <br />
+
+          Our greatest strength is our people. Their dedication, expertise,
+          and unwavering commitment to excellence allow us to consistently
+          deliver safe, efficient, and customer-focused services throughout
+          the Philippines. Together, we strive not only to meet expectations
+          but to exceed them.
+
+          <br />
+          <br />
+
+          As we look toward the future, we remain committed to expanding our
+          capabilities, strengthening our partnerships, and raising the
+          standard of maritime agency and logistics services. Every vessel we
+          serve and every client we support is an opportunity to demonstrate
+          our commitment to excellence.
+
+          <br />
+          <br />
+
+          On behalf of the entire KP Global Shipping family, thank you for
+          your trust and confidence. We look forward to serving you with
+          professionalism, integrity, and the unwavering commitment that
+          defines who we are.
+
+          <br />
+          <br />
+
+          Together, let us navigate the future with confidence.
         </p>
 
-        
         <div className="mt-12">
 
           <h3 className="text-3xl font-bold">
@@ -273,6 +332,7 @@ Together, let us navigate the future with confidence.
   </div>
 
 </section>
+
 {/* KP Group */}
 
 <section className="py-24 bg-gray-100">

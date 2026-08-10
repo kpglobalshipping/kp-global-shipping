@@ -135,6 +135,60 @@ style(...)
 
 ## Current Milestone
 
-Mission 10
+Mission 21
 
-Project Documentation
+Knowledge Center Refinement & Project Consolidation
+
+### Mission 20 — Completed
+
+- Immigration Guide created and refined
+- Immigration Guide streamlined for concise, informative presentation
+- Redundant sections removed
+- Required Immigration Documents table implemented
+- Immigration Clearance Process implemented
+- Operational Notes implemented
+- Immigration coordination CTA implemented
+- KP Global Shipping service boundaries reviewed and clarified
+- 9(c) Crew List Visa processing removed as a standard KP Global Shipping service
+- Visa Extension Coordination excluded from KP Global Shipping service listings
+- CEO Message section enhanced with official CEO portrait
+- Company page tested successfully
+- Next.js image configuration corrected
+- Project remains operational and compiling successfully
+
+### Knowledge Center Editorial Standard
+
+**Maximum Value. Minimum Reading.**
+
+All future resource pages should:
+
+1. Explain what the topic is.
+2. Identify the key requirements or information.
+3. Clearly state KP Global Shipping's actual role.
+4. Provide the appropriate next step or contact option.
+5. Avoid unnecessary repetition or excessive content.
+
+### Operational Accuracy Rules
+
+- KP Global Shipping does not require original copies of crew or vessel documents as a standard practice.
+- Passport and Seaman's Book submissions may be provided as copies.
+- The original document specifically required by the Shipping Agent is the Customs Port Clearance.
+- 9(c) Crew List Visa processing is normally handled by the Manning Agency.
+- KP Global Shipping may assist with 9(c) Crew List Visa arrangements only by special arrangement when operational time constraints require assistance.
+- Visa Extension Coordination is not part of KP Global Shipping's standard ship agency services.
+
+### Mission 21 Objective
+
+Review, consolidate, and refine the existing website and Knowledge Center before creating additional pages or components.
+
+Priority:
+
+1. Review existing pages.
+2. Remove redundant or unnecessary content.
+3. Reuse existing components wherever possible.
+4. Check for incomplete or empty pages.
+5. Verify navigation and internal links.
+6. Check build and runtime errors.
+7. Commit stable work before proceeding to new development.
+
+**Rule: No unnecessary new page, folder, or component should be created when an existing resource can be reused.**

@@ -19,7 +19,7 @@ export const leadership = [
   },
   {
     name: "Sahlee C. Gutierrez",
-    position: "General Manager",
+        position: "General Manager",
     experience: "27 years in Ship Agency Experience",
     initials: "SG",
     category: "Management",
@@ -32,6 +32,22 @@ export const leadership = [
     initials: "LB",
     category: "Management",
     photo: "/images/Lezel G.Bersamin.jpg",
+  },
+  {
+    name: "Vicky Jean P. Veloso",
+    position: "Accounting Manager",
+    experience: "12 years in Ship Agency & Accounting Experience",
+    initials: "VV",
+    category: "Management",
+    photo: "/images/Vicky Jean P. Veloso.jpg",
+  },
+  {
+    name: "Ma.Rizza V. Aynera",
+    position: "Project Business Manager",
+    experience: "10 years in Ship & project management experience",
+    initials: "RA",
+    category: "Project Business Management",
+    photo: "/images/Rizza V. Aynera.jpg",
   },
   {
     name: "Rene A. Mendoza",
@@ -48,6 +64,14 @@ export const leadership = [
     initials: "JR",
     category: "Operations Department",
     photo: "/images/Julie Ann T. Rosete.jpg",
+  },
+  {
+    name: "Jeanky M. Cabaruan",
+    position: "Accounting Associate",
+    experience: "12 years in Ship Agency & Accounting Experience",
+    initials: "JC",
+    category: "Accounting Department",
+    photo: "/images/Jeanky M. Cabaruan.jpg",
   },
   {
     name: "Niño T. Cerilo",
@@ -81,15 +105,7 @@ export const leadership = [
     category: "Procurement Department",
     photo: "/images/Trisha Lei C. Dela Cruz.jpg",
   },
-  {
-    name: "Ma.Rizza V. Aynera",
-    position: "Project Manager",
-    experience: "10 years in Ship & project management experience",
-    initials: "RA",
-    category: "Project Business Management",
-    photo: "/images/Rizza V. Aynera.jpg",
-  },
-  {
+    {
     name: "Marian Antonet M. Reyes",
     position: "Project Assistant",
     experience: "2 years in project management experience",
@@ -97,22 +113,7 @@ export const leadership = [
     category: "Project Business Management",
     photo: "/images/Marian Antonet Reyes.jpg",
   },
-  {
-    name: "Vicky Jean P. Veloso",
-    position: "Accounting Manager",
-    experience: "12 years in Ship Agency & Accounting Experience",
-    initials: "VV",
-    category: "Management",
-    photo: "/images/Vicky Jean P. Veloso.jpg",
-  },
-  {
-    name: "Jeanky M. Cabaruan",
-    position: "Accounting Associate",
-    experience: "12 years in Ship Agency & Accounting Experience",
-    initials: "JC",
-    category: "Accounting Department",
-    photo: "/images/Jeanky M. Cabaruan.jpg",
-  },
+    
   {
     name: "Rona Vee D. Cadiao",
     position: "Accounting Staff",
