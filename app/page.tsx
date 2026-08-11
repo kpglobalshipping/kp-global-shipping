@@ -10,7 +10,6 @@ import Services from "./components/Services";
 import WhyChooseUs from "./components/WhyChooseUs";
 import Coverage from "./components/Coverage";
 import Clients from "./components/Clients";
-import Statistics from "./components/Statistics";
 import Highlights from "./components/Highlights";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -41,7 +40,6 @@ export default function Home() {
         <TechnicalServices />
         <Coverage />
         <Clients />
-        <Statistics />
         <Highlights />
         <Contact />
         <Footer />

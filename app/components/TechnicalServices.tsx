@@ -47,7 +47,7 @@ const services = [
 
 export default function TechnicalServices() {
   return (
-    <section className="py-24 bg-white">
+    <section id="technical" className="py-24 bg-white">
 
       <div className="max-w-7xl mx-auto px-6">
 
