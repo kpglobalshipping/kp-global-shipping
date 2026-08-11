@@ -3,24 +3,30 @@ import { leadership } from "../data/leadership";
 
 export default function ExecutiveLeadership() {
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6">
 
+        {/* Section Heading */}
+
         <div className="text-center mb-16">
+
           <p className="uppercase tracking-[4px] text-yellow-500 font-bold">
             OUR PEOPLE
           </p>
 
           <h2 className="text-5xl font-extrabold text-blue-900 mt-4">
-            Executive Leadership
+            People Behind the Operation
           </h2>
 
-          <p className="mt-6 max-w-3xl mx-auto text-gray-600 text-lg">
-            Our experienced management and operations team is committed to
-            delivering professional maritime services with integrity,
-            efficiency and reliability.
+          <p className="mt-6 max-w-3xl mx-auto text-gray-600 text-lg leading-8">
+            Our experienced team works together to provide reliable,
+            responsive, and professional maritime services throughout
+            the Philippines.
           </p>
+
         </div>
+
+        {/* People */}
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
@@ -55,9 +61,13 @@ export default function ExecutiveLeadership() {
 
               </div>
 
-              <h3 className="text-3xl font-bold text-blue-900">
+              {/* Name */}
+
+              <h3 className="text-2xl font-bold text-blue-900">
                 {person.name}
               </h3>
+
+              {/* Korean Name */}
 
               {person.koreanName && (
                 <p className="text-gray-500 mt-2">
@@ -65,13 +75,19 @@ export default function ExecutiveLeadership() {
                 </p>
               )}
 
-              <p className="text-yellow-500 font-bold text-lg mt-3">
+              {/* Position */}
+
+              <p className="text-yellow-600 font-bold text-lg mt-3">
                 {person.position}
               </p>
+
+              {/* Experience */}
 
               <p className="text-gray-600 mt-5 leading-7">
                 {person.experience}
               </p>
+
+              {/* Category */}
 
               <div className="mt-6 inline-block rounded-full bg-blue-100 text-blue-900 px-4 py-2 text-sm font-semibold">
                 {person.category}

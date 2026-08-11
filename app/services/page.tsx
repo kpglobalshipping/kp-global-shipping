@@ -1,307 +1,173 @@
+import Link from "next/link";
+
+const services = [
+  {
+    title: "Port Agency",
+    code: "PA",
+    description:
+      "Comprehensive port agency services covering every stage of a vessel's port call, from pre-arrival coordination through departure.",
+    href: "/services/port-agency",
+  },
+  {
+    title: "Owner's Protective Agency",
+    code: "OPA",
+    description:
+      "Independent representation safeguarding the owner's interests throughout the vessel's port stay.",
+    href: "/services/protective-agency",
+  },
+  {
+    title: "Crew Change",
+    code: "CC",
+    description:
+      "Professional crew embarkation and disembarkation services, including airport, transportation, accommodation, immigration coordination, and local assistance.",
+    href: "/services/crew-change",
+  },
+  {
+    title: "Technical Services",
+    code: "TS",
+    description:
+      "Marine technical support including dry docking assistance, repairs, inspections, surveys, and technical attendance.",
+    href: "/services/technical-services",
+  },
+  {
+    title: "Marine Logistics",
+    code: "ML",
+    description:
+      "End-to-end logistics support for ship spares and marine equipment, including customs clearance, delivery coordination, and specialized transportation.",
+    href: "/services/marine-logistics",
+  },
+  {
+    title: "Customs Clearance",
+    code: "CC",
+    description:
+      "Professional coordination of customs documentation, clearance procedures, import requirements, and regulatory matters for vessel-related shipments.",
+    href: "/services/customs-clearance",
+  },
+  {
+    title: "Ship Supply",
+    code: "SS",
+    description:
+      "Reliable supply coordination for provisions, bonded stores, spare parts, deck and engine supplies, and other vessel requirements.",
+    href: "/services/ship-supply",
+  },
+  {
+    title: "Offshore Support",
+    code: "OS",
+    description:
+      "Offshore vessel support, project logistics, and specialized marine services coordinated according to operational requirements.",
+    href: "/services/offshore-support",
+  },
+];
+
 export default function ServicesPage() {
   return (
-    <main className="min-h-screen bg-white">
-
+    <main>
       {/* Hero */}
-      {/* Services */}
-
-<section className="py-24 bg-gray-100">
-
-  <div className="max-w-7xl mx-auto px-6">
-
-    <div className="text-center mb-16">
-
-      <p className="text-yellow-500 font-bold text-3xl mb-3">
-        What We Do
-      </p>
-
-      <h2 className="text-5xl font-extrabold text-blue-900">
-        Maritime Services
-      </h2>
-
-      <p className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">
-        Delivering complete maritime solutions with professionalism,
-        efficiency and reliability across the Philippines.
-      </p>
-
-    </div>
-
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-      {/* Port Agency */}
-
-     {/* Port Agency */}
-
-<div className="bg-white rounded-2xl border border-gray-200 shadow-lg p-8 flex flex-col hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
-
-  <div className="text-5xl mb-5">
-    ⚓
-  </div>
-
-  <h3 className="text-2xl font-bold text-blue-900">
-    Port Agency
-  </h3>
-
-  <p className="mt-4 text-gray-600 leading-7">
-    Complete vessel attendance,
-    port clearance,
-    documentation and coordination
-    with all local authorities.
-  </p>
-
-  <ul className="mt-6 space-y-2 text-gray-600">
-
-    <li>✔ Port Entry Clearance</li>
-
-    <li>✔ Government Coordination</li>
-
-    <li>✔ Departure Clearance</li>
-
-  </ul>
-
-  <span className="inline-block mt-auto pt-8 text-blue-900 font-bold">
-  Learn More →
-</span>
-
-</div>
-      <a
-  href="/services/port-agency"
-  className="inline-block mt-6 text-blue-900 font-bold hover:text-yellow-500 transition"
->
-  Learn More →
-</a>
-
-      {/* Protective Agency */}
-
-      <div className="bg-white rounded-2xl border border-gray-200 shadow-lg p-8 hover:shadow-2xl transition duration-300">
-
-        <div className="text-5xl mb-5">🛡️</div>
-
-        <h3 className="text-2xl font-bold text-blue-900">
-          Protective Agency
-        </h3>
-
-        <p className="mt-4 text-gray-600 leading-7">
-          Independent representation protecting
-          owners' interests throughout every port call.
-        </p>
-
-      </div>
-      <a
-  href="/services/protective-agency"
-  className="inline-block mt-6 text-blue-900 font-bold hover:text-yellow-500 transition"
->
-  Learn More →
-</a>
-
-      {/* Crew Change */}
-
-      <div className="bg-white rounded-2xl border border-gray-200 shadow-lg p-8 hover:shadow-2xl transition duration-300">
-
-        <div className="text-5xl mb-5">👨‍✈️</div>
-
-        <h3 className="text-2xl font-bold text-blue-900">
-          Crew Change
-        </h3>
-
-        <p className="mt-4 text-gray-600 leading-7">
-          Immigration, airport transfers,
-          hotel booking, visas and medical assistance.
-        </p>
-
-      </div>
-      <a
-  href="/services/crew-change"
-  className="inline-block mt-6 text-blue-900 font-bold hover:text-yellow-500 transition"
->
-  Learn More →
-</a>
-
-      {/* Technical Services */}
-
-      <div className="bg-white rounded-2xl border border-gray-200 shadow-lg p-8 hover:shadow-2xl transition duration-300">
-
-        <div className="text-5xl mb-5">🔧</div>
-
-        <h3 className="text-2xl font-bold text-blue-900">
-          Technical Services
-        </h3>
-
-        <p className="mt-4 text-gray-600 leading-7">
-          Dry docking support,
-          repairs, inspections and technical attendance.
-        </p>
-
-      </div>
-      <a
-  href="/services/technical-services"
-  className="inline-block mt-6 text-blue-900 font-bold hover:text-yellow-500 transition"
->
-  Learn More →
-</a>
-
-      {/* Marine Logistics */}
-
-      <div className="bg-white rounded-2xl border border-gray-200 shadow-lg p-8 hover:shadow-2xl transition duration-300">
-
-        <div className="text-5xl mb-5">🚛</div>
-
-        <h3 className="text-2xl font-bold text-blue-900">
-          Marine Logistics
-        </h3>
-
-        <p className="mt-4 text-gray-600 leading-7">
-          Transportation,
-          warehousing,
-          cargo coordination and deliveries.
-        </p>
-
-      </div>
-      <a
-  href="/services/marine-logistics"
-  className="inline-block mt-6 text-blue-900 font-bold hover:text-yellow-500 transition"
->
-  Learn More →
-</a>
-
-      {/* Customs */}
-
-      <div className="bg-white rounded-2xl border border-gray-200 shadow-lg p-8 hover:shadow-2xl transition duration-300">
-
-        <div className="text-5xl mb-5">📄</div>
-
-        <h3 className="text-2xl font-bold text-blue-900">
-          Customs Clearance
-        </h3>
-
-        <p className="mt-4 text-gray-600 leading-7">
-          Import permits,
-          customs documentation,
-          clearance and regulatory compliance.
-        </p>
-
-      </div>
-      <a
-  href="/services/customs-clearance"
-  className="inline-block mt-6 text-blue-900 font-bold hover:text-yellow-500 transition"
->
-  Learn More →
-</a>
-
-      {/* Ship Supply */}
-
-      <div className="bg-white rounded-2xl border border-gray-200 shadow-lg p-8 hover:shadow-2xl transition duration-300">
-
-        <div className="text-5xl mb-5">📦</div>
-
-        <h3 className="text-2xl font-bold text-blue-900">
-          Ship Supply
-        </h3>
-
-        <p className="mt-4 text-gray-600 leading-7">
-          Provisions,
-          bonded stores,
-          spare parts and deck engine supplies.
-        </p>
-
-      </div>
-      <a
-  href="/services/ship-supply"
-  className="inline-block mt-6 text-blue-900 font-bold hover:text-yellow-500 transition"
->
-  Learn More →
-</a>
-
-      {/* Offshore */}
-
-      <div className="bg-white rounded-2xl border border-gray-200 shadow-lg p-8 hover:shadow-2xl transition duration-300">
-
-        <div className="text-5xl mb-5">🌊</div>
-
-        <h3 className="text-2xl font-bold text-blue-900">
-          Offshore Support
-        </h3>
-
-        <p className="mt-4 text-gray-600 leading-7">
-          Offshore vessel support,
-          project logistics and specialized marine services.
-        </p>
-
-      </div>
-      <a
-  href="/services/offshore-support"
-  className="inline-block mt-6 text-blue-900 font-bold hover:text-yellow-500 transition"
->
-  Learn More →
-</a>
-
-    </div>
-
-  </div>
-
-</section>
-
-      <section className="bg-gradient-to-r from-blue-900 to-sky-700 text-white py-24">
-
-        <div className="max-w-7xl mx-auto px-6 text-center">
-
-          <p className="text-yellow-400 font-bold text-2xl">
+      <section className="bg-gradient-to-r from-blue-900 to-sky-700 py-24 text-white">
+        <div className="mx-auto max-w-7xl px-6 text-center">
+          <p className="text-2xl font-bold text-yellow-400">
             KP Global Shipping Inc.
           </p>
 
-          <h1 className="text-6xl font-extrabold mt-4">
+          <h1 className="mt-4 text-5xl font-extrabold md:text-6xl">
             Maritime Services
           </h1>
 
-          <p className="mt-8 text-xl text-blue-100 max-w-3xl mx-auto">
-            Delivering complete maritime solutions throughout the Philippines.
+          <p className="mx-auto mt-8 max-w-3xl text-xl leading-8 text-blue-100">
+            Delivering dependable maritime services with professionalism,
+            transparency, and operational excellence throughout the Philippines.
+          </p>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mb-16 text-center">
+            <p className="mb-3 text-2xl font-bold uppercase tracking-widest text-yellow-500">
+              What We Do
+            </p>
+
+            <h2 className="text-4xl font-extrabold text-blue-900 md:text-5xl">
+              Comprehensive Maritime Services
+            </h2>
+
+            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-600">
+              From vessel arrival and port operations to crew changes,
+              logistics, technical support, and departure, our team provides
+              responsive coordination throughout the vessel&apos;s port call.
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {services.map((service) => (
+              <div
+                key={service.title}
+                className="group flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-8 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
+              >
+                {/* Professional Icon Treatment */}
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl border border-yellow-400 bg-blue-900 text-sm font-extrabold tracking-wider text-yellow-400 transition duration-300 group-hover:bg-yellow-400 group-hover:text-blue-900">
+                  {service.code}
+                </div>
+
+                <h3 className="text-2xl font-bold leading-tight text-blue-900">
+                  {service.title}
+                </h3>
+
+                <p className="mt-4 flex-grow leading-7 text-gray-600">
+                  {service.description}
+                </p>
+
+                <Link
+                  href={service.href}
+                  className="mt-6 inline-flex items-center font-bold text-blue-900 transition hover:text-yellow-500"
+                >
+                  Learn More
+                  <span className="ml-2 transition-transform duration-200 group-hover:translate-x-1">
+                    →
+                  </span>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="bg-gradient-to-r from-blue-900 to-sky-700 py-24 text-white">
+        <div className="mx-auto max-w-7xl px-6 text-center">
+          <p className="mb-4 text-2xl font-bold text-yellow-400">
+            Ready to Work with Us?
           </p>
 
+          <h2 className="text-4xl font-extrabold md:text-5xl">
+            Your Reliable Partner in Philippine Port Operations
+          </h2>
+
+          <p className="mx-auto mt-8 max-w-4xl text-xl leading-9 text-blue-100">
+            Whether you require port agency, owner&apos;s protective agency,
+            crew change, husbandry, marine logistics, customs coordination, or
+            technical support, our experienced team is ready to assist with
+            your vessel&apos;s requirements throughout the Philippines.
+          </p>
+
+          <div className="mt-12 flex flex-wrap justify-center gap-6">
+            <Link
+              href="/contact"
+              className="rounded-xl bg-yellow-400 px-8 py-4 font-bold text-blue-900 transition hover:bg-yellow-300"
+            >
+              Contact Us
+            </Link>
+
+            <Link
+              href="/company"
+              className="rounded-xl border-2 border-white px-8 py-4 font-bold transition hover:bg-white hover:text-blue-900"
+            >
+              Learn About KP
+            </Link>
+          </div>
         </div>
-
       </section>
-{/* Call to Action */}
-
-<section className="py-24 bg-blue-900 text-white">
-
-  <div className="max-w-5xl mx-auto px-6 text-center">
-
-    <p className="text-yellow-400 font-bold text-2xl mb-4">
-      Ready to Work with Us?
-    </p>
-
-    <h2 className="text-5xl font-extrabold">
-      Your Trusted Maritime Partner
-    </h2>
-
-    <p className="mt-8 text-xl text-blue-100 leading-9">
-      Whether you require port agency, crew change, protective agency,
-      technical attendance, customs clearance, or complete husbandry
-      services, our experienced team is ready to assist you anywhere
-      in the Philippines.
-    </p>
-
-    <div className="mt-12 flex flex-wrap justify-center gap-6">
-
-      <a
-        href="/contact"
-        className="bg-yellow-400 text-blue-900 font-bold px-8 py-4 rounded-xl hover:bg-yellow-300 transition"
-      >
-        Contact Us
-      </a>
-
-      <a
-        href="/company"
-        className="border-2 border-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-900 transition"
-      >
-        Learn About KP
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
     </main>
   );
 }

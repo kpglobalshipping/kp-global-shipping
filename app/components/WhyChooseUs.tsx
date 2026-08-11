@@ -1,12 +1,36 @@
 export default function WhyChooseUs() {
-  const reasons = [
-    "24/7 Operations Support",
-    "Nationwide Philippine Port Coverage",
-    "Experienced Marine Professionals",
-    "Fast Response Time",
-    "Reliable Crew Change Services",
-    "Strong International Network",
-  ];
+  const whyChooseUs = [
+  {
+    title: "24/7 Operations Support",
+    description:
+      "Continuous operational coordination and responsive support throughout the vessel's port stay.",
+  },
+  {
+    title: "Nationwide Philippine Port Coverage",
+    description:
+      "Reliable local coordination across major Philippine ports and terminals.",
+  },
+  {
+    title: "Experienced Marine Professionals",
+    description:
+      "A dedicated team with experience in ship agency, port operations, logistics, and maritime services.",
+  },
+  {
+    title: "Fast Response Time",
+    description:
+      "Prompt communication and practical solutions when vessel operations require immediate action.",
+  },
+  {
+    title: "Reliable Crew Change Services",
+    description:
+      "Efficient coordination of crew embarkation, disembarkation, airport, transportation, accommodation, and immigration requirements.",
+  },
+  {
+    title: "Strong International Network",
+    description:
+      "Established relationships with shipowners, charterers, technical service providers, manning partners, and maritime stakeholders.",
+  },
+];
 
   return (
     <section className="py-24 bg-white">
@@ -22,16 +46,19 @@ export default function WhyChooseUs() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          {reasons.map((reason) => (
+          {whyChooseUs.map((item) => (
             <div
-              key={reason}
+              key={item.title}
               className="bg-blue-900 text-white rounded-xl p-8 shadow-lg hover:scale-105 transition duration-300"
             >
               <div className="text-4xl mb-4">⚓</div>
 
               <h3 className="text-xl font-bold">
-                {reason}
+                {item.title}
               </h3>
+              <p className="text-gray-300 mt-4">
+                {item.description}
+              </p>
             </div>
           ))}
 
