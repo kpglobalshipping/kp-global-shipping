@@ -9,11 +9,9 @@ export default function Navbar() {
 
   const navItems = [
     { name: "Home", href: "#" },
-    { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
     { name: "Technical", href: "#technical" },
     { name: "Port Info", href: "#ports" },
-    { name: "Company Profile", href: "#company-profile" },
     { name: "Gallery", href: "#gallery" },
     { name: "Contact", href: "#contact" },
   ];
@@ -32,7 +30,7 @@ export default function Navbar() {
             alt="KP Global Shipping"
             width={65}
             height={65}
-            className="w-[65px] h-[65px] object-cover rounded-full" 
+            className="w-[65px] h-[65px] object-cover rounded-full"
           />
 
           <div>
@@ -53,128 +51,115 @@ export default function Navbar() {
 
         <nav className="hidden lg:flex items-center gap-8">
 
-  <a
-    href="#"
-    className="text-white hover:text-yellow-400 transition font-medium"
-  >
-    Home
-  </a>
+          {/* Home */}
 
-  {/* About Dropdown */}
+          <a
+            href="#"
+            className="text-white hover:text-yellow-400 transition font-medium"
+          >
+            Home
+          </a>
 
-  <div className="relative">
+          {/* About Dropdown */}
 
-    <button
-      onClick={() => setAboutOpen(!aboutOpen)}
-      className="text-white hover:text-yellow-400 transition font-medium flex items-center gap-1"
-    >
-      About
-      <span className="text-xs">
-        {aboutOpen ? "▲" : "▼"}
-      </span>
-    </button>
+          <div className="relative">
 
-    {aboutOpen && (
+            <button
+              onClick={() => setAboutOpen(!aboutOpen)}
+              className="text-white hover:text-yellow-400 transition font-medium flex items-center gap-1"
+            >
+              About
 
-      <div className="absolute top-full left-0 mt-3 w-64 bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden">
+              <span className="text-xs">
+                {aboutOpen ? "▲" : "▼"}
+              </span>
 
-        <a
-          href="/company#ceo-message"
-          className="block px-5 py-4 text-blue-950 hover:bg-blue-950 hover:text-yellow-400 transition"
-          onClick={() => setAboutOpen(false)}
-        >
-          Message from CEO
-        </a>
+            </button>
 
-        <a
-          href="/company"
-          className="block px-5 py-4 text-blue-950 hover:bg-blue-950 hover:text-yellow-400 transition"
-          onClick={() => setAboutOpen(false)}
-        >
-          Company Profile
-        </a>
+            {aboutOpen && (
 
-        <a
-          href="/company#foundation"
-          className="block px-5 py-4 text-blue-950 hover:bg-blue-950 hover:text-yellow-400 transition"
-          onClick={() => setAboutOpen(false)}
-        >
-          Vision, Mission & Values
-        </a>
+              <div className="absolute top-full left-0 mt-3 w-64 bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden">
 
-        <a
-          href="/company#leadership"
-          className="block px-5 py-4 text-blue-950 hover:bg-blue-950 hover:text-yellow-400 transition"
-          onClick={() => setAboutOpen(false)}
-        >
-          Leadership
-        </a>
+                {/* Message from CEO */}
 
-        <a
-          href="/company#timeline"
-          className="block px-5 py-4 text-blue-950 hover:bg-blue-950 hover:text-yellow-400 transition"
-          onClick={() => setAboutOpen(false)}
-        >
-          Company Journey
-        </a>
+                <a
+                  href="/company#ceo-message"
+                  className="block px-5 py-4 text-blue-950 hover:bg-blue-950 hover:text-yellow-400 transition"
+                  onClick={() => setAboutOpen(false)}
+                >
+                  Message from CEO
+                </a>
 
-      </div>
+                {/* Company Profile - Updated 2026 PDF */}
 
-    )}
+                <a
+                  href="/company-profile/KP_GLOBAL_SHIPPING_COMPANY_PROFILE_2026.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-5 py-4 text-blue-950 hover:bg-blue-950 hover:text-yellow-400 transition"
+                  onClick={() => setAboutOpen(false)}
+                >
+                  Company Profile
+                </a>
 
-  </div>
+                {/* Vision, Mission & Values */}
 
-  {/* Remaining Navigation */}
+                <a
+                  href="/company#foundation"
+                  className="block px-5 py-4 text-blue-950 hover:bg-blue-950 hover:text-yellow-400 transition"
+                  onClick={() => setAboutOpen(false)}
+                >
+                  Vision, Mission & Values
+                </a>
 
-  <a
-    href="#services"
-    className="text-white hover:text-yellow-400 transition font-medium"
-  >
-    Services
-  </a>
+                {/* Leadership */}
 
-  <a
-    href="#technical"
-    className="text-white hover:text-yellow-400 transition font-medium"
-  >
-    Technical
-  </a>
+                <a
+                  href="/company#leadership"
+                  className="block px-5 py-4 text-blue-950 hover:bg-blue-950 hover:text-yellow-400 transition"
+                  onClick={() => setAboutOpen(false)}
+                >
+                  Leadership
+                </a>
 
-  <a
-    href="#ports"
-    className="text-white hover:text-yellow-400 transition font-medium"
-  >
-    Port Info
-  </a>
+                {/* Company Journey */}
 
-  <a
-    href="#company-profile"
-    className="text-white hover:text-yellow-400 transition font-medium"
-  >
-    Company Profile
-  </a>
+                <a
+                  href="/company#timeline"
+                  className="block px-5 py-4 text-blue-950 hover:bg-blue-950 hover:text-yellow-400 transition"
+                  onClick={() => setAboutOpen(false)}
+                >
+                  Company Journey
+                </a>
 
-  <a
-    href="#gallery"
-    className="text-white hover:text-yellow-400 transition font-medium"
-  >
-    Gallery
-  </a>
+              </div>
 
-  <a
-    href="#contact"
-    className="text-white hover:text-yellow-400 transition font-medium"
-  >
-    Contact
-  </a>
+            )}
 
-</nav>
+          </div>
+
+          {/* Remaining Navigation */}
+
+          {navItems.slice(1).map((item) => (
+
+            <a
+              key={item.name}
+              href={item.href}
+              className="text-white hover:text-yellow-400 transition font-medium"
+            >
+              {item.name}
+            </a>
+
+          ))}
+
+        </nav>
 
         {/* Mobile Button */}
 
         <button
           className="lg:hidden text-white text-3xl"
           onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation menu"
         >
           ☰
         </button>
@@ -187,7 +172,112 @@ export default function Navbar() {
 
         <div className="lg:hidden bg-blue-950 border-t border-blue-900">
 
-          {navItems.map((item) => (
+          {/* Home */}
+
+          <a
+            href="#"
+            className="block px-6 py-4 text-white hover:bg-blue-900"
+            onClick={() => setMenuOpen(false)}
+          >
+            Home
+          </a>
+
+          {/* About */}
+
+          <div className="border-t border-blue-900">
+
+            <button
+              onClick={() => setAboutOpen(!aboutOpen)}
+              className="w-full flex items-center justify-between px-6 py-4 text-white hover:bg-blue-900"
+            >
+              <span>About</span>
+
+              <span className="text-xs">
+                {aboutOpen ? "▲" : "▼"}
+              </span>
+
+            </button>
+
+            {aboutOpen && (
+
+              <div className="bg-blue-900">
+
+                {/* Message from CEO */}
+
+                <a
+                  href="/company#ceo-message"
+                  className="block px-10 py-3 text-white hover:text-yellow-400"
+                  onClick={() => {
+                    setAboutOpen(false);
+                    setMenuOpen(false);
+                  }}
+                >
+                  Message from CEO
+                </a>
+
+                {/* Company Profile */}
+
+                <a
+                  href="/company-profile/KP_GLOBAL_SHIPPING_COMPANY_PROFILE_2026.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-10 py-3 text-white hover:text-yellow-400"
+                  onClick={() => {
+                    setAboutOpen(false);
+                    setMenuOpen(false);
+                  }}
+                >
+                  Company Profile
+                </a>
+
+                {/* Vision, Mission & Values */}
+
+                <a
+                  href="/company#foundation"
+                  className="block px-10 py-3 text-white hover:text-yellow-400"
+                  onClick={() => {
+                    setAboutOpen(false);
+                    setMenuOpen(false);
+                  }}
+                >
+                  Vision, Mission & Values
+                </a>
+
+                {/* Leadership */}
+
+                <a
+                  href="/company#leadership"
+                  className="block px-10 py-3 text-white hover:text-yellow-400"
+                  onClick={() => {
+                    setAboutOpen(false);
+                    setMenuOpen(false);
+                  }}
+                >
+                  Leadership
+                </a>
+
+                {/* Company Journey */}
+
+                <a
+                  href="/company#timeline"
+                  className="block px-10 py-3 text-white hover:text-yellow-400"
+                  onClick={() => {
+                    setAboutOpen(false);
+                    setMenuOpen(false);
+                  }}
+                >
+                  Company Journey
+                </a>
+
+              </div>
+
+            )}
+
+          </div>
+
+          {/* Other Mobile Navigation */}
+
+          {navItems.slice(1).map((item) => (
 
             <a
               key={item.name}
