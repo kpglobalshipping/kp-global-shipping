@@ -5,6 +5,7 @@ import { useState } from "react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
 
   const navItems = [
     { name: "Home", href: "#" },
@@ -50,21 +51,124 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
 
-        <nav className="hidden lg:flex gap-8">
+        <nav className="hidden lg:flex items-center gap-8">
 
-          {navItems.map((item) => (
+  <a
+    href="#"
+    className="text-white hover:text-yellow-400 transition font-medium"
+  >
+    Home
+  </a>
 
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-white hover:text-yellow-400 transition font-medium"
-            >
-              {item.name}
-            </a>
+  {/* About Dropdown */}
 
-          ))}
+  <div className="relative">
 
-        </nav>
+    <button
+      onClick={() => setAboutOpen(!aboutOpen)}
+      className="text-white hover:text-yellow-400 transition font-medium flex items-center gap-1"
+    >
+      About
+      <span className="text-xs">
+        {aboutOpen ? "▲" : "▼"}
+      </span>
+    </button>
+
+    {aboutOpen && (
+
+      <div className="absolute top-full left-0 mt-3 w-64 bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden">
+
+        <a
+          href="/company#ceo-message"
+          className="block px-5 py-4 text-blue-950 hover:bg-blue-950 hover:text-yellow-400 transition"
+          onClick={() => setAboutOpen(false)}
+        >
+          Message from CEO
+        </a>
+
+        <a
+          href="/company"
+          className="block px-5 py-4 text-blue-950 hover:bg-blue-950 hover:text-yellow-400 transition"
+          onClick={() => setAboutOpen(false)}
+        >
+          Company Profile
+        </a>
+
+        <a
+          href="/company#foundation"
+          className="block px-5 py-4 text-blue-950 hover:bg-blue-950 hover:text-yellow-400 transition"
+          onClick={() => setAboutOpen(false)}
+        >
+          Vision, Mission & Values
+        </a>
+
+        <a
+          href="/company#leadership"
+          className="block px-5 py-4 text-blue-950 hover:bg-blue-950 hover:text-yellow-400 transition"
+          onClick={() => setAboutOpen(false)}
+        >
+          Leadership
+        </a>
+
+        <a
+          href="/company#timeline"
+          className="block px-5 py-4 text-blue-950 hover:bg-blue-950 hover:text-yellow-400 transition"
+          onClick={() => setAboutOpen(false)}
+        >
+          Company Journey
+        </a>
+
+      </div>
+
+    )}
+
+  </div>
+
+  {/* Remaining Navigation */}
+
+  <a
+    href="#services"
+    className="text-white hover:text-yellow-400 transition font-medium"
+  >
+    Services
+  </a>
+
+  <a
+    href="#technical"
+    className="text-white hover:text-yellow-400 transition font-medium"
+  >
+    Technical
+  </a>
+
+  <a
+    href="#ports"
+    className="text-white hover:text-yellow-400 transition font-medium"
+  >
+    Port Info
+  </a>
+
+  <a
+    href="#company-profile"
+    className="text-white hover:text-yellow-400 transition font-medium"
+  >
+    Company Profile
+  </a>
+
+  <a
+    href="#gallery"
+    className="text-white hover:text-yellow-400 transition font-medium"
+  >
+    Gallery
+  </a>
+
+  <a
+    href="#contact"
+    className="text-white hover:text-yellow-400 transition font-medium"
+  >
+    Contact
+  </a>
+
+</nav>
 
         {/* Mobile Button */}
 

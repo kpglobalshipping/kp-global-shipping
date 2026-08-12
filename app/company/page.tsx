@@ -118,7 +118,10 @@ export default function CompanyPage() {
 </section>
 {/* Vision Mission Values */}
 
-<section className="py-24 bg-white">
+<section
+  id="foundation"
+  className="py-24 bg-white"
+>
 
   <div className="max-w-7xl mx-auto px-6">
 
@@ -202,7 +205,10 @@ export default function CompanyPage() {
       {/* Leadership */}
 {/* CEO Message */}
 
-<section className="py-24 bg-blue-900 text-white">
+<section
+  id="ceo-message"
+  className="py-24 bg-blue-900 text-white"
+>
 
   <div className="max-w-7xl mx-auto px-6">
 
@@ -437,7 +443,10 @@ export default function CompanyPage() {
 </section>
 {/* Company Timeline */}
 
-<section className="py-24 bg-white">
+<section
+  id="timeline"
+  className="py-24 bg-white"
+>
 
   <div className="max-w-7xl mx-auto px-6">
 
@@ -551,7 +560,9 @@ export default function CompanyPage() {
   </div>
 
 </section>
-      <ExecutiveLeadership />
+      <div id="leadership">
+  <ExecutiveLeadership />
+</div>
       {/* Downloads */}
 
 <section className="py-24 bg-gray-100">
