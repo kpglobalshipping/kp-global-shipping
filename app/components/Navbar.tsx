@@ -27,11 +27,11 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
 
           <Image
-            src="/kp-logo.png"
+            src="/images/kp-logo.png"
             alt="KP Global Shipping"
             width={65}
             height={65}
-            style={{ width: "65px", height: "auto" }}
+            className="w-[65px] h-[65px] object-cover rounded-full" 
           />
 
           <div>
