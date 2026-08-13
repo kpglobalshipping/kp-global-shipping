@@ -17,9 +17,10 @@ export default function BatangasPortPage() {
     <main className="min-h-screen bg-white">
 
       <PortHero
-        title={batangasPort.hero.title}
-        subtitle={batangasPort.hero.subtitle}
-      />
+  title={batangasPort.hero.title}
+  subtitle={batangasPort.hero.subtitle}
+  image="/images/batangas-port.jpg"
+/>
 <PortStats
    stats={batangasPort.stats}
 />

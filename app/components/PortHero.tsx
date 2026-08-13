@@ -1,17 +1,19 @@
 type PortHeroProps = {
   title: string;
   subtitle: string;
+  image: string;
 };
 
 export default function PortHero({
   title,
   subtitle,
+  image,
 }: PortHeroProps) {
   return (
     <section
       className="relative h-[75vh] bg-cover bg-center flex items-center justify-center"
       style={{
-        backgroundImage: "url('/images/batangas-port.jpg')",
+        backgroundImage: `url('${image}')`,
       }}
     >
       {/* Dark Overlay */}
