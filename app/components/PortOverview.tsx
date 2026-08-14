@@ -8,17 +8,27 @@ export default function PortOverview({
   description,
 }: PortOverviewProps) {
   return (
-    <section className="py-20 bg-white">
+    <section className="bg-gray-50 py-10">
 
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
 
-        <h2 className="text-4xl font-bold text-blue-900 mb-8">
-          {title}
-        </h2>
+        <div className="bg-white border border-gray-200 rounded-2xl shadow-sm p-7">
 
-        <p className="text-lg text-gray-700 leading-8">
-          {description}
-        </p>
+          <div className="flex items-center gap-3 mb-4">
+
+            <div className="w-2 h-8 bg-yellow-400 rounded-full"></div>
+
+            <h2 className="text-2xl md:text-3xl font-extrabold text-blue-900">
+              {title}
+            </h2>
+
+          </div>
+
+          <p className="text-gray-700 leading-7 text-base md:text-lg">
+            {description}
+          </p>
+
+        </div>
 
       </div>
 

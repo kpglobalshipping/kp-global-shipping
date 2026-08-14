@@ -1,9 +1,10 @@
 export const subicPort = {
   hero: {
-    title: "Port of Subic",
-    subtitle:
-      "Comprehensive Port Information for Vessel Owners, Operators, Charterers, and Ship Managers",
-  },
+  title: "Port of Subic",
+  subtitle:
+    "Comprehensive Port Information for Vessel Owners, Operators, and Ship Managers",
+  image: "/images/subic-port.jpg",
+},
 
   stats: [
     {

@@ -1,10 +1,10 @@
 export const manilaPort = {
   hero: {
-    title: "Port of Manila",
-    subtitle:
-      "Comprehensive Port Information for Vessel Owners, Operators, Charterers, Ship Managers, and Maritime Principals",
-    image: "/images/manila-port.jpg",
-  },
+  title: "Port of Manila",
+  subtitle:
+    "Comprehensive Port Information for Vessel Owners, Operators, and Ship Managers",
+  image: "/images/manila-port.jpg",
+},
 
   stats: [
     {

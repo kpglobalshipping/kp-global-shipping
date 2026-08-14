@@ -1,9 +1,10 @@
 export const batangasPort = {
   hero: {
-    title: "Port of Batangas",
-    subtitle:
-      "Comprehensive Port Information for Vessel Owners, Operators, and Ship Managers",
-  },
+  title: "Port of Batangas",
+  subtitle:
+    "Comprehensive Port Information for Vessel Owners, Operators, and Ship Managers",
+  image: "/images/batangas-port.jpg",
+},
   stats: [
   {
     icon: "anchor" as const,

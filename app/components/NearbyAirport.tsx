@@ -1,3 +1,5 @@
+import { Plane, Clock } from "lucide-react";
+
 type NearbyAirportProps = {
   name: string;
   distance: string;
@@ -8,36 +10,42 @@ export default function NearbyAirport({
   distance,
 }: NearbyAirportProps) {
   return (
-    <section className="py-20 bg-white">
+    <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm h-full">
 
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="flex items-center gap-3 mb-5">
 
-        <div className="text-center mb-14">
+        <div className="w-11 h-11 rounded-lg bg-blue-900 flex items-center justify-center">
 
-          <p className="text-yellow-500 font-bold text-xl">
+          <Plane className="w-6 h-6 text-yellow-400" />
+
+        </div>
+
+        <div>
+
+          <p className="text-xs font-bold uppercase tracking-widest text-yellow-500">
             Nearest Airport
           </p>
 
-          <h2 className="text-4xl font-extrabold text-blue-900 mt-3">
+          <h2 className="text-xl font-extrabold text-blue-900">
             Airport Information
           </h2>
 
         </div>
 
-        <div className="bg-blue-50 rounded-2xl shadow-lg p-8">
+      </div>
 
-          <h3 className="text-2xl font-bold text-blue-900 mb-4">
-            ✈️ {name}
-          </h3>
+      <h3 className="font-bold text-blue-900 mb-3">
+        {name}
+      </h3>
 
-          <p className="text-lg text-gray-700">
-            Distance / Travel Time: {distance}
-          </p>
+      <div className="flex items-start gap-2 text-sm text-gray-600">
 
-        </div>
+        <Clock className="w-4 h-4 mt-0.5 text-blue-900" />
+
+        <span>{distance}</span>
 
       </div>
 
-    </section>
+    </div>
   );
 }

@@ -29,49 +29,51 @@ export default function PortFacilities({
   facilities,
 }: PortFacilitiesProps) {
   return (
-    <section className="py-20 bg-white">
+    <section className="bg-gray-50 py-8">
 
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="text-center mb-14">
+        <div className="flex items-center gap-3 mb-6">
 
-          <p className="text-yellow-500 font-bold text-xl">
-            Port Facilities
-          </p>
+          <div className="w-2 h-8 bg-yellow-400 rounded-full"></div>
 
-          <h2 className="text-4xl font-extrabold text-blue-900 mt-3">
-            Available Port Infrastructure
-          </h2>
+          <div>
+
+            <p className="text-yellow-500 text-xs font-bold uppercase tracking-widest">
+              Infrastructure
+            </p>
+
+            <h2 className="text-2xl font-extrabold text-blue-900">
+              Port Facilities
+            </h2>
+
+          </div>
 
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 
           {facilities.map((facility, index) => {
 
             const Icon = getIcon(facility);
 
             return (
-
               <div
                 key={index}
-                className="bg-gray-50 rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6"
+                className="bg-white border border-gray-200 rounded-xl p-5 flex items-center gap-4 hover:border-yellow-400 hover:shadow-md transition-all"
               >
 
-                <div className="w-14 h-14 rounded-full bg-yellow-400 flex items-center justify-center mb-5">
+                <div className="flex-shrink-0 w-11 h-11 rounded-lg bg-yellow-400 flex items-center justify-center">
 
-                  <Icon className="w-7 h-7 text-blue-900" />
+                  <Icon className="w-6 h-6 text-blue-900" />
 
                 </div>
 
-                <h3 className="text-lg font-bold text-blue-900">
-
+                <h3 className="text-sm md:text-base font-bold text-blue-900 leading-5">
                   {facility}
-
                 </h3>
 
               </div>
-
             );
 
           })}

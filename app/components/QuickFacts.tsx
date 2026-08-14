@@ -54,49 +54,57 @@ export default function QuickFacts({
   facts,
 }: QuickFactsProps) {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="bg-white py-8">
 
       <div className="max-w-7xl mx-auto px-6">
 
-        <div className="text-center mb-14">
+        <div className="flex items-center gap-3 mb-6">
 
-          <p className="text-yellow-500 font-bold text-xl">
-            Quick Facts
-          </p>
+          <div className="w-2 h-8 bg-yellow-400 rounded-full"></div>
 
-          <h2 className="text-4xl font-extrabold text-blue-900 mt-3">
-            Essential Port Information
-          </h2>
+          <div>
+            <p className="text-yellow-500 text-xs font-bold uppercase tracking-widest">
+              Quick Facts
+            </p>
+
+            <h2 className="text-2xl font-extrabold text-blue-900">
+              Essential Port Information
+            </h2>
+          </div>
 
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
 
           {facts.map((fact, index) => {
 
             const Icon = getIcon(fact.label);
 
             return (
-
               <div
                 key={index}
-                className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-6 border border-gray-100"
+                className="bg-gray-50 border border-gray-200 rounded-xl p-4 hover:border-yellow-400 hover:shadow-md transition-all"
               >
 
-                <Icon
-                  className="w-10 h-10 text-yellow-500 mb-4"
-                />
+                <div className="flex items-center gap-3 mb-3">
 
-                <p className="text-sm uppercase tracking-wide text-gray-500">
-                  {fact.label}
-                </p>
+                  <div className="w-9 h-9 rounded-lg bg-blue-900 flex items-center justify-center">
 
-                <p className="text-xl font-bold text-blue-900 mt-2">
+                    <Icon className="w-5 h-5 text-yellow-400" />
+
+                  </div>
+
+                  <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+                    {fact.label}
+                  </p>
+
+                </div>
+
+                <p className="text-sm md:text-base font-bold text-blue-900 leading-5">
                   {fact.value}
                 </p>
 
               </div>
-
             );
 
           })}

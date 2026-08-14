@@ -1,3 +1,5 @@
+import { Hotel } from "lucide-react";
+
 type NearbyHotelsProps = {
   hotels: string[];
 };
@@ -6,41 +8,49 @@ export default function NearbyHotels({
   hotels,
 }: NearbyHotelsProps) {
   return (
-    <section className="py-20 bg-gray-50">
+    <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm h-full">
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="flex items-center gap-3 mb-5">
 
-        <div className="text-center mb-14">
+        <div className="w-11 h-11 rounded-lg bg-yellow-400 flex items-center justify-center">
 
-          <p className="text-yellow-500 font-bold text-xl">
+          <Hotel className="w-6 h-6 text-blue-900" />
+
+        </div>
+
+        <div>
+
+          <p className="text-xs font-bold uppercase tracking-widest text-yellow-500">
             Accommodation
           </p>
 
-          <h2 className="text-4xl font-extrabold text-blue-900 mt-3">
+          <h2 className="text-xl font-extrabold text-blue-900">
             Recommended Hotels
           </h2>
 
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+      </div>
 
-          {hotels.map((hotel, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
 
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition duration-300"
-            >
-              <p className="text-lg font-medium text-gray-700">
-                🏨 {hotel}
-              </p>
-            </div>
+        {hotels.map((hotel, index) => (
 
-          ))}
+          <div
+            key={index}
+            className="bg-gray-50 border border-gray-100 rounded-lg px-4 py-3"
+          >
 
-        </div>
+            <p className="text-sm font-semibold text-gray-700">
+              {hotel}
+            </p>
+
+          </div>
+
+        ))}
 
       </div>
 
-    </section>
+    </div>
   );
 }
