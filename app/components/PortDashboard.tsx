@@ -1,8 +1,10 @@
+"use client";
+
 import {
   Anchor,
   Ship,
+  Globe2,
   Clock3,
-  Globe,
   MapPin,
   Plane,
   Truck,
@@ -10,12 +12,12 @@ import {
   Fuel,
   Trash2,
   Package,
+  Warehouse,
   Users,
   Wrench,
   ClipboardCheck,
   LifeBuoy,
-  Warehouse,
-  Navigation,
+  ExternalLink,
 } from "lucide-react";
 
 type PortDashboardProps = {
@@ -27,7 +29,7 @@ type PortDashboardProps = {
     };
 
     stats: {
-      icon: "anchor" | "ship" | "clock" | "globe";
+      icon: "anchor" | "ship" | "globe" | "clock";
       title: string;
       value: string;
     }[];
@@ -67,16 +69,45 @@ type PortDashboardProps = {
   };
 };
 
-const statIcons = {
-  anchor: Anchor,
-  ship: Ship,
-  clock: Clock3,
-  globe: Globe,
-};
+/* =========================================================
+   COLORS
+========================================================= */
 
-function getFactIcon(label: string) {
+const SLATE_BLUE = "#6B7FA8";
+const DARK_BLUE = "#102A63";
+const YELLOW = "#FACC15";
+
+/* =========================================================
+   ICON HELPERS
+========================================================= */
+
+function getStatIcon(
+  icon: PortDashboardProps["port"]["stats"][number]["icon"]
+) {
+  switch (icon) {
+    case "anchor":
+      return Anchor;
+
+    case "ship":
+      return Ship;
+
+    case "globe":
+      return Globe2;
+
+    case "clock":
+      return Clock3;
+
+    default:
+      return Anchor;
+  }
+}
+
+function getQuickFactIcon(label: string) {
   switch (label) {
     case "Province":
+      return MapPin;
+
+    case "Location":
       return MapPin;
 
     case "Port Authority":
@@ -92,7 +123,7 @@ function getFactIcon(label: string) {
       return Ship;
 
     case "Tug Assistance":
-      return Navigation;
+      return Anchor;
 
     case "Fresh Water":
       return Droplets;
@@ -109,445 +140,1155 @@ function getFactIcon(label: string) {
 }
 
 function getFacilityIcon(facility: string) {
-  if (facility.includes("Container")) return Package;
-  if (facility.includes("Bulk")) return Warehouse;
-  if (facility.includes("RoRo")) return Truck;
-  if (facility.includes("Passenger")) return Users;
-  if (facility.includes("Water")) return Droplets;
-  if (facility.includes("Waste")) return Trash2;
-  if (facility.includes("Bunkering")) return Fuel;
+  if (
+    facility.includes("Container") ||
+    facility.includes("Cargo")
+  ) {
+    return Package;
+  }
+
+  if (
+    facility.includes("Bulk") ||
+    facility.includes("Warehouse") ||
+    facility.includes("Storage")
+  ) {
+    return Warehouse;
+  }
+
+  if (
+    facility.includes("RoRo") ||
+    facility.includes("Ro-Ro")
+  ) {
+    return Truck;
+  }
+
+  if (facility.includes("Passenger")) {
+    return Users;
+  }
+
+  if (facility.includes("Water")) {
+    return Droplets;
+  }
+
+  if (
+    facility.includes("Waste") ||
+    facility.includes("Garbage")
+  ) {
+    return Trash2;
+  }
+
+  if (facility.includes("Bunkering")) {
+    return Fuel;
+  }
 
   return Ship;
 }
 
 function getServiceIcon(service: string) {
-  if (service.includes("Port Agency")) return Anchor;
-  if (service.includes("Protective")) return Ship;
-  if (service.includes("Crew")) return Users;
-  if (service.includes("Ship Supply")) return Package;
-  if (service.includes("Marine")) return Truck;
-  if (service.includes("Technical")) return Wrench;
-  if (service.includes("Customs")) return ClipboardCheck;
-  if (service.includes("Offshore")) return LifeBuoy;
+  if (service.includes("Port Agency")) {
+    return Anchor;
+  }
+
+  if (service.includes("Protective")) {
+    return Ship;
+  }
+
+  if (service.includes("Crew")) {
+    return Users;
+  }
+
+  if (service.includes("Ship Supply")) {
+    return Package;
+  }
+
+  if (
+    service.includes("Marine") ||
+    service.includes("Logistics")
+  ) {
+    return Truck;
+  }
+
+  if (
+    service.includes("Technical") ||
+    service.includes("Attendance")
+  ) {
+    return Wrench;
+  }
+
+  if (
+    service.includes("Customs") ||
+    service.includes("Clearance")
+  ) {
+    return ClipboardCheck;
+  }
+
+  if (
+    service.includes("Offshore") ||
+    service.includes("Support")
+  ) {
+    return LifeBuoy;
+  }
 
   return Anchor;
 }
+
+/* =========================================================
+   MAIN COMPONENT
+========================================================= */
 
 export default function PortDashboard({
   port,
 }: PortDashboardProps) {
   return (
-    <main className="min-h-screen bg-gray-50">
-
+    <main
+      className="min-h-screen"
+      style={{
+        backgroundColor: SLATE_BLUE,
+      }}
+    >
       {/* =====================================================
           HERO
       ===================================================== */}
 
       <section
-        className="relative h-[360px] md:h-[400px] bg-cover bg-center flex items-center"
+        className="w-full overflow-hidden"
         style={{
-          backgroundImage: `url('${port.hero.image}')`,
+          backgroundColor: SLATE_BLUE,
         }}
       >
+        <div
+          className="
+            w-full
+            min-h-[560px]
+            lg:min-h-[620px]
+            grid
+            grid-cols-1
+            lg:grid-cols-[minmax(260px,1fr)_minmax(560px,3fr)_minmax(260px,1fr)]
+          "
+        >
+          {/* =================================================
+              LEFT SLATE BLUE PANEL
+          ================================================= */}
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/75 to-transparent" />
+          <div
+            className="
+              relative
+              flex
+              items-center
+              justify-center
+              px-8
+              py-12
+              lg:px-10
+              xl:px-14
+              order-2
+              lg:order-1
+            "
+            style={{
+              backgroundColor: SLATE_BLUE,
+            }}
+          >
+            <div className="w-full max-w-[460px]">
+              {/* SMALL LABEL */}
 
-        <div className="relative z-10 max-w-7xl mx-auto w-full px-6">
+              <p
+                className="
+                  text-sm
+                  md:text-base
+                  font-bold
+                  tracking-[0.20em]
+                  uppercase
+                  mb-5
+                "
+                style={{
+                  color: "#FFFFFF",
+                }}
+              >
+                Philippine Port Information Center
+              </p>
 
-          <div className="max-w-2xl">
+              {/* PORT TITLE */}
 
-            <p className="text-blue-900 font-bold text-sm md:text-base uppercase tracking-widest mb-3">
-              Philippine Port Information Center
-            </p>
+              <h1
+                className="
+                  text-5xl
+                  md:text-6xl
+                  xl:text-7xl
+                  font-black
+                  uppercase
+                  leading-[0.92]
+                  tracking-tight
+                "
+                style={{
+                  color: DARK_BLUE,
+                }}
+              >
+                {port.hero.title}
+              </h1>
 
-            <h1 className="text-4xl md:text-6xl font-extrabold text-blue-950 uppercase leading-tight">
-              {port.hero.title}
-            </h1>
+              {/* YELLOW LINE */}
 
-            <p className="mt-4 text-sm md:text-base text-gray-700 font-medium max-w-xl leading-6">
-              {port.hero.subtitle}
-            </p>
+              <div
+                className="
+                  mt-6
+                  h-1
+                  w-24
+                  rounded-full
+                "
+                style={{
+                  backgroundColor: YELLOW,
+                }}
+              />
 
+              {/* DESCRIPTION */}
+
+              <p
+                className="
+                  mt-6
+                  text-base
+                  md:text-lg
+                  leading-7
+                  font-medium
+                "
+                style={{
+                  color: "#FFFFFF",
+                }}
+              >
+                {port.hero.subtitle}
+              </p>
+            </div>
           </div>
 
+          {/* =================================================
+              CENTER HERO IMAGE
+          ================================================= */}
+
+          <div
+            className="
+              relative
+              w-full
+              min-h-[420px]
+              lg:min-h-[620px]
+              overflow-hidden
+              order-1
+              lg:order-2
+            "
+          >
+            <img
+              src={port.hero.image}
+              alt={port.hero.title}
+              className="
+                absolute
+                inset-0
+                w-full
+                h-full
+                object-cover
+                object-center
+              "
+            />
+
+            {/* VERY LIGHT IMAGE SHADING
+                Keeps the photograph vivid while improving
+                visual separation from the side panels.
+            */}
+
+            <div
+              className="
+                absolute
+                inset-0
+                pointer-events-none
+              "
+              style={{
+                background:
+                  "linear-gradient(90deg, rgba(0,0,0,0.06), transparent 18%, transparent 82%, rgba(0,0,0,0.06))",
+              }}
+            />
+          </div>
+
+          {/* =================================================
+              RIGHT SLATE BLUE PANEL
+          ================================================= */}
+
+          <div
+            className="
+              relative
+              flex
+              items-center
+              justify-center
+              px-8
+              py-12
+              lg:px-10
+              xl:px-14
+              order-3
+            "
+            style={{
+              backgroundColor: SLATE_BLUE,
+            }}
+          >
+            <div className="w-full max-w-[460px] text-center lg:text-left">
+              {/* COMPANY NAME */}
+
+              <h2
+                className="
+                  text-3xl
+                  md:text-4xl
+                  xl:text-5xl
+                  font-black
+                  uppercase
+                  leading-tight
+                  tracking-tight
+                "
+                style={{
+                  color: "#FFFFFF",
+                }}
+              >
+                KP GLOBAL
+                <br />
+                SHIPPING INC.
+              </h2>
+
+              {/* YELLOW LINE */}
+
+              <div
+                className="
+                  mt-6
+                  h-1
+                  w-24
+                  rounded-full
+                  mx-auto
+                  lg:mx-0
+                "
+                style={{
+                  backgroundColor: YELLOW,
+                }}
+              />
+
+              {/* TAGLINE */}
+
+              <p
+                className="
+                  mt-5
+                  text-base
+                  md:text-lg
+                  xl:text-xl
+                  font-semibold
+                  leading-relaxed
+                "
+                style={{
+                  color: "#FFFFFF",
+                }}
+              >
+                Quick, Prompt, and Stand-beside YOU
+              </p>
+            </div>
+          </div>
         </div>
-
       </section>
-
 
       {/* =====================================================
           PORT STATS
       ===================================================== */}
 
-      <section className="bg-blue-950 text-white">
+      <section
+        className="text-white"
+        style={{
+          backgroundColor: DARK_BLUE,
+        }}
+      >
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4">
+          {port.stats.map((stat, index) => {
+            const Icon = getStatIcon(stat.icon);
 
-        <div className="max-w-7xl mx-auto px-6">
+            return (
+              <div
+                key={index}
+                className="
+                  flex
+                  items-center
+                  gap-4
+                  px-6
+                  py-6
+                  md:px-8
+                  border-r
+                  border-blue-800
+                  last:border-r-0
+                "
+              >
+                <Icon
+                  className="
+                    w-9
+                    h-9
+                    md:w-10
+                    md:h-10
+                    shrink-0
+                  "
+                  style={{
+                    color: YELLOW,
+                  }}
+                />
 
-          <div className="grid grid-cols-2 lg:grid-cols-4">
+                <div>
+                  <p
+                    className="
+                      text-[10px]
+                      md:text-xs
+                      font-bold
+                      uppercase
+                      tracking-wide
+                      text-white
+                    "
+                  >
+                    {stat.title}
+                  </p>
 
-            {port.stats.map((stat, index) => {
-
-              const Icon = statIcons[stat.icon];
-
-              return (
-                <div
-                  key={index}
-                  className="flex items-center gap-3 px-5 py-4 border-r border-blue-800 last:border-r-0"
-                >
-
-                  <Icon className="w-8 h-8 text-yellow-400 shrink-0" />
-
-                  <div>
-
-                    <p className="text-[10px] md:text-xs uppercase tracking-wide font-bold text-white">
-                      {stat.title}
-                    </p>
-
-                    <p className="text-[10px] md:text-xs text-blue-200 mt-1">
-                      {stat.value}
-                    </p>
-
-                  </div>
-
+                  <p
+                    className="
+                      mt-1
+                      text-sm
+                      md:text-base
+                      font-medium
+                      text-blue-100
+                    "
+                  >
+                    {stat.value}
+                  </p>
                 </div>
-              );
-
-            })}
-
-          </div>
-
+              </div>
+            );
+          })}
         </div>
-
       </section>
 
-
       {/* =====================================================
-          MAIN INFORMATION GRID
+          MAIN INFORMATION DASHBOARD
       ===================================================== */}
 
-      <section className="py-5">
+      <section
+        className="py-8 md:py-10"
+        style={{
+          backgroundColor: SLATE_BLUE,
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
 
-        <div className="max-w-7xl mx-auto px-6">
+          {/* =================================================
+              FIRST INFORMATION CARD
+          ================================================= */}
 
-          <div className="grid lg:grid-cols-4 gap-0 bg-white border border-gray-200 shadow-sm">
+          <div
+            className="
+              bg-white
+              border
+              border-slate-200
+              rounded-xl
+              shadow-lg
+              overflow-hidden
+            "
+          >
+            <div className="grid lg:grid-cols-4">
 
+              {/* =================================================
+                  PORT OVERVIEW
+              ================================================= */}
 
-            {/* PORT OVERVIEW */}
+              <div
+                className="
+                  p-6
+                  md:p-7
+                  border-b
+                  lg:border-b-0
+                  lg:border-r
+                  border-slate-200
+                "
+              >
+                <h2
+                  className="
+                    text-lg
+                    font-extrabold
+                    uppercase
+                    tracking-wide
+                  "
+                  style={{
+                    color: DARK_BLUE,
+                  }}
+                >
+                  {port.overview.title}
+                </h2>
 
-            <div className="p-5 border-b lg:border-b-0 lg:border-r border-gray-200">
+                <div
+                  className="mt-3 h-[2px] w-full"
+                  style={{
+                    backgroundColor: YELLOW,
+                  }}
+                />
 
-              <h2 className="text-sm font-extrabold text-blue-950 uppercase border-b-2 border-yellow-500 pb-2 mb-4">
-                Port Overview
-              </h2>
+                <p
+                  className="
+                    mt-5
+                    text-sm
+                    leading-6
+                    text-slate-600
+                  "
+                >
+                  {port.overview.description}
+                </p>
+              </div>
 
-              <p className="text-xs text-gray-600 leading-5">
-                {port.overview.description}
-              </p>
+              {/* =================================================
+                  QUICK FACTS
+              ================================================= */}
 
-            </div>
+              <div
+                className="
+                  p-6
+                  md:p-7
+                  border-b
+                  lg:border-b-0
+                  lg:border-r
+                  border-slate-200
+                "
+              >
+                <h2
+                  className="
+                    text-lg
+                    font-extrabold
+                    uppercase
+                    tracking-wide
+                  "
+                  style={{
+                    color: DARK_BLUE,
+                  }}
+                >
+                  Quick Facts
+                </h2>
 
+                <div
+                  className="mt-3 h-[2px] w-full"
+                  style={{
+                    backgroundColor: YELLOW,
+                  }}
+                />
 
-            {/* QUICK FACTS */}
+                <div className="mt-5 space-y-3">
+                  {port.quickFacts.map((fact, index) => {
+                    const Icon = getQuickFactIcon(fact.label);
 
-            <div className="p-5 border-b lg:border-b-0 lg:border-r border-gray-200">
+                    return (
+                      <div
+                        key={index}
+                        className="flex items-start gap-3"
+                      >
+                        <Icon
+                          className="
+                            w-4
+                            h-4
+                            mt-0.5
+                            shrink-0
+                          "
+                          style={{
+                            color: "#EF4444",
+                          }}
+                        />
 
-              <h2 className="text-sm font-extrabold text-blue-950 uppercase border-b-2 border-yellow-500 pb-2 mb-4">
-                Quick Facts
-              </h2>
-
-              <div className="space-y-2">
-
-                {port.quickFacts.map((fact, index) => {
-
-                  const Icon = getFactIcon(fact.label);
-
-                  return (
-                    <div
-                      key={index}
-                      className="flex items-start gap-2"
-                    >
-
-                      <Icon className="w-3.5 h-3.5 text-red-600 mt-0.5 shrink-0" />
-
-                      <div className="text-[11px] leading-4">
-
-                        <span className="font-bold text-gray-700">
-                          {fact.label}:
-                        </span>{" "}
-
-                        <span className="text-gray-600">
+                        <p
+                          className="
+                            text-sm
+                            leading-5
+                            text-slate-700
+                          "
+                        >
+                          <span className="font-bold text-slate-900">
+                            {fact.label}:
+                          </span>{" "}
                           {fact.value}
-                        </span>
-
+                        </p>
                       </div>
-
-                    </div>
-                  );
-
-                })}
-
+                    );
+                  })}
+                </div>
               </div>
 
-            </div>
+              {/* =================================================
+                  PORT FACILITIES
+              ================================================= */}
 
+              <div
+                className="
+                  p-6
+                  md:p-7
+                  border-b
+                  lg:border-b-0
+                  lg:border-r
+                  border-slate-200
+                "
+              >
+                <h2
+                  className="
+                    text-lg
+                    font-extrabold
+                    uppercase
+                    tracking-wide
+                  "
+                  style={{
+                    color: DARK_BLUE,
+                  }}
+                >
+                  Port Facilities
+                </h2>
 
-            {/* FACILITIES */}
+                <div
+                  className="mt-3 h-[2px] w-full"
+                  style={{
+                    backgroundColor: YELLOW,
+                  }}
+                />
 
-            <div className="p-5 border-b lg:border-b-0 lg:border-r border-gray-200">
+                <div className="mt-5 space-y-3">
+                  {port.facilities.map((facility, index) => {
+                    const Icon = getFacilityIcon(facility);
 
-              <h2 className="text-sm font-extrabold text-blue-950 uppercase border-b-2 border-yellow-500 pb-2 mb-4">
-                Port Facilities
-              </h2>
+                    return (
+                      <div
+                        key={index}
+                        className="flex items-start gap-3"
+                      >
+                        <Icon
+                          className="
+                            w-4
+                            h-4
+                            mt-0.5
+                            shrink-0
+                          "
+                          style={{
+                            color: "#EF4444",
+                          }}
+                        />
 
-              <div className="space-y-2">
-
-                {port.facilities.map((facility, index) => {
-
-                  const Icon = getFacilityIcon(facility);
-
-                  return (
-                    <div
-                      key={index}
-                      className="flex items-start gap-2"
-                    >
-
-                      <Icon className="w-3.5 h-3.5 text-red-600 mt-0.5 shrink-0" />
-
-                      <span className="text-[11px] leading-4 text-gray-600">
-                        {facility}
-                      </span>
-
-                    </div>
-                  );
-
-                })}
-
+                        <p
+                          className="
+                            text-sm
+                            leading-5
+                            text-slate-700
+                          "
+                        >
+                          {facility}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
 
-            </div>
+              {/* =================================================
+                  PORT SERVICES
+              ================================================= */}
 
+              <div className="p-6 md:p-7">
+                <h2
+                  className="
+                    text-lg
+                    font-extrabold
+                    uppercase
+                    tracking-wide
+                  "
+                  style={{
+                    color: DARK_BLUE,
+                  }}
+                >
+                  Port Services
+                </h2>
 
-            {/* SERVICES */}
+                <div
+                  className="mt-3 h-[2px] w-full"
+                  style={{
+                    backgroundColor: YELLOW,
+                  }}
+                />
 
-            <div className="p-5">
+                <div className="mt-5 space-y-3">
+                  {port.services.map((service, index) => {
+                    const Icon = getServiceIcon(service);
 
-              <h2 className="text-sm font-extrabold text-blue-950 uppercase border-b-2 border-yellow-500 pb-2 mb-4">
-                Port Services
-              </h2>
+                    return (
+                      <div
+                        key={index}
+                        className="flex items-start gap-3"
+                      >
+                        <Icon
+                          className="
+                            w-4
+                            h-4
+                            mt-0.5
+                            shrink-0
+                          "
+                          style={{
+                            color: "#EF4444",
+                          }}
+                        />
 
-              <div className="space-y-2">
-
-                {port.services.map((service, index) => {
-
-                  const Icon = getServiceIcon(service);
-
-                  return (
-                    <div
-                      key={index}
-                      className="flex items-start gap-2"
-                    >
-
-                      <Icon className="w-3.5 h-3.5 text-red-600 mt-0.5 shrink-0" />
-
-                      <span className="text-[11px] leading-4 text-gray-600">
-                        {service}
-                      </span>
-
-                    </div>
-                  );
-
-                })}
-
+                        <p
+                          className="
+                            text-sm
+                            leading-5
+                            text-slate-700
+                          "
+                        >
+                          {service}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
-
             </div>
-
           </div>
 
-        </div>
+          {/* =====================================================
+              SECOND INFORMATION ROW
+          ===================================================== */}
 
-      </section>
+          <div
+            className="
+              mt-6
+              grid
+              lg:grid-cols-4
+              gap-6
+            "
+          >
 
+            {/* =================================================
+                PORT RESTRICTIONS
+            ================================================= */}
 
-      {/* =====================================================
-          SECOND INFORMATION ROW
-      ===================================================== */}
-
-      <section className="pb-5">
-
-        <div className="max-w-7xl mx-auto px-6">
-
-          <div className="grid lg:grid-cols-4 gap-0 bg-white border border-gray-200 shadow-sm">
-
-
-            {/* RESTRICTIONS */}
-
-            <div className="p-5 lg:col-span-1 border-b lg:border-b-0 lg:border-r border-gray-200">
-
-              <h2 className="text-sm font-extrabold text-blue-950 uppercase border-b-2 border-yellow-500 pb-2 mb-4">
+            <div
+              className="
+                lg:col-span-2
+                bg-white
+                border
+                border-slate-200
+                rounded-xl
+                p-6
+                md:p-7
+                shadow-lg
+              "
+            >
+              <h2
+                className="
+                  text-lg
+                  font-extrabold
+                  uppercase
+                  tracking-wide
+                "
+                style={{
+                  color: DARK_BLUE,
+                }}
+              >
                 Port Restrictions
               </h2>
 
-              <div className="space-y-2">
+              <div
+                className="mt-3 h-[2px] w-full"
+                style={{
+                  backgroundColor: YELLOW,
+                }}
+              />
 
-                {port.restrictions.map((restriction, index) => (
+              <div className="mt-5 space-y-3">
+                {port.restrictions.map(
+                  (restriction, index) => (
+                    <div
+                      key={index}
+                      className="flex items-start gap-3"
+                    >
+                      <span
+                        className="
+                          font-bold
+                          text-sm
+                          shrink-0
+                        "
+                        style={{
+                          color: "#EF4444",
+                        }}
+                      >
+                        ●
+                      </span>
 
-                  <div
-                    key={index}
-                    className="flex items-start gap-2"
-                  >
-
-                    <span className="text-red-600 text-xs">
-                      ●
-                    </span>
-
-                    <p className="text-[11px] text-gray-600 leading-4">
-                      {restriction}
-                    </p>
-
-                  </div>
-
-                ))}
-
+                      <p
+                        className="
+                          text-sm
+                          leading-5
+                          text-slate-600
+                        "
+                      >
+                        {restriction}
+                      </p>
+                    </div>
+                  )
+                )}
               </div>
-
             </div>
 
+            {/* =================================================
+                NEARBY AIRPORT
+            ================================================= */}
 
-            {/* AIRPORT */}
-
-            <div className="p-5 border-b lg:border-b-0 lg:border-r border-gray-200">
-
-              <h2 className="text-sm font-extrabold text-blue-950 uppercase border-b-2 border-yellow-500 pb-2 mb-4">
+            <div
+              className="
+                bg-white
+                border
+                border-slate-200
+                rounded-xl
+                p-6
+                md:p-7
+                shadow-lg
+              "
+            >
+              <h2
+                className="
+                  text-lg
+                  font-extrabold
+                  uppercase
+                  tracking-wide
+                "
+                style={{
+                  color: DARK_BLUE,
+                }}
+              >
                 Nearby Airport
               </h2>
 
-              <div className="flex items-start gap-3">
+              <div
+                className="mt-3 h-[2px] w-full"
+                style={{
+                  backgroundColor: YELLOW,
+                }}
+              />
 
-                <div className="w-9 h-9 rounded-full bg-blue-950 flex items-center justify-center shrink-0">
-
-                  <Plane className="w-4 h-4 text-yellow-400" />
-
+              <div className="mt-5 flex gap-4">
+                <div
+                  className="
+                    w-11
+                    h-11
+                    rounded-full
+                    flex
+                    items-center
+                    justify-center
+                    shrink-0
+                  "
+                  style={{
+                    backgroundColor: DARK_BLUE,
+                  }}
+                >
+                  <Plane
+                    className="w-5 h-5"
+                    style={{
+                      color: YELLOW,
+                    }}
+                  />
                 </div>
 
                 <div>
-
-                  <p className="text-xs font-bold text-blue-950 leading-4">
+                  <h3
+                    className="
+                      font-bold
+                      text-sm
+                      leading-5
+                    "
+                    style={{
+                      color: DARK_BLUE,
+                    }}
+                  >
                     {port.airport.name}
-                  </p>
+                  </h3>
 
-                  <p className="text-[11px] text-gray-600 leading-4 mt-2">
+                  <p
+                    className="
+                      mt-2
+                      text-sm
+                      leading-5
+                      text-slate-600
+                    "
+                  >
                     {port.airport.distance}
                   </p>
-
                 </div>
-
               </div>
-
             </div>
 
+            {/* =================================================
+                NEARBY HOTELS
+            ================================================= */}
 
-            {/* HOTELS */}
-
-            <div className="p-5 border-b lg:border-b-0 lg:border-r border-gray-200">
-
-              <h2 className="text-sm font-extrabold text-blue-950 uppercase border-b-2 border-yellow-500 pb-2 mb-4">
+            <div
+              className="
+                bg-white
+                border
+                border-slate-200
+                rounded-xl
+                p-6
+                md:p-7
+                shadow-lg
+              "
+            >
+              <h2
+                className="
+                  text-lg
+                  font-extrabold
+                  uppercase
+                  tracking-wide
+                "
+                style={{
+                  color: DARK_BLUE,
+                }}
+              >
                 Nearby Hotels
               </h2>
 
-              <div className="space-y-2">
+              <div
+                className="mt-3 h-[2px] w-full"
+                style={{
+                  backgroundColor: YELLOW,
+                }}
+              />
 
+              <div className="mt-5 space-y-3">
                 {port.hotels.map((hotel, index) => (
-
                   <div
                     key={index}
-                    className="flex items-start gap-2"
+                    className="flex items-start gap-3"
                   >
+                    <div
+                      className="
+                        w-7
+                        h-7
+                        rounded
+                        flex
+                        items-center
+                        justify-center
+                        shrink-0
+                      "
+                      style={{
+                        backgroundColor: DARK_BLUE,
+                      }}
+                    >
+                      <span
+                        className="text-xs"
+                        style={{
+                          color: YELLOW,
+                        }}
+                      >
+                        ★
+                      </span>
+                    </div>
 
-                    <span className="text-blue-900 text-xs">
-                      🏨
-                    </span>
-
-                    <span className="text-[11px] text-gray-600 leading-4">
+                    <p
+                      className="
+                        text-sm
+                        leading-5
+                        text-slate-600
+                      "
+                    >
                       {hotel}
-                    </span>
-
+                    </p>
                   </div>
-
                 ))}
-
               </div>
-
             </div>
-
-
-            {/* MAP */}
-
-            <div className="p-5">
-
-              <h2 className="text-sm font-extrabold text-blue-950 uppercase border-b-2 border-yellow-500 pb-2 mb-4">
-                Port Location
-              </h2>
-
-              <div className="rounded-lg overflow-hidden border border-gray-200">
-
-                <iframe
-                  src={port.map.url}
-                  width="100%"
-                  height="150"
-                  loading="lazy"
-                  allowFullScreen
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="border-0"
-                />
-
-              </div>
-
-            </div>
-
           </div>
 
+          {/* =====================================================
+              MAP
+          ===================================================== */}
+
+          <div
+            className="
+              mt-6
+              bg-white
+              border
+              border-slate-200
+              rounded-xl
+              overflow-hidden
+              shadow-lg
+            "
+          >
+            <div className="p-6 md:p-7">
+              <h2
+                className="
+                  text-lg
+                  font-extrabold
+                  uppercase
+                  tracking-wide
+                "
+                style={{
+                  color: DARK_BLUE,
+                }}
+              >
+                {port.map.title}
+              </h2>
+
+              <div
+                className="mt-3 h-[2px] w-full"
+                style={{
+                  backgroundColor: YELLOW,
+                }}
+              />
+            </div>
+
+            <div className="w-full h-[420px]">
+              <iframe
+                src={port.map.url}
+                title={port.map.title}
+                width="100%"
+                height="100%"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                className="border-0"
+              />
+            </div>
+          </div>
         </div>
-
       </section>
-
 
       {/* =====================================================
           CTA
       ===================================================== */}
 
-      <section className="bg-blue-950 text-white">
-
-        <div className="max-w-7xl mx-auto px-6 py-7">
-
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+      <section
+        className="text-white"
+        style={{
+          backgroundColor: DARK_BLUE,
+        }}
+      >
+        <div
+          className="
+            max-w-7xl
+            mx-auto
+            px-6
+            py-10
+            md:py-12
+            flex
+            flex-col
+            md:flex-row
+            items-center
+            justify-between
+            gap-8
+          "
+        >
+          <div className="flex items-center gap-5">
+            <div
+              className="
+                w-16
+                h-16
+                rounded-full
+                border-2
+                flex
+                items-center
+                justify-center
+                shrink-0
+              "
+              style={{
+                borderColor: YELLOW,
+              }}
+            >
+              <HeadsetIcon />
+            </div>
 
             <div>
-
-              <h2 className="text-2xl md:text-3xl font-extrabold">
+              <h2
+                className="
+                  text-2xl
+                  md:text-3xl
+                  font-extrabold
+                "
+              >
                 {port.cta.title}
               </h2>
 
-              <p className="text-xs md:text-sm text-blue-200 mt-2 max-w-3xl leading-5">
+              <p
+                className="
+                  mt-2
+                  max-w-3xl
+                  text-sm
+                  md:text-base
+                  leading-6
+                  text-blue-100
+                "
+              >
                 {port.cta.description}
               </p>
-
             </div>
-
-            <a
-              href="/contact"
-              className="shrink-0 bg-yellow-500 hover:bg-yellow-400 text-blue-950 font-extrabold text-sm px-6 py-3 rounded-lg transition"
-            >
-              REQUEST ASSISTANCE ↗
-            </a>
-
           </div>
 
+          <a
+            href="/contact"
+            className="
+              inline-flex
+              items-center
+              gap-2
+              font-extrabold
+              px-7
+              py-4
+              rounded-lg
+              transition
+              duration-300
+              whitespace-nowrap
+              shadow-lg
+            "
+            style={{
+              backgroundColor: YELLOW,
+              color: DARK_BLUE,
+            }}
+          >
+            Request Assistance
+
+            <ExternalLink className="w-4 h-4" />
+          </a>
         </div>
-
       </section>
-
     </main>
+  );
+}
+
+/* =========================================================
+   SMALL HEADSET ICON
+========================================================= */
+
+function HeadsetIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      className="w-8 h-8"
+      style={{
+        color: YELLOW,
+      }}
+      aria-hidden="true"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M4 13a8 8 0 0 1 16 0"
+      />
+
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M4 13v4a2 2 0 0 0 2 2h1v-6H6a2 2 0 0 0-2 2Z"
+      />
+
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M20 13v4a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2Z"
+      />
+
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M17 19c0 1.1-.9 2-2 2h-2"
+      />
+    </svg>
   );
 }
