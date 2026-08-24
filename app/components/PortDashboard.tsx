@@ -20,6 +20,10 @@ import {
   ExternalLink,
 } from "lucide-react";
 
+const SLATE_BLUE = "#6B7FA8";
+const DARK_BLUE = "#102B63";
+const YELLOW = "#FACC15";
+
 type PortDashboardProps = {
   port: {
     hero: {
@@ -70,14 +74,6 @@ type PortDashboardProps = {
 };
 
 /* =========================================================
-   COLORS
-========================================================= */
-
-const SLATE_BLUE = "#6B7FA8";
-const DARK_BLUE = "#102A63";
-const YELLOW = "#FACC15";
-
-/* =========================================================
    ICON HELPERS
 ========================================================= */
 
@@ -87,16 +83,12 @@ function getStatIcon(
   switch (icon) {
     case "anchor":
       return Anchor;
-
     case "ship":
       return Ship;
-
     case "globe":
       return Globe2;
-
     case "clock":
       return Clock3;
-
     default:
       return Anchor;
   }
@@ -246,243 +238,187 @@ export default function PortDashboard({
         backgroundColor: SLATE_BLUE,
       }}
     >
-      {/* =====================================================
-          HERO
-      ===================================================== */}
+{/* =====================================================
+    HERO
+===================================================== */}
 
-      <section
-        className="w-full overflow-hidden"
-        style={{
-          backgroundColor: SLATE_BLUE,
-        }}
-      >
-        <div
+<section className="w-full bg-[#6B7FA8]">
+  <div className="grid grid-cols-1 lg:grid-cols-[22%_56%_22%] min-h-[520px]">
+
+    {/* =================================================
+        LEFT SLATE BLUE PANEL
+    ================================================= */}
+    <div
+      className="
+        bg-[#6B7FA8]
+        flex
+        items-center
+        px-8
+        md:px-10
+        lg:px-8
+        xl:px-10
+      "
+    >
+      <div className="w-full">
+
+        {/* PORT INFORMATION CENTER */}
+        <p
           className="
-            w-full
-            min-h-[560px]
-            lg:min-h-[620px]
-            grid
-            grid-cols-1
-            lg:grid-cols-[minmax(260px,1fr)_minmax(560px,3fr)_minmax(260px,1fr)]
+            text-sm
+            md:text-base
+            font-bold
+            tracking-[0.18em]
+            uppercase
+            text-blue-950
+            leading-relaxed
+            mb-6
           "
         >
-          {/* =================================================
-              LEFT SLATE BLUE PANEL
-          ================================================= */}
+          Philippine Port
+          <br />
+          Information Center
+        </p>
 
-          <div
-            className="
-              relative
-              flex
-              items-center
-              justify-center
-              px-8
-              py-12
-              lg:px-10
-              xl:px-14
-              order-2
-              lg:order-1
-            "
-            style={{
-              backgroundColor: SLATE_BLUE,
-            }}
-          >
-            <div className="w-full max-w-[460px]">
-              {/* SMALL LABEL */}
+        {/* PORT TITLE */}
+        <h1
+          className="
+            text-5xl
+            md:text-6xl
+            lg:text-5xl
+            xl:text-6xl
+            font-black
+            uppercase
+            leading-[0.9]
+            tracking-tight
+            text-blue-950
+          "
+        >
+          {port.hero.title}
+        </h1>
 
-              <p
-                className="
-                  text-sm
-                  md:text-base
-                  font-bold
-                  tracking-[0.20em]
-                  uppercase
-                  mb-5
-                "
-                style={{
-                  color: "#FFFFFF",
-                }}
-              >
-                Philippine Port Information Center
-              </p>
+        {/* YELLOW DIVIDER */}
+        <div
+          className="
+            mt-7
+            h-1
+            w-24
+            rounded-full
+            bg-yellow-400
+          "
+        />
 
-              {/* PORT TITLE */}
+        {/* DESCRIPTION */}
+        <p
+          className="
+            mt-6
+            text-sm
+            md:text-base
+            lg:text-sm
+            xl:text-base
+            font-medium
+            leading-6
+            text-white
+            drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]
+          "
+        >
+          {port.hero.subtitle}
+        </p>
 
-              <h1
-                className="
-                  text-5xl
-                  md:text-6xl
-                  xl:text-7xl
-                  font-black
-                  uppercase
-                  leading-[0.92]
-                  tracking-tight
-                "
-                style={{
-                  color: DARK_BLUE,
-                }}
-              >
-                {port.hero.title}
-              </h1>
+      </div>
+    </div>
 
-              {/* YELLOW LINE */}
 
-              <div
-                className="
-                  mt-6
-                  h-1
-                  w-24
-                  rounded-full
-                "
-                style={{
-                  backgroundColor: YELLOW,
-                }}
-              />
+    {/* =================================================
+        CENTER HERO IMAGE
+    ================================================= */}
+    <div className="relative min-h-[520px] lg:min-h-[600px] overflow-hidden">
 
-              {/* DESCRIPTION */}
+      <img
+        src={port.hero.image}
+        alt={port.hero.title}
+        className="
+          absolute
+          inset-0
+          w-full
+          h-full
+          object-cover
+        "
+      />
 
-              <p
-                className="
-                  mt-6
-                  text-base
-                  md:text-lg
-                  leading-7
-                  font-medium
-                "
-                style={{
-                  color: "#FFFFFF",
-                }}
-              >
-                {port.hero.subtitle}
-              </p>
-            </div>
-          </div>
+    </div>
 
-          {/* =================================================
-              CENTER HERO IMAGE
-          ================================================= */}
 
-          <div
-            className="
-              relative
-              w-full
-              min-h-[420px]
-              lg:min-h-[620px]
-              overflow-hidden
-              order-1
-              lg:order-2
-            "
-          >
-            <img
-              src={port.hero.image}
-              alt={port.hero.title}
-              className="
-                absolute
-                inset-0
-                w-full
-                h-full
-                object-cover
-                object-center
-              "
-            />
+    {/* =================================================
+        RIGHT SLATE BLUE PANEL
+    ================================================= */}
+    <div
+      className="
+        bg-[#6B7FA8]
+        flex
+        items-center
+        justify-center
+        px-8
+        md:px-10
+        lg:px-8
+        xl:px-10
+      "
+    >
+      <div className="text-center w-full">
 
-            {/* VERY LIGHT IMAGE SHADING
-                Keeps the photograph vivid while improving
-                visual separation from the side panels.
-            */}
+        {/* COMPANY NAME */}
+        <h2
+          className="
+            text-3xl
+            md:text-4xl
+            lg:text-3xl
+            xl:text-4xl
+            font-black
+            uppercase
+            leading-[0.95]
+            tracking-tight
+            text-white
+            drop-shadow-[0_2px_4px_rgba(0,0,0,0.45)]
+          "
+        >
+          KP GLOBAL
+          <br />
+          SHIPPING INC.
+        </h2>
 
-            <div
-              className="
-                absolute
-                inset-0
-                pointer-events-none
-              "
-              style={{
-                background:
-                  "linear-gradient(90deg, rgba(0,0,0,0.06), transparent 18%, transparent 82%, rgba(0,0,0,0.06))",
-              }}
-            />
-          </div>
+        {/* YELLOW DIVIDER */}
+        <div
+          className="
+            mt-6
+            mx-auto
+            h-1
+            w-24
+            rounded-full
+            bg-yellow-400
+          "
+        />
 
-          {/* =================================================
-              RIGHT SLATE BLUE PANEL
-          ================================================= */}
+        {/* TAGLINE */}
+        <p
+          className="
+            mt-5
+            text-sm
+            md:text-base
+            lg:text-sm
+            xl:text-base
+            font-semibold
+            leading-6
+            text-white
+            whitespace-nowrap
+          "
+        >
+          Quick, Prompt, and Stand-beside YOU
+        </p>
 
-          <div
-            className="
-              relative
-              flex
-              items-center
-              justify-center
-              px-8
-              py-12
-              lg:px-10
-              xl:px-14
-              order-3
-            "
-            style={{
-              backgroundColor: SLATE_BLUE,
-            }}
-          >
-            <div className="w-full max-w-[460px] text-center lg:text-left">
-              {/* COMPANY NAME */}
+      </div>
+    </div>
 
-              <h2
-                className="
-                  text-3xl
-                  md:text-4xl
-                  xl:text-5xl
-                  font-black
-                  uppercase
-                  leading-tight
-                  tracking-tight
-                "
-                style={{
-                  color: "#FFFFFF",
-                }}
-              >
-                KP GLOBAL
-                <br />
-                SHIPPING INC.
-              </h2>
-
-              {/* YELLOW LINE */}
-
-              <div
-                className="
-                  mt-6
-                  h-1
-                  w-24
-                  rounded-full
-                  mx-auto
-                  lg:mx-0
-                "
-                style={{
-                  backgroundColor: YELLOW,
-                }}
-              />
-
-              {/* TAGLINE */}
-
-              <p
-                className="
-                  mt-5
-                  text-base
-                  md:text-lg
-                  xl:text-xl
-                  font-semibold
-                  leading-relaxed
-                "
-                style={{
-                  color: "#FFFFFF",
-                }}
-              >
-                Quick, Prompt, and Stand-beside YOU
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+  </div>
+</section>
 
       {/* =====================================================
           PORT STATS
@@ -495,6 +431,7 @@ export default function PortDashboard({
         }}
       >
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4">
+
           {port.stats.map((stat, index) => {
             const Icon = getStatIcon(stat.icon);
 
@@ -509,9 +446,11 @@ export default function PortDashboard({
                   py-6
                   md:px-8
                   border-r
-                  border-blue-800
                   last:border-r-0
                 "
+                style={{
+                  borderColor: "#29467D",
+                }}
               >
                 <Icon
                   className="
@@ -571,7 +510,7 @@ export default function PortDashboard({
         <div className="max-w-7xl mx-auto px-4 md:px-6">
 
           {/* =================================================
-              FIRST INFORMATION CARD
+              FIRST INFORMATION ROW
           ================================================= */}
 
           <div
@@ -580,15 +519,13 @@ export default function PortDashboard({
               border
               border-slate-200
               rounded-xl
-              shadow-lg
+              shadow-sm
               overflow-hidden
             "
           >
             <div className="grid lg:grid-cols-4">
 
-              {/* =================================================
-                  PORT OVERVIEW
-              ================================================= */}
+              {/* PORT OVERVIEW */}
 
               <div
                 className="
@@ -633,9 +570,7 @@ export default function PortDashboard({
                 </p>
               </div>
 
-              {/* =================================================
-                  QUICK FACTS
-              ================================================= */}
+              {/* QUICK FACTS */}
 
               <div
                 className="
@@ -669,6 +604,7 @@ export default function PortDashboard({
                 />
 
                 <div className="mt-5 space-y-3">
+
                   {port.quickFacts.map((fact, index) => {
                     const Icon = getQuickFactIcon(fact.label);
 
@@ -704,12 +640,11 @@ export default function PortDashboard({
                       </div>
                     );
                   })}
+
                 </div>
               </div>
 
-              {/* =================================================
-                  PORT FACILITIES
-              ================================================= */}
+              {/* PORT FACILITIES */}
 
               <div
                 className="
@@ -743,6 +678,7 @@ export default function PortDashboard({
                 />
 
                 <div className="mt-5 space-y-3">
+
                   {port.facilities.map((facility, index) => {
                     const Icon = getFacilityIcon(facility);
 
@@ -775,14 +711,14 @@ export default function PortDashboard({
                       </div>
                     );
                   })}
+
                 </div>
               </div>
 
-              {/* =================================================
-                  PORT SERVICES
-              ================================================= */}
+              {/* PORT SERVICES */}
 
               <div className="p-6 md:p-7">
+
                 <h2
                   className="
                     text-lg
@@ -805,6 +741,7 @@ export default function PortDashboard({
                 />
 
                 <div className="mt-5 space-y-3">
+
                   {port.services.map((service, index) => {
                     const Icon = getServiceIcon(service);
 
@@ -837,14 +774,15 @@ export default function PortDashboard({
                       </div>
                     );
                   })}
+
                 </div>
               </div>
             </div>
           </div>
 
-          {/* =====================================================
+          {/* =================================================
               SECOND INFORMATION ROW
-          ===================================================== */}
+          ================================================= */}
 
           <div
             className="
@@ -855,9 +793,7 @@ export default function PortDashboard({
             "
           >
 
-            {/* =================================================
-                PORT RESTRICTIONS
-            ================================================= */}
+            {/* PORT RESTRICTIONS */}
 
             <div
               className="
@@ -868,7 +804,7 @@ export default function PortDashboard({
                 rounded-xl
                 p-6
                 md:p-7
-                shadow-lg
+                shadow-sm
               "
             >
               <h2
@@ -893,43 +829,41 @@ export default function PortDashboard({
               />
 
               <div className="mt-5 space-y-3">
-                {port.restrictions.map(
-                  (restriction, index) => (
-                    <div
-                      key={index}
-                      className="flex items-start gap-3"
-                    >
-                      <span
-                        className="
-                          font-bold
-                          text-sm
-                          shrink-0
-                        "
-                        style={{
-                          color: "#EF4444",
-                        }}
-                      >
-                        ●
-                      </span>
 
-                      <p
-                        className="
-                          text-sm
-                          leading-5
-                          text-slate-600
-                        "
-                      >
-                        {restriction}
-                      </p>
-                    </div>
-                  )
-                )}
+                {port.restrictions.map((restriction, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start gap-3"
+                  >
+                    <span
+                      className="
+                        font-bold
+                        text-sm
+                        shrink-0
+                      "
+                      style={{
+                        color: "#EF4444",
+                      }}
+                    >
+                      ●
+                    </span>
+
+                    <p
+                      className="
+                        text-sm
+                        leading-5
+                        text-slate-600
+                      "
+                    >
+                      {restriction}
+                    </p>
+                  </div>
+                ))}
+
               </div>
             </div>
 
-            {/* =================================================
-                NEARBY AIRPORT
-            ================================================= */}
+            {/* NEARBY AIRPORT */}
 
             <div
               className="
@@ -939,7 +873,7 @@ export default function PortDashboard({
                 rounded-xl
                 p-6
                 md:p-7
-                shadow-lg
+                shadow-sm
               "
             >
               <h2
@@ -964,6 +898,7 @@ export default function PortDashboard({
               />
 
               <div className="mt-5 flex gap-4">
+
                 <div
                   className="
                     w-11
@@ -1011,12 +946,11 @@ export default function PortDashboard({
                     {port.airport.distance}
                   </p>
                 </div>
+
               </div>
             </div>
 
-            {/* =================================================
-                NEARBY HOTELS
-            ================================================= */}
+            {/* NEARBY HOTELS */}
 
             <div
               className="
@@ -1026,7 +960,7 @@ export default function PortDashboard({
                 rounded-xl
                 p-6
                 md:p-7
-                shadow-lg
+                shadow-sm
               "
             >
               <h2
@@ -1051,6 +985,7 @@ export default function PortDashboard({
               />
 
               <div className="mt-5 space-y-3">
+
                 {port.hotels.map((hotel, index) => (
                   <div
                     key={index}
@@ -1091,13 +1026,14 @@ export default function PortDashboard({
                     </p>
                   </div>
                 ))}
+
               </div>
             </div>
           </div>
 
-          {/* =====================================================
+          {/* =================================================
               MAP
-          ===================================================== */}
+          ================================================= */}
 
           <div
             className="
@@ -1107,10 +1043,11 @@ export default function PortDashboard({
               border-slate-200
               rounded-xl
               overflow-hidden
-              shadow-lg
+              shadow-sm
             "
           >
             <div className="p-6 md:p-7">
+
               <h2
                 className="
                   text-lg
@@ -1134,6 +1071,7 @@ export default function PortDashboard({
             </div>
 
             <div className="w-full h-[420px]">
+
               <iframe
                 src={port.map.url}
                 title={port.map.title}
@@ -1144,8 +1082,10 @@ export default function PortDashboard({
                 referrerPolicy="no-referrer-when-downgrade"
                 className="border-0"
               />
+
             </div>
           </div>
+
         </div>
       </section>
 
@@ -1175,6 +1115,7 @@ export default function PortDashboard({
           "
         >
           <div className="flex items-center gap-5">
+
             <div
               className="
                 w-16
@@ -1194,6 +1135,7 @@ export default function PortDashboard({
             </div>
 
             <div>
+
               <h2
                 className="
                   text-2xl
@@ -1216,6 +1158,7 @@ export default function PortDashboard({
               >
                 {port.cta.description}
               </p>
+
             </div>
           </div>
 
@@ -1233,6 +1176,7 @@ export default function PortDashboard({
               duration-300
               whitespace-nowrap
               shadow-lg
+              hover:opacity-90
             "
             style={{
               backgroundColor: YELLOW,
