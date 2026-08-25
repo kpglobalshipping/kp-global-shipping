@@ -2,7 +2,7 @@ import ExecutiveLeadership from "../components/ExecutiveLeadership";
 import Image from "next/image";
 export default function CompanyPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-slate-100">
 
       {/* Hero */}
 
@@ -120,7 +120,7 @@ export default function CompanyPage() {
 
 <section
   id="foundation"
-  className="py-24 bg-white"
+  className="py-24 bg-slate-100"
 >
 
   <div className="max-w-7xl mx-auto px-6">
@@ -445,7 +445,7 @@ export default function CompanyPage() {
 
 <section
   id="timeline"
-  className="py-24 bg-white"
+  className="py-24 bg-slate-100"
 >
 
   <div className="max-w-7xl mx-auto px-6">

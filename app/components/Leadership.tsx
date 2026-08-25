@@ -19,7 +19,7 @@ export default function Leadership() {
 ];
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-slate-100">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}

@@ -18,7 +18,7 @@ import { technicalServicesBenefits } from "../../data/technicalServicesBenefits"
 
 export default function TechnicalServicesPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-slate-100">
 
       <ServiceHero
         title="Technical Services"
@@ -38,7 +38,7 @@ export default function TechnicalServicesPage() {
       />
 
       <WhyChooseKP
-        title="Why Choose KP Global Shipping?"
+        heading="Why Choose KP Global Shipping?"
         subtitle="Reliable. Responsive. Professional."
         reasons={[
           "Experienced Marine Coordinators",

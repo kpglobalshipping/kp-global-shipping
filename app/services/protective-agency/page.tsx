@@ -18,7 +18,7 @@ import { protectiveAgencyBenefits } from "../../data/protectiveAgencyBenefits";
 
 export default function ProtectiveAgencyPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-slate-100">
 
       <ServiceHero
         title="Protective Agency Services"
@@ -38,7 +38,7 @@ export default function ProtectiveAgencyPage() {
       />
 
       <WhyChooseKP
-        title="Why Choose KP Global Shipping?"
+        heading="Why Choose KP Global Shipping?"
         subtitle="Independent. Transparent. Professional."
         reasons={[
           "Independent Owner Representation",

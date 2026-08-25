@@ -9,7 +9,7 @@ import { technicalCategories } from "../data/technicalCategories";
 import { featuredResources } from "../data/featuredResources";
 export default function TechnicalLibraryPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-slate-100">
 
       <TechnicalHero
         title={technicalLibrary.hero.title}

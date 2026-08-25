@@ -18,7 +18,7 @@ import { customsClearanceBenefits } from "../../data/customsClearanceBenefits";
 
 export default function CustomsClearancePage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-slate-100">
 
       <ServiceHero
         title="Customs Clearance"

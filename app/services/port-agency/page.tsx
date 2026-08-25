@@ -12,7 +12,7 @@ import ServiceCTA from "../../components/ServiceCTA";
 
 export default function PortAgencyPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-slate-100">
 
       <ServiceHero
   title={portAgency.hero.title}

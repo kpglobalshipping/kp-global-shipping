@@ -18,7 +18,7 @@ import { crewChangeBenefits } from "../../data/crewChangeBenefits";
 
 export default function CrewChangePage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-slate-100">
 
       <ServiceHero
         title="Crew Change Services"

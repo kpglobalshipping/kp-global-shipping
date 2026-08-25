@@ -18,7 +18,7 @@ import { offshoreSupportBenefits } from "../../data/offshoreSupportBenefits";
 
 export default function OffshoreSupportPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-slate-100">
 
       <ServiceHero
         title="Offshore Support"

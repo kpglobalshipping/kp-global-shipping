@@ -33,7 +33,7 @@ export default function ClientBenefits({
   benefits,
 }: ClientBenefitsProps) {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-slate-100">
 
       <div className="max-w-7xl mx-auto px-6">
 

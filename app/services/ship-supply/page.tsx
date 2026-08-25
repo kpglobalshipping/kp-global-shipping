@@ -18,7 +18,7 @@ import { shipSupplyProcess } from "@/app/data/shipSupplyProcess";
 
 export default function ShipSupplyPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-slate-100">
 
       <ServiceHero
         title="Ship Supply"

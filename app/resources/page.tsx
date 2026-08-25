@@ -63,7 +63,7 @@ export default function ResourcesPage() {
         </div>
 
       </section>
-      <section className="bg-white py-10 border-b border-gray-200">
+      <section className="bg-slate-100 py-10 border-b border-gray-200">
 
   <div className="max-w-6xl mx-auto px-6">
 
@@ -126,7 +126,7 @@ export default function ResourcesPage() {
   </div>
 
 </section>
-<section className="py-14 bg-white">
+<section className="py-14 bg-slate-100">
 
   <div className="max-w-6xl mx-auto px-6">
 

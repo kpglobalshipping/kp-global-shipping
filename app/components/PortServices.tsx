@@ -30,7 +30,7 @@ export default function PortServices({
   services,
 }: PortServicesProps) {
   return (
-    <section className="bg-white py-8">
+    <section className="bg-slate-100 py-8">
 
       <div className="max-w-7xl mx-auto px-6">
 

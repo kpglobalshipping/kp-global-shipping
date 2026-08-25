@@ -12,7 +12,7 @@ import ServiceCTA from "../../components/ServiceCTA";
 
 export default function HusbandryServicesPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-slate-100">
 
       <ServiceHero
         title={husbandryServices.hero.title}
