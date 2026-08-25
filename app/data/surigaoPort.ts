@@ -32,7 +32,7 @@ export const surigaoPort = {
   overview: {
     title: "Port Overview",
     description:
-      "The Port of Surigao is a major maritime gateway serving Surigao City and the wider Caraga Region. The port handles passenger, RoRo, break-bulk, bulk and other cargo activities while providing important maritime connections between Mindanao, the Visayas and nearby island provinces. Its strategic location also supports regional mining, agricultural, fishing, industrial and commercial activities.",
+      "The Port of Surigao is a major maritime gateway serving Surigao City and the wider Caraga Region. The port handles passenger, RoRo, break-bulk, bulk, and other cargo activities while providing important maritime connections between Mindanao, the Visayas, and nearby island provinces. Its strategic location also supports regional mining, agricultural, fishing, industrial, and commercial activities.",
   },
 
   quickFacts: [
@@ -62,11 +62,12 @@ export const surigaoPort = {
     },
     {
       label: "Tug Assistance",
-      value: "Available subject to vessel requirements and port conditions",
+      value:
+        "Available subject to vessel requirements and prevailing port conditions",
     },
     {
       label: "Fresh Water",
-      value: "Not Available at anchorage",
+      value: "Not available at anchorage",
     },
     {
       label: "Bunkering",
@@ -84,7 +85,7 @@ export const surigaoPort = {
     "PPA Administrative and Operations Facilities",
     "Bunkering Services",
     "Garbage and Waste Reception",
-    "Stevedering and Cargo Handling Services",
+    "Stevedoring and Cargo Handling Services",
   ],
 
   services: [
@@ -100,12 +101,12 @@ export const surigaoPort = {
   ],
 
   restrictions: [
-    "Vessel operations are subject to Philippine Ports Authority regulations, prevailing weather conditions.",
+    "Vessel operations are subject to Philippine Ports Authority regulations and prevailing weather conditions.",
     "Pilotage requirements shall be confirmed with the relevant port authority and pilot station prior to vessel arrival.",
-    "Docking and undocking at Anchorage schedules are subject to port traffic, terminal readiness and operational conditions.",
-    "Cargo operations may be affected by heavy rain, strong winds and other adverse weather conditions.",
+    "Anchorage, berthing, and unberthing schedules are subject to port traffic, terminal readiness, and prevailing operational conditions.",
+    "Cargo operations may be affected by heavy rain, strong winds, and other adverse weather conditions.",
     "Vessel documentation and pre-arrival requirements should be completed within the required port submission timelines.",
-    "Fresh water is not available at anchorage, bunkering, waste disposal and other husbandry services should be arranged in advance whenever possible.",
+    "Fresh water is not available at anchorage. Bunkering, waste disposal, and other husbandry services should be arranged in advance whenever possible.",
   ],
 
   airport: {
@@ -129,7 +130,7 @@ export const surigaoPort = {
   cta: {
     title: "Need Port Agency Support in Surigao?",
     description:
-      "KP Global Shipping Inc. provides professional port agency, protective agency, crew change, husbandry and marine support services for vessels calling Surigao and other Philippine ports.",
+      "KP Global Shipping Inc. provides professional port agency, protective agency, crew change, husbandry, and marine support services for vessels calling Surigao and other Philippine ports.",
   },
 };
 
