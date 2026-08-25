@@ -98,19 +98,20 @@ export default function About() {
 
           </div>
 
-          {/* RIGHT */}
+{/* RIGHT */}
 
-          <div>
-
-            <Image
-              src="/images/office.jpg"
-              alt="KP Global Shipping Office"
-              width={700}
-              height={600}
-              className="rounded-3xl shadow-2xl object-cover w-full h-auto"
-            />
-
-          </div>
+<div className="flex justify-center lg:justify-end">
+  <div className="w-full max-w-[620px]">
+    <Image
+  src="/images/office.jpg"
+  alt="KP Global Shipping Office"
+  width={700}
+  height={400}
+  loading="eager"
+  className="w-full h-auto object-contain rounded-2xl"
+/>
+  </div>
+</div>
 
         </div>
 
