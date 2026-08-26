@@ -30,7 +30,7 @@ export default function TechnicalCategories({
   categories,
 }: TechnicalCategoriesProps) {
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-24 bg-[#E0EAF4]">
 
       <div className="max-w-7xl mx-auto px-6">
 

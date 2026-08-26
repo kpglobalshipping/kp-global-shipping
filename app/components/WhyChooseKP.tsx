@@ -10,7 +10,7 @@ export default function WhyChooseKP({
   reasons,
 }: WhyChooseKPProps) {
   return (
-    <section className="py-20 bg-slate-100">
+    <section className="py-20 bg-[#D5E2EF]">
 
       <div className="max-w-7xl mx-auto px-6">
 
@@ -31,7 +31,7 @@ export default function WhyChooseKP({
           {reasons.map((reason, index) => (
             <div
               key={index}
-              className="bg-gray-50 rounded-2xl shadow p-8"
+              className="bg-white rounded-2xl shadow p-8"
             >
               <p className="text-lg text-gray-700">
                 ✅ {reason}
@@ -46,3 +46,4 @@ export default function WhyChooseKP({
     </section>
   );
 }
+

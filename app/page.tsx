@@ -25,7 +25,7 @@ export default function Home() {
       <Announcement />
       <Navbar />
 
-      <main className="min-h-screen bg-slate-100">
+      <main className="min-h-screen bg-[#E8EEF5]">
         <Hero />
         <WhyKP />
         <Achievements />

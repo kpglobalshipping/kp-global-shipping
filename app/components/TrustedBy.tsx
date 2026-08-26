@@ -9,7 +9,7 @@ export default function TrustedBy() {
   ];
 
   return (
-    <section className="py-20 bg-slate-100">
+    <section className="py-20 bg-[#D5E2EF]">
       <div className="max-w-7xl mx-auto px-6">
 
         <h2 className="text-4xl font-bold text-center text-blue-900">
@@ -25,7 +25,7 @@ export default function TrustedBy() {
           {clients.map((client) => (
             <div
               key={client}
-              className="border rounded-lg p-6 text-center bg-gray-50 hover:bg-blue-900 hover:text-white transition"
+              className="border rounded-lg p-6 text-center bg-white hover:bg-blue-900 hover:text-white transition"
             >
               {client}
             </div>
@@ -37,3 +37,4 @@ export default function TrustedBy() {
     </section>
   );
 }
+

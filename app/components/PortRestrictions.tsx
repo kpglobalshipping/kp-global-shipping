@@ -8,7 +8,7 @@ export default function PortRestrictions({
   restrictions,
 }: PortRestrictionsProps) {
   return (
-    <section className="bg-gray-50 py-8">
+    <section className="bg-[#E0EAF4] py-8">
 
       <div className="max-w-7xl mx-auto px-6">
 

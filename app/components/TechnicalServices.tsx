@@ -47,7 +47,7 @@ const services = [
 
 export default function TechnicalServices() {
   return (
-    <section id="technical" className="py-24 bg-slate-100">
+    <section id="technical" className="py-24 bg-[#D5E2EF]">
 
       <div className="max-w-7xl mx-auto px-6">
 
@@ -75,7 +75,7 @@ export default function TechnicalServices() {
 
             <div
               key={service.title}
-              className="bg-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition"
+              className="bg-[#E0EAF4] rounded-2xl p-8 shadow-lg hover:shadow-xl transition"
             >
 
               <div className="text-5xl mb-6">

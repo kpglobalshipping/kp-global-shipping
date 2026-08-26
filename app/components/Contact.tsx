@@ -5,7 +5,7 @@ import { FormEvent, useState } from "react";
 export default function Contact() {
   const [status, setStatus] = useState("");
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const form = new FormData(event.currentTarget);
@@ -14,27 +14,32 @@ export default function Contact() {
     const email = String(form.get("email") ?? "").trim();
     const requirements = String(form.get("requirements") ?? "").trim();
 
-    const subject = encodeURIComponent(
-      `Quote Request from ${company}`,
-    );
+    const subject = `Quote Request from ${company}`;
 
-    const body = encodeURIComponent(
+    const message =
+      `To: agent@kp-smt.com, kp.agent22@gmail.com\n\n` +
+      `Subject: ${subject}\n\n` +
       `Dear KP Global Shipping,\n\n` +
-        `Company Name: ${company}\n` +
-        `Email Address: ${email}\n\n` +
-        `Vessel Requirements:\n${requirements}\n\n` +
-        `Thank you.`,
-    );
+      `Company Name: ${company}\n` +
+      `Email Address: ${email}\n\n` +
+      `Vessel Requirements:\n${requirements}\n\n` +
+      `Thank you.\n\n` +
+      `---\n` +
+      `Submitted through KP Global Shipping website`;
 
-    const recipients =
-      "agent@kp-smt.com,kp.agent22@gmail.com";
+    try {
+      await navigator.clipboard.writeText(message);
 
-    setStatus(
-      "Opening your email application with your quote request ready to send...",
-    );
+      setStatus(
+        "Your quote request has been copied. Please paste it into your email and send it to our Operations Team.",
+      );
+    } catch (error) {
+      console.error("Clipboard error:", error);
 
-    window.location.href =
-      `mailto:${recipients}?subject=${subject}&body=${body}`;
+      setStatus(
+        "Unable to copy automatically. Please copy the information below and email it to agent@kp-smt.com or kp.agent22@gmail.com.",
+      );
+    }
   }
 
   return (
@@ -161,12 +166,26 @@ export default function Contact() {
                 type="submit"
                 className="w-full rounded-lg bg-blue-900 px-6 py-3 font-bold text-white transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:ring-offset-2"
               >
-                Request a Quote
+                Prepare Quote Request
               </button>
+
+              <div className="rounded-lg bg-blue-50 border border-blue-200 p-4 text-sm text-blue-950">
+                <p className="font-semibold mb-2">
+                  Send your request to:
+                </p>
+
+                <p>
+                  📧 agent@kp-smt.com
+                </p>
+
+                <p>
+                  📧 kp.agent22@gmail.com
+                </p>
+              </div>
 
               <p
                 aria-live="polite"
-                className="min-h-5 text-center text-sm text-gray-600"
+                className="min-h-12 text-center text-sm text-gray-600"
               >
                 {status}
               </p>

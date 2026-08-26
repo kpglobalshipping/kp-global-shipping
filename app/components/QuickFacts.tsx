@@ -54,7 +54,7 @@ export default function QuickFacts({
   facts,
 }: QuickFactsProps) {
   return (
-    <section className="bg-slate-100 py-8">
+    <section className="bg-[#D5E2EF] py-8">
 
       <div className="max-w-7xl mx-auto px-6">
 
@@ -83,7 +83,7 @@ export default function QuickFacts({
             return (
               <div
                 key={index}
-                className="bg-gray-50 border border-gray-200 rounded-xl p-4 hover:border-yellow-400 hover:shadow-md transition-all"
+                className="bg-[#E0EAF4] border border-gray-200 rounded-xl p-4 hover:border-yellow-400 hover:shadow-md transition-all"
               >
 
                 <div className="flex items-center gap-3 mb-3">

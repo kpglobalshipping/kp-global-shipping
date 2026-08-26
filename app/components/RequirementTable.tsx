@@ -46,7 +46,7 @@ export default function RequirementTable({
 
               <tr
   key={index}
-  className="border-t border-gray-200 even:bg-slate-50 hover:bg-blue-50 transition-colors"
+  className="border-t border-gray-200 even:bg-[#E0EAF4] hover:bg-blue-50 transition-colors"
 >
               
 

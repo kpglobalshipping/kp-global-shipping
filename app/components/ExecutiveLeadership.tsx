@@ -3,7 +3,7 @@ import { leadership } from "../data/leadership";
 
 export default function ExecutiveLeadership() {
   return (
-    <section className="py-24 bg-slate-50">
+    <section className="py-24 bg-[#E0EAF4]">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Section Heading */}

@@ -24,7 +24,7 @@ export default function PortStats({
   stats,
 }: PortStatsProps) {
   return (
-    <section className="bg-slate-100 py-12">
+    <section className="bg-[#D5E2EF] py-12">
 
       <div className="max-w-7xl mx-auto px-6">
 

@@ -33,7 +33,7 @@ export default function ClientBenefits({
   benefits,
 }: ClientBenefitsProps) {
   return (
-    <section className="py-20 bg-slate-100">
+    <section className="py-20 bg-[#D5E2EF]">
 
       <div className="max-w-7xl mx-auto px-6">
 
@@ -59,7 +59,7 @@ export default function ClientBenefits({
 
               <div
                 key={index}
-                className="bg-gray-50 rounded-2xl shadow-lg p-8 hover:shadow-xl transition"
+                className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition"
               >
 
                 <Icon
@@ -88,3 +88,4 @@ export default function ClientBenefits({
     </section>
   );
 }
+

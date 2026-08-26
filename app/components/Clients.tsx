@@ -11,7 +11,7 @@ export default function Clients() {
   ];
 
   return (
-    <section className="py-24 bg-slate-100">
+    <section className="py-24 bg-[#D5E2EF]">
       <div className="max-w-7xl mx-auto px-6">
 
         <h2 className="text-4xl font-bold text-center text-blue-900">
@@ -27,7 +27,7 @@ export default function Clients() {
           {clients.map((client) => (
             <div
               key={client}
-              className="bg-gray-100 rounded-xl shadow p-8 text-center hover:bg-blue-900 hover:text-white transition"
+              className="bg-white rounded-xl shadow p-8 text-center hover:bg-blue-900 hover:text-white transition"
             >
               <div className="text-4xl mb-4">🤝</div>
 
@@ -43,3 +43,4 @@ export default function Clients() {
     </section>
   );
 }
+

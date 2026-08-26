@@ -9,7 +9,7 @@ export default function FeaturedResources({
   resources,
 }: FeaturedResourcesProps) {
   return (
-    <section className="py-24 bg-slate-100">
+    <section className="py-24 bg-[#D5E2EF]">
 
       <div className="max-w-7xl mx-auto px-6">
 
@@ -31,7 +31,7 @@ export default function FeaturedResources({
 
             <div
               key={index}
-              className="bg-gray-50 rounded-2xl border border-gray-200 p-8 hover:shadow-xl transition-all duration-300"
+              className="bg-white rounded-2xl border border-gray-200 p-8 hover:shadow-xl transition-all duration-300"
             >
 
               <span className="inline-block bg-yellow-400 text-blue-900 text-xs font-bold px-3 py-1 rounded-full mb-4">
@@ -64,3 +64,4 @@ export default function FeaturedResources({
     </section>
   );
 }
+

@@ -63,7 +63,7 @@ export default function FAQAccordion({
 
               {isOpen && (
 
-                <div className="border-t border-gray-100 bg-slate-50 px-6 py-6 leading-8 text-gray-700">
+                <div className="border-t border-gray-100 bg-[#E0EAF4] px-6 py-6 leading-8 text-gray-700">
 
                   {item.answer}
 

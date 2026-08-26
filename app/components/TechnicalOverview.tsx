@@ -8,7 +8,7 @@ export default function TechnicalOverview({
   description,
 }: TechnicalOverviewProps) {
   return (
-    <section className="py-24 bg-slate-100">
+    <section className="py-24 bg-[#D5E2EF]">
 
       <div className="max-w-5xl mx-auto px-6 text-center">
 

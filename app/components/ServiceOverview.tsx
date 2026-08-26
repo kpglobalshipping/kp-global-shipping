@@ -10,7 +10,7 @@ export default function ServiceOverview({
   description,
 }: ServiceOverviewProps) {
   return (
-    <section className="py-20 bg-slate-100">
+    <section className="py-20 bg-[#D5E2EF]">
 
       <div className="max-w-7xl mx-auto px-6">
 

@@ -38,7 +38,7 @@ export default function NearbyHotels({
 
           <div
             key={index}
-            className="bg-gray-50 border border-gray-100 rounded-lg px-4 py-3"
+            className="bg-[#E0EAF4] border border-gray-100 rounded-lg px-4 py-3"
           >
 
             <p className="text-sm font-semibold text-gray-700">

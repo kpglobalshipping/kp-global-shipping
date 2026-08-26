@@ -8,7 +8,7 @@ export default function PortMap({
   mapUrl,
 }: PortMapProps) {
   return (
-    <section className="bg-slate-100 py-10">
+    <section className="bg-[#D5E2EF] py-10">
 
       <div className="max-w-7xl mx-auto px-6">
 

@@ -8,7 +8,7 @@ export default function PortOverview({
   description,
 }: PortOverviewProps) {
   return (
-    <section className="bg-gray-50 py-10">
+    <section className="bg-[#E0EAF4] py-10">
 
       <div className="max-w-7xl mx-auto px-6">
 

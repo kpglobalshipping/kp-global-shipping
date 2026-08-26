@@ -30,7 +30,7 @@ export default function PortServices({
   services,
 }: PortServicesProps) {
   return (
-    <section className="bg-slate-100 py-8">
+    <section className="bg-[#D5E2EF] py-8">
 
       <div className="max-w-7xl mx-auto px-6">
 
@@ -61,7 +61,7 @@ export default function PortServices({
             return (
               <div
                 key={index}
-                className="bg-gray-50 border border-gray-200 rounded-xl p-5 flex items-center gap-4 hover:border-blue-900 hover:shadow-md transition-all"
+                className="bg-[#E0EAF4] border border-gray-200 rounded-xl p-5 flex items-center gap-4 hover:border-blue-900 hover:shadow-md transition-all"
               >
 
                 <div className="flex-shrink-0 w-11 h-11 rounded-lg bg-blue-900 flex items-center justify-center">
