@@ -1,11 +1,11 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent } from "react";
 
 export default function Contact() {
-  const [status, setStatus] = useState("");
+  
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+      function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const form = new FormData(event.currentTarget);
@@ -17,29 +17,23 @@ export default function Contact() {
     const subject = `Quote Request from ${company}`;
 
     const message =
-      `To: agent@kp-smt.com, kp.agent22@gmail.com\n\n` +
-      `Subject: ${subject}\n\n` +
       `Dear KP Global Shipping,\n\n` +
       `Company Name: ${company}\n` +
       `Email Address: ${email}\n\n` +
       `Vessel Requirements:\n${requirements}\n\n` +
       `Thank you.\n\n` +
+      `Best Regards,\n` +
+      `${company}\n\n` +
       `---\n` +
       `Submitted through KP Global Shipping website`;
 
-    try {
-      await navigator.clipboard.writeText(message);
+    const gmailUrl =
+  `https://mail.google.com/mail/?view=cm` +
+  `&to=${encodeURIComponent("agent@kp-smt.com,kp.agent22@gmail.com")}` +
+  `&su=${encodeURIComponent(subject)}` +
+  `&body=${encodeURIComponent(message)}`;
 
-      setStatus(
-        "Your quote request has been copied. Please paste it into your email and send it to our Operations Team.",
-      );
-    } catch (error) {
-      console.error("Clipboard error:", error);
-
-      setStatus(
-        "Unable to copy automatically. Please copy the information below and email it to agent@kp-smt.com or kp.agent22@gmail.com.",
-      );
-    }
+window.open(gmailUrl, "_blank");
   }
 
   return (
@@ -183,11 +177,9 @@ export default function Contact() {
                 </p>
               </div>
 
-              <p
-                aria-live="polite"
-                className="min-h-12 text-center text-sm text-gray-600"
-              >
-                {status}
+              <p className="text-center text-xs text-gray-500 leading-5">
+                Clicking the button will open your default email application
+                with the quote request already prepared.
               </p>
 
             </form>
