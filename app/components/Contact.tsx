@@ -1,17 +1,12 @@
-
 "use client";
 
 import { FormEvent, useState } from "react";
 
 export default function Contact() {
   const [status, setStatus] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-
-    setIsSubmitting(true);
-    setStatus("Sending your quote request...");
 
     const form = new FormData(event.currentTarget);
 
@@ -19,51 +14,39 @@ export default function Contact() {
     const email = String(form.get("email") ?? "").trim();
     const requirements = String(form.get("requirements") ?? "").trim();
 
-    try {
-      const response = await fetch("/api/quote", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          company,
-          email,
-          requirements,
-        }),
-      });
+    const subject = encodeURIComponent(
+      `Quote Request from ${company}`,
+    );
 
-      const result = await response.json();
+    const body = encodeURIComponent(
+      `Dear KP Global Shipping,\n\n` +
+        `Company Name: ${company}\n` +
+        `Email Address: ${email}\n\n` +
+        `Vessel Requirements:\n${requirements}\n\n` +
+        `Thank you.`,
+    );
 
-      if (!response.ok) {
-        throw new Error(result.error || "Unable to send your request.");
-      }
+    const recipients =
+      "agent@kp-smt.com,kp.agent22@gmail.com";
 
-      setStatus(
-        "Thank you. Your quote request has been sent successfully. Our operations team will respond promptly.",
-      );
+    setStatus(
+      "Opening your email application with your quote request ready to send...",
+    );
 
-      event.currentTarget.reset();
-    } catch (error) {
-      console.error("Quote submission error:", error);
-
-      setStatus(
-        error instanceof Error
-          ? error.message
-          : "Something went wrong. Please try again.",
-      );
-    } finally {
-      setIsSubmitting(false);
-    }
+    window.location.href =
+      `mailto:${recipients}?subject=${subject}&body=${body}`;
   }
 
   return (
     <section id="contact" className="py-24 bg-blue-900 text-white">
       <div className="max-w-6xl mx-auto px-6">
+
         <h2 className="text-4xl font-bold text-center mb-12">
           Contact Us
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12">
+
           <div>
             <h3 className="text-2xl font-bold mb-6">
               KP GLOBAL SHIPPING INC.
@@ -81,9 +64,13 @@ export default function Contact() {
               Philippines
             </p>
 
-            <p className="mb-3">📞 +63 2 8801 4753</p>
+            <p className="mb-3">
+              📞 +63 2 8801 4753
+            </p>
 
-            <p className="mb-3">📧 agent@kp-smt.com</p>
+            <p className="mb-3">
+              📧 agent@kp-smt.com
+            </p>
 
             <p className="mb-3">
               🕒 24 Hours / 7 Days Operations
@@ -105,6 +92,7 @@ export default function Contact() {
           </div>
 
           <div className="bg-white text-black rounded-xl p-8 shadow-xl">
+
             <h3 className="text-2xl font-bold mb-6">
               Request a Quote
             </h3>
@@ -115,6 +103,7 @@ export default function Contact() {
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
+
               <div>
                 <label
                   htmlFor="quote-company"
@@ -129,7 +118,6 @@ export default function Contact() {
                   className="w-full rounded-lg border border-gray-300 p-3 outline-none transition focus:border-blue-900 focus:ring-2 focus:ring-blue-900/20"
                   placeholder="Your company"
                   required
-                  disabled={isSubmitting}
                 />
               </div>
 
@@ -148,7 +136,6 @@ export default function Contact() {
                   className="w-full rounded-lg border border-gray-300 p-3 outline-none transition focus:border-blue-900 focus:ring-2 focus:ring-blue-900/20"
                   placeholder="you@company.com"
                   required
-                  disabled={isSubmitting}
                 />
               </div>
 
@@ -167,16 +154,14 @@ export default function Contact() {
                   rows={5}
                   placeholder="Vessel name, port, ETA, service required, and any relevant details..."
                   required
-                  disabled={isSubmitting}
                 />
               </div>
 
               <button
                 type="submit"
-                disabled={isSubmitting}
-                className="w-full rounded-lg bg-blue-900 px-6 py-3 font-bold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:ring-offset-2"
+                className="w-full rounded-lg bg-blue-900 px-6 py-3 font-bold text-white transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:ring-offset-2"
               >
-                {isSubmitting ? "Sending..." : "Request a Quote"}
+                Request a Quote
               </button>
 
               <p
@@ -185,11 +170,14 @@ export default function Contact() {
               >
                 {status}
               </p>
+
             </form>
+
           </div>
+
         </div>
+
       </div>
     </section>
   );
 }
-
