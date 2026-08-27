@@ -1163,7 +1163,7 @@ export default function PortDashboard({
           </div>
 
           <a
-            href="/contact"
+            href="/#contact"
             className="
               inline-flex
               items-center
