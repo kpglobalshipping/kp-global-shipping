@@ -27,20 +27,16 @@ export default function Home() {
       <main className="min-h-screen bg-[#E8EEF5]">
         <Hero />
         <WhyKP />
-        <TrustedBy />
         <About />
-        <Leadership />
-        <Gallery />
-        <Services />
-        <WhyChooseUs />
-        <KPGroup />
-        <ExecutiveLeadership />
-        <TechnicalServices />
-        <Coverage />
-        <Clients />
-        <Highlights />
-        <Contact />
-        <Footer />
+<Leadership />
+<Gallery />
+<Services />
+<KPGroup />
+<ExecutiveLeadership />
+<Coverage />
+<Clients />
+<Contact />
+<Footer />
         <FloatingButton />
       </main>
     </>
