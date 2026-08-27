@@ -2,7 +2,7 @@ export const crewChangeFeatures = [
   {
     title: "Immigration Processing",
     description:
-      "Processing of crew visas, Special Immigration Arrangements, and Crew List Visa documentation.",
+      "Immigration processing assistance for Special Immigration Arrangements covering crew embarkation and disembarkation when the required 9(C) visa & 9(C) Crew List Visa are unavailable, subject to applicable Immigration fees and charges.",
   },
   {
     title: "Airport Meet & Assist",
