@@ -118,11 +118,11 @@ export default function CompanyPage() {
 </section>
 {/* Vision Mission Values */}
 
+
 <section
   id="foundation"
-  className="py-24 bg-slate-100"
+  className="py-24 bg-[#D5E2EF]"
 >
-
   <div className="max-w-7xl mx-auto px-6">
 
     <div className="text-center mb-16">
@@ -145,13 +145,13 @@ export default function CompanyPage() {
 
       {/* Vision */}
 
-      <div className="bg-white rounded-2xl border border-gray-200 shadow-lg p-10 hover:shadow-2xl transition duration-300">
+      <div className="bg-[#123B5D] rounded-2xl p-10 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
 
-        <h3 className="text-3xl font-bold text-blue-900 mb-6">
+        <h3 className="text-3xl font-bold text-white mb-6">
           Vision
         </h3>
 
-        <p className="text-gray-600 leading-8">
+        <p className="text-white leading-8">
           To become one of Asia's most trusted maritime service providers,
           recognized for operational excellence, innovation, integrity,
           and customer satisfaction.
@@ -161,13 +161,13 @@ export default function CompanyPage() {
 
       {/* Mission */}
 
-      <div className="bg-white rounded-2xl border border-gray-200 shadow-lg p-10 hover:shadow-2xl transition duration-300">
+      <div className="bg-[#123B5D] rounded-2xl p-10 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
 
-        <h3 className="text-3xl font-bold text-blue-900 mb-6">
+        <h3 className="text-3xl font-bold text-white mb-6">
           Mission
         </h3>
 
-        <p className="text-gray-600 leading-8">
+        <p className="text-white leading-8">
           To provide reliable, quick, prompt, and professional maritime
           solutions through experienced people, modern technology,
           and nationwide operational support.
@@ -177,13 +177,13 @@ export default function CompanyPage() {
 
       {/* Core Values */}
 
-      <div className="bg-white rounded-2xl border border-gray-200 shadow-lg p-10 hover:shadow-2xl transition duration-300">
+      <div className="bg-[#123B5D] rounded-2xl p-10 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
 
-        <h3 className="text-3xl font-bold text-blue-900 mb-6">
+        <h3 className="text-3xl font-bold text-white mb-6">
           Core Values
         </h3>
 
-        <ul className="space-y-3 text-gray-600">
+        <ul className="space-y-3 text-white">
 
           <li>✔ Integrity</li>
           <li>✔ Professionalism</li>
@@ -199,7 +199,6 @@ export default function CompanyPage() {
     </div>
 
   </div>
-
 </section>
 
       {/* Leadership */}
