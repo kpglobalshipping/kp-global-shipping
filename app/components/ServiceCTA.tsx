@@ -27,7 +27,7 @@ export default function ServiceCTA({
         <div className="mt-12 flex flex-wrap justify-center gap-6">
 
           <a
-            href="/contact"
+            href="/#contact"
             className="bg-yellow-400 text-blue-900 font-bold px-8 py-4 rounded-xl hover:bg-yellow-300 transition"
           >
             Contact Us
