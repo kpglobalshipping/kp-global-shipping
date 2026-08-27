@@ -12,7 +12,6 @@ const companies = [
       "Husbandry Services",
       "Marine Logistics",
     ],
-    color: "border-blue-900",
   },
   {
     icon: <Wrench size={42} />,
@@ -25,7 +24,6 @@ const companies = [
       "Class Attendance",
       "Spare Parts Supply",
     ],
-    color: "border-yellow-500",
   },
   {
     icon: <Users size={42} />,
@@ -38,7 +36,6 @@ const companies = [
       "Documentation",
       "Deployment",
     ],
-    color: "border-green-600",
   },
 ];
 
@@ -47,6 +44,7 @@ export default function KPGroup() {
     <section id="company-profile" className="py-24 bg-[#D5E2EF]">
       <div className="max-w-7xl mx-auto px-6">
 
+        {/* SECTION INTRODUCTION */}
         <div className="text-center mb-16">
 
           <p className="uppercase tracking-[4px] text-yellow-500 font-bold">
@@ -67,31 +65,64 @@ export default function KPGroup() {
 
         </div>
 
+        {/* GROUP COMPANIES */}
         <div className="grid md:grid-cols-3 gap-8">
 
           {companies.map((company) => (
 
             <div
               key={company.name}
-              className={`rounded-2xl border-t-8 ${company.color} shadow-xl p-8 hover:-translate-y-2 transition duration-300`}
+              className="
+                bg-blue-900
+                rounded-2xl
+                p-8
+                border
+                border-blue-800
+                shadow-[0_12px_30px_rgba(15,23,42,0.25)]
+                hover:-translate-y-2
+                hover:shadow-[0_20px_40px_rgba(15,23,42,0.35)]
+                transition
+                duration-300
+              "
             >
 
-              <div className="text-blue-900 mb-6">
+              {/* ICON */}
+              <div className="text-yellow-400 mb-6">
                 {company.icon}
               </div>
 
-              <h3 className="text-2xl font-bold text-blue-900">
+              {/* COMPANY NAME */}
+              <h3 className="text-2xl font-bold text-white">
                 {company.name}
               </h3>
 
-              <p className="text-yellow-600 font-semibold mt-2 mb-6">
+              {/* SUBTITLE */}
+              <p className="text-yellow-400 font-semibold mt-2 mb-6">
                 {company.subtitle}
               </p>
 
-              <ul className="space-y-3 text-gray-700">
+              {/* SERVICES */}
+              <ul className="space-y-3 text-blue-50">
+
                 {company.services.map((service) => (
-                  <li key={service}>✓ {service}</li>
+
+                  <li
+                    key={service}
+                    className="flex items-start gap-3"
+                  >
+
+                    <span className="text-yellow-400 font-bold">
+                      ✓
+                    </span>
+
+                    <span>
+                      {service}
+                    </span>
+
+                  </li>
+
                 ))}
+
               </ul>
 
             </div>

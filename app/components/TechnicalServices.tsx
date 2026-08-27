@@ -75,19 +75,26 @@ export default function TechnicalServices() {
 
             <div
               key={service.title}
-              className="bg-[#E0EAF4] rounded-2xl p-8 shadow-lg hover:shadow-xl transition"
+              className="
+                bg-[#0B2A5B]
+                rounded-2xl
+                p-8
+                border
+                border-blue-800
+                shadow-[0_10px_25px_rgba(11,42,91,0.25)]
+                hover:shadow-[0_16px_35px_rgba(11,42,91,0.35)]
+                hover:-translate-y-1
+                transition-all
+                duration-300
+              "
             >
 
               <div className="text-5xl mb-6">
-
                 {service.icon}
-
               </div>
 
-              <h3 className="text-2xl font-bold text-blue-900 mb-6">
-
+              <h3 className="text-2xl font-bold text-white mb-6">
                 {service.title}
-
               </h3>
 
               <ul className="space-y-3">
@@ -96,10 +103,10 @@ export default function TechnicalServices() {
 
                   <li
                     key={item}
-                    className="flex items-center text-gray-700"
+                    className="flex items-center text-white"
                   >
 
-                    <span className="text-green-600 mr-3">
+                    <span className="text-yellow-400 mr-3 font-bold">
                       ✔
                     </span>
 

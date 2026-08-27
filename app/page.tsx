@@ -1,7 +1,6 @@
 import Announcement from "./components/Announcement";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Achievements from "./components/Achievements";
 import TrustedBy from "./components/TrustedBy";
 import About from "./components/About";
 import Leadership from "./components/Leadership";
@@ -28,7 +27,6 @@ export default function Home() {
       <main className="min-h-screen bg-[#E8EEF5]">
         <Hero />
         <WhyKP />
-        <Achievements />
         <TrustedBy />
         <About />
         <Leadership />
@@ -44,7 +42,6 @@ export default function Home() {
         <Contact />
         <Footer />
         <FloatingButton />
-        
       </main>
     </>
   );
