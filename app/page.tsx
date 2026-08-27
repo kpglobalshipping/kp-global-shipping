@@ -31,6 +31,7 @@ export default function Home() {
 <Leadership />
 <Gallery />
 <Services />
+<TechnicalServices />
 <KPGroup />
 <ExecutiveLeadership />
 <Coverage />
