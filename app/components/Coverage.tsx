@@ -17,7 +17,7 @@ export default function Coverage() {
   ];
 
   return (
-    <section id="ports" className="py-24 bg-[#D5E2EF]">
+    <section id="ports" className="py-24 bg-[#D5E2EF]/90">
       <div className="max-w-7xl mx-auto px-6">
 
         <h2 className="text-4xl font-bold text-center text-blue-900">

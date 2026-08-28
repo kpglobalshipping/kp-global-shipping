@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-24 bg-[#D5E2EF]"
+      className="py-24 bg-[#D5E2EF]/90"
     >
       <div className="max-w-7xl mx-auto px-6">
 

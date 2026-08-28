@@ -41,7 +41,7 @@ const companies = [
 
 export default function KPGroup() {
   return (
-    <section id="company-profile" className="py-24 bg-[#D5E2EF]">
+    <section id="company-profile" className="py-24 bg-[#D5E2EF]/90">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* SECTION INTRODUCTION */}

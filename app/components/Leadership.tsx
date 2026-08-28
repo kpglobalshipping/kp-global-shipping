@@ -14,12 +14,12 @@ export default function Leadership() {
   {
     name: "Sahlee Gutierrez",
     position: "General Manager",
-    photo: "/images/sahlee c. gutierrez.jpg",
+    photo: "/images/Sahlee C. Gutierrez.jpg",
   },
 ];
 
   return (
-    <section id="about" className="py-20 bg-[#D5E2EF]">
+    <section id="leadership" className="py-20 bg-[#D5E2EF]/90">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}

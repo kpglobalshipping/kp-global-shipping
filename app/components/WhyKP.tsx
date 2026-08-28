@@ -45,15 +45,15 @@ export default function WhyKP() {
 
         <div className="text-center">
 
-          <p className="uppercase tracking-[4px] text-yellow-400 font-bold">
+          <p className="uppercase tracking-[2px] sm:tracking-[4px] text-yellow-400 font-bold text-sm sm:text-base leading-6">
             WHY KP GLOBAL SHIPPING INC.
           </p>
 
-          <h2 className="text-5xl font-extrabold mt-5">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mt-4 sm:mt-5 leading-tight">
             Quick. Prompt. Stand-beside YOU.
           </h2>
 
-          <p className="mt-8 max-w-4xl mx-auto text-blue-100 text-lg leading-8">
+          <p className="mt-6 sm:mt-8 max-w-4xl mx-auto text-blue-100 text-base sm:text-lg leading-7 sm:leading-8">
             More than a shipping agency, KP Global Shipping Inc. is a maritime
             service platform delivering reliable port agency, technical support,
             crew change coordination and marine logistics throughout the Philippines.

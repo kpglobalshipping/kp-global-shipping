@@ -24,7 +24,12 @@ export default function Home() {
       <Announcement />
       <Navbar />
 
-      <main className="min-h-screen bg-[#E8EEF5]">
+      <main
+  className="min-h-screen bg-cover bg-center bg-fixed"
+  style={{
+    backgroundImage: "url('/images/hero-ship.jpg')",
+  }}
+>
         <Hero />
         <WhyKP />
         <About />

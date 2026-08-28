@@ -4,7 +4,12 @@ import Image from "next/image";
 
 export default function CompanyPage() {
   return (
-    <main className="min-h-screen bg-slate-100">
+    <main
+  className="min-h-screen bg-cover bg-center bg-fixed"
+  style={{
+    backgroundImage: "url('/images/hero-ship.jpg')",
+  }}
+>
 
       {/* =========================================================
           HERO
@@ -43,7 +48,7 @@ export default function CompanyPage() {
           </h2>
 
           <p className="mt-8 text-xl leading-9 text-gray-700">
-            KP Global Shipping Inc. is one of the Philippines&apos; leading
+            KP Global Shipping Inc. is one of the Philippines' leading
             maritime service providers offering Port Agency, Protective
             Agency, Crew Change, Husbandry Services, Technical Services,
             Marine Logistics, Customs Clearance, Ship Supply and Offshore
@@ -64,7 +69,7 @@ export default function CompanyPage() {
           COMPANY AT A GLANCE
       ========================================================= */}
 
-      <section className="bg-gray-100 py-24">
+      <section className="bg-gray-100/90 py-24">
         <div className="max-w-7xl mx-auto px-6">
 
           <div className="text-center mb-16">
@@ -137,7 +142,7 @@ export default function CompanyPage() {
 
       <section
         id="foundation"
-        className="py-24 bg-[#D5E2EF]"
+        className="py-24 bg-[#D5E2EF]/90"
       >
         <div className="max-w-7xl mx-auto px-6">
 
@@ -169,7 +174,7 @@ export default function CompanyPage() {
               </h3>
 
               <p className="text-white leading-8">
-                To become one of Asia&apos;s most trusted maritime service
+                To become one of Asia's most trusted maritime service
                 providers, recognized for operational excellence, innovation,
                 integrity, and customer satisfaction.
               </p>
@@ -364,7 +369,7 @@ export default function CompanyPage() {
           OUR GLOBAL NETWORK
       ========================================================= */}
 
-      <section className="py-24 bg-gray-100">
+      <section className="py-24 bg-gray-100/90">
         <div className="max-w-7xl mx-auto px-6">
 
           <div className="text-center mb-16">
@@ -474,7 +479,7 @@ export default function CompanyPage() {
 
       <section
         id="timeline"
-        className="py-24 bg-slate-100"
+        className="py-24 bg-slate-100/90"
       >
         <div className="max-w-7xl mx-auto px-6">
 
