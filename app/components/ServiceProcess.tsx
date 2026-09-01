@@ -24,7 +24,7 @@ export default function ServiceProcess({
     CheckCircle,
   ];
   return (
-    <section className="py-20 bg-blue-50">
+    <section className="py-20 bg-blue-50/90">
 
       <div className="max-w-6xl mx-auto px-6">
 

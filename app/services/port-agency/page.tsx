@@ -12,7 +12,12 @@ import ServiceCTA from "../../components/ServiceCTA";
 
 export default function PortAgencyPage() {
   return (
-    <main className="min-h-screen bg-slate-100">
+    <main
+  className="min-h-screen bg-cover bg-center bg-fixed"
+  style={{
+    backgroundImage: "url('/images/port-agency.jpg')",
+  }}
+>
 
       <ServiceHero
   title={portAgency.hero.title}

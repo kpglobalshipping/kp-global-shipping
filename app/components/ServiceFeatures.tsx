@@ -15,7 +15,7 @@ export default function ServiceFeatures({
   features,
 }: ServiceFeaturesProps) {
   return (
-    <section className="py-20 bg-[#D5E2EF]">
+    <section className="py-20 bg-[#D5E2EF]/90">
 
       <div className="max-w-7xl mx-auto px-6">
 

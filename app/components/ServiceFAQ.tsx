@@ -22,7 +22,7 @@ export default function ServiceFAQ({
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="py-20 bg-[#E0EAF4]">
+    <section className="py-20 bg-[#E0EAF4]/90">
 
       <div className="max-w-5xl mx-auto px-6">
 
