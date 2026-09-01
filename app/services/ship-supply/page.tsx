@@ -23,7 +23,8 @@ export default function ShipSupplyPage() {
       <ServiceHero
         title="Ship Supply"
         subtitle="Reliable ship supply services delivering quality provisions, technical stores, and essential vessel requirements throughout the Philippines."
-      />
+    image="/images/ship-supply.jpg"
+    />
 
       <ServiceOverview
         subtitle={shipSupplyOverview.subtitle}

@@ -17,7 +17,8 @@ export default function HusbandryServicesPage() {
       <ServiceHero
         title={husbandryServices.hero.title}
         subtitle={husbandryServices.hero.subtitle}
-      />
+ image="/images/husbandry-services.jpg"
+ />
 
       <ServiceOverview
         subtitle={husbandryServices.overview.subtitle}

@@ -17,6 +17,7 @@ export default function PortAgencyPage() {
       <ServiceHero
   title={portAgency.hero.title}
   subtitle={portAgency.hero.subtitle}
+  image="/images/port-agency.jpg"
 />
 
       {/* Overview */}

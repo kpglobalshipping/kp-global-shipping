@@ -1,31 +1,46 @@
 type ServiceHeroProps = {
   title: string;
   subtitle: string;
+  image?: string;
 };
 
 export default function ServiceHero({
   title,
   subtitle,
+  image,
 }: ServiceHeroProps) {
   return (
-    <section className="bg-gradient-to-r from-blue-900 to-sky-700 text-white py-24">
+    <section
+      className="relative min-h-[520px] bg-cover bg-center bg-fixed text-white"
+      style={
+        image
+          ? {
+              backgroundImage: `url('${image}')`,
+            }
+          : undefined
+      }
+    >
+      {/* Background Overlay */}
+      <div className="absolute inset-0 bg-blue-950/20"></div>
 
-      <div className="max-w-7xl mx-auto px-6">
+      {/* Hero Content */}
+      <div className="relative z-10 flex min-h-[520px] items-center">
+        <div className="mx-auto w-full max-w-7xl px-6">
 
-        <p className="text-yellow-400 font-bold text-2xl">
-          KP Global Shipping Inc.
-        </p>
+          <p className="text-2xl font-bold text-yellow-400">
+            KP Global Shipping Inc.
+          </p>
 
-        <h1 className="text-6xl font-extrabold mt-4">
-          {title}
-        </h1>
+          <h1 className="mt-4 text-6xl font-extrabold">
+            {title}
+          </h1>
 
-        <p className="mt-8 text-xl text-blue-100 max-w-3xl">
-          {subtitle}
-        </p>
+          <p className="mt-8 max-w-3xl text-xl leading-8 text-white">
+            {subtitle}
+          </p>
 
+        </div>
       </div>
-
     </section>
   );
 }

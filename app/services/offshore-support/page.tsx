@@ -23,6 +23,7 @@ export default function OffshoreSupportPage() {
       <ServiceHero
         title="Offshore Support"
         subtitle="Reliable offshore support solutions for marine operations, offshore vessels, and energy projects throughout the Philippines."
+        image="/images/offshore-support.jpg"
       />
 
       <ServiceOverview

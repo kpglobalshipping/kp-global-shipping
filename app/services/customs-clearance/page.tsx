@@ -23,6 +23,7 @@ export default function CustomsClearancePage() {
       <ServiceHero
         title="Customs Clearance"
         subtitle="Professional customs documentation and regulatory compliance for vessels calling at Philippine ports."
+        image="/images/customs-clearance.jpg"
       />
 
       <ServiceOverview

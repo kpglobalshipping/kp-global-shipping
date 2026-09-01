@@ -23,7 +23,8 @@ export default function MarineLogisticsPage() {
       <ServiceHero
         title="Marine Logistics"
         subtitle="Reliable logistics coordination for vessels calling at Philippine ports."
-      />
+   image="/images/marine-logistics.jpg"
+   />
 
       <ServiceOverview
         subtitle={marineLogisticsOverview.subtitle}

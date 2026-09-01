@@ -23,7 +23,8 @@ export default function CrewChangePage() {
       <ServiceHero
         title="Crew Change Services"
         subtitle="Professional crew change coordination throughout the Philippines, ensuring smooth embarkation and disembarkation for international seafarers."
-      />
+image="/images/crew-change.jpg"
+/>
 
       <ServiceOverview
         subtitle={crewChangeOverview.subtitle}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import InteractiveServices from "../components/InteractiveServices";
 
 const services = [
   {
@@ -7,6 +8,7 @@ const services = [
     description:
       "Comprehensive port agency services covering every stage of a vessel's port call, from pre-arrival coordination through departure.",
     href: "/services/port-agency",
+    image: "/images/port-agency.jpg",
   },
   {
     title: "Owner's Protective Agency",
@@ -14,6 +16,7 @@ const services = [
     description:
       "Independent representation safeguarding the owner's interests throughout the vessel's port stay.",
     href: "/services/protective-agency",
+    image: "/images/protective-agency.jpg",
   },
   {
     title: "Crew Change",
@@ -21,6 +24,7 @@ const services = [
     description:
       "Professional crew embarkation and disembarkation services, including airport, transportation, accommodation, immigration coordination, and local assistance.",
     href: "/services/crew-change",
+    image: "/images/crew-change.jpg",
   },
   {
     title: "Technical Services",
@@ -28,6 +32,7 @@ const services = [
     description:
       "Marine technical support including dry docking assistance, repairs, inspections, surveys, and technical attendance.",
     href: "/services/technical-services",
+    image: "/images/technical-services.jpg",
   },
   {
     title: "Marine Logistics",
@@ -35,6 +40,7 @@ const services = [
     description:
       "End-to-end logistics support for ship spares and marine equipment, including customs clearance, delivery coordination, and specialized transportation.",
     href: "/services/marine-logistics",
+    image: "/images/marine-logistics.jpg",
   },
   {
     title: "Customs Clearance",
@@ -42,6 +48,7 @@ const services = [
     description:
       "Professional coordination of customs documentation, clearance procedures, import requirements, and regulatory matters for vessel-related shipments.",
     href: "/services/customs-clearance",
+    image: "/images/customs-clearance.jpg",
   },
   {
     title: "Ship Supply",
@@ -49,6 +56,7 @@ const services = [
     description:
       "Reliable supply coordination for provisions, bonded stores, spare parts, deck and engine supplies, and other vessel requirements.",
     href: "/services/ship-supply",
+    image: "/images/ship-supply.jpg",
   },
   {
     title: "Offshore Support",
@@ -56,6 +64,7 @@ const services = [
     description:
       "Offshore vessel support, project logistics, and specialized marine services coordinated according to operational requirements.",
     href: "/services/offshore-support",
+    image: "/images/offshore-support.jpg",
   },
 ];
 
@@ -81,57 +90,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services */}
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="mb-16 text-center">
-            <p className="mb-3 text-2xl font-bold uppercase tracking-widest text-yellow-500">
-              What We Do
-            </p>
-
-            <h2 className="text-4xl font-extrabold text-blue-900 md:text-5xl">
-              Comprehensive Maritime Services
-            </h2>
-
-            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-600">
-              From vessel arrival and port operations to crew changes,
-              logistics, technical support, and departure, our team provides
-              responsive coordination throughout the vessel&apos;s port call.
-            </p>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {services.map((service) => (
-              <div
-                key={service.title}
-                className="group flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-8 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
-              >
-                {/* Professional Icon Treatment */}
-                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-xl border border-yellow-400 bg-blue-900 text-sm font-extrabold tracking-wider text-yellow-400 transition duration-300 group-hover:bg-yellow-400 group-hover:text-blue-900">
-                  {service.code}
-                </div>
-
-                <h3 className="text-2xl font-bold leading-tight text-blue-900">
-                  {service.title}
-                </h3>
-
-                <p className="mt-4 flex-grow leading-7 text-gray-600">
-                  {service.description}
-                </p>
-
-                <Link
-                  href={service.href}
-                  className="mt-6 inline-flex items-center font-bold text-blue-900 transition hover:text-yellow-500"
-                >
-                  Learn More
-                  <span className="ml-2 transition-transform duration-200 group-hover:translate-x-1">
-                    →
-                  </span>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+<InteractiveServices services={services} />
 
       {/* Call to Action */}
       <section className="bg-gradient-to-r from-blue-900 to-sky-700 py-24 text-white">

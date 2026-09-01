@@ -23,7 +23,7 @@ export default function TechnicalServicesPage() {
       <ServiceHero
         title="Technical Services"
         subtitle="Professional marine technical support, inspections, repairs, and engineering solutions throughout the Philippines."
-      />
+    image="/images/technical-services.jpg"/>
 
       <ServiceOverview
         subtitle={technicalServicesOverview.subtitle}
@@ -56,6 +56,7 @@ export default function TechnicalServicesPage() {
         subtitle="Our Process"
         title="How We Deliver Technical Services"
         steps={technicalServicesProcess}
+        
       />
 
       <ServiceFAQ

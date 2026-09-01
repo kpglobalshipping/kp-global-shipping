@@ -23,6 +23,7 @@ export default function ProtectiveAgencyPage() {
       <ServiceHero
         title="Protective Agency Services"
         subtitle="Independent representation protecting the interests of shipowners, operators, and charterers throughout every Philippine port call."
+      image="/images/protective-agency.jpg"
       />
 
       <ServiceOverview
