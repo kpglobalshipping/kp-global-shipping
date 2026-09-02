@@ -24,8 +24,8 @@ export default function InteractiveServices({
     <section
       className="relative bg-cover bg-center bg-fixed py-20"
       style={{
-        backgroundImage: `url('${selectedImage}')`,
-      }}
+  backgroundImage: `url(${selectedImage})`,
+}}
     >
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-[#E8EEF5]/90"></div>
@@ -57,7 +57,7 @@ export default function InteractiveServices({
             {services.map((service) => (
               <div
                 key={service.title}
-                onClick={() => setSelectedImage(service.image)}
+                onMouseEnter={() => setSelectedImage(service.image)}
                 className="group flex h-full cursor-pointer flex-col rounded-2xl border border-gray-200 bg-white p-8 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
               >
 

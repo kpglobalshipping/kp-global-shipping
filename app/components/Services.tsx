@@ -10,7 +10,7 @@ const services = [
     icon: "🛡️",
     title: "Owner's Protective Agency",
     description:
-      "Independent representation protecting owners' interests throughout the vessel's port stay.",
+  "Independent representation of vessel owners, safeguarding their interests and ensuring proper coordination, cost control and operational support throughout the vessel’s port stay.",
     href: "/services/protective-agency",
   },
   {
