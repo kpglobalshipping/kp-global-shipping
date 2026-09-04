@@ -1,17 +1,17 @@
 export const crewChangeOverview = {
-  subtitle: "Professional Crew Change Services",
+  subtitle: "Professional Crew Change Services in the Philippines",
 
-  title: "Complete Crew Change Solutions",
+  title: "Complete Crew Change Solutions for International Seafarers",
 
   description:
-    "KP Global Shipping Inc. provides comprehensive crew change services throughout the Philippines. Our experienced operations team coordinates every stage of the process, ensuring safe, efficient, and compliant embarkation and disembarkation of seafarers while minimizing vessel delays and operational disruptions.",
+    "KP Global Shipping Inc. provides professional crew change coordination throughout the Philippines for vessel owners, operators, managers, and international principals. Our experienced operations team supports safe and efficient embarkation and disembarkation of seafarers through airport coordination, immigration assistance, transportation, accommodation, vessel transfer, and port coordination while helping minimize vessel delays and operational disruptions.",
 };
 
 export const crewChangeProcess = [
-  "Pre-Arrival Planning",
-  "Immigration & Visa Processing",
+  "Pre-Arrival Crew Change Planning",
+  "Immigration Coordination & Documentation Assistance",
   "Airport Meet & Assist",
-  "Hotel & Transportation",
-  "Embarkation / Disembarkation",
-  "Final Documentation",
+  "Hotel & Ground Transportation",
+  "Vessel Embarkation / Disembarkation",
+  "Final Coordination & Documentation",
 ];

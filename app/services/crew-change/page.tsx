@@ -21,9 +21,9 @@ export default function CrewChangePage() {
     <main className="min-h-screen bg-slate-100">
 
       <ServiceHero
-        title="Crew Change Services"
-        subtitle="Professional crew change coordination throughout the Philippines, ensuring smooth embarkation and disembarkation for international seafarers."
-image="/images/crew-change.jpg"
+  title="Crew Change Services in the Philippines"
+  subtitle="Professional crew change coordination supporting safe and efficient embarkation and disembarkation of international seafarers at major Philippine ports."
+  image="/images/crew-change.jpg"
 />
 
       <ServiceOverview
@@ -45,7 +45,7 @@ image="/images/crew-change.jpg"
           "Experienced Operations Team",
           "Nationwide Port Coverage",
           "24/7 Operational Support",
-          "Immigration & Visa Coordination",
+          "Immigration Coordination & Documentation Assistance",
           "Airport Meet & Assist",
           "Trusted by International Principals",
           "Fast Response Time",
@@ -72,9 +72,9 @@ image="/images/crew-change.jpg"
       />
 
       <ServiceCTA
-        title="Professional Crew Change Services Across the Philippines"
-        description="Whether your crew is joining or signing off in Manila, Batangas, Subic, Cebu, Davao, General Santos, or other Philippine ports, KP Global Shipping is ready to provide complete crew change coordination from arrival to departure."
-      />
+  title="Professional Crew Change Services Across the Philippines"
+  description="Whether your seafarers are joining or signing off in Manila, Batangas, Subic, Cebu, Davao, General Santos, or other Philippine ports, KP Global Shipping provides reliable crew change coordination including airport assistance, immigration coordination, transportation, accommodation, and vessel transfer support."
+/>
 
     </main>
   );
