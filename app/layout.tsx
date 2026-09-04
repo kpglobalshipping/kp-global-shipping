@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   description:
     "KP Global Shipping Inc. provides reliable ship agency, port agency, protective agency, crew change, husbandry, marine logistics, customs coordination, and offshore support services throughout the Philippines.",
 
+verification: {
+  google: "tEIOG2Sq0_qN5FYYEYGsWnRY2GImfuutjB8BADF5JFw",
+},
   keywords: [
     "ship agency Philippines",
     "port agency Philippines",
