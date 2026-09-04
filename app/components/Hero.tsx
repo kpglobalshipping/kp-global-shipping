@@ -17,12 +17,15 @@ export default function Hero() {
         <p className="mt-6 text-lg md:text-xl font-bold text-blue-900">
           Port Agency • Protective Agency • Crew Change • Husbandry Services
         </p>
-<p className="mt-6 max-w-2xl mx-auto text-base md:text-lg leading-7 text-blue-950">
-  KP Global Shipping Inc. delivers professional shipping agency services
-  with extensive maritime expertise and a global network of trusted partners
-  across Asia, Europe, and America, providing reliable support for vessel owners,
-  operators, and charterers throughout the Philippines.
-</p>
+
+        <p className="mt-6 max-w-2xl mx-auto text-base md:text-lg leading-7 text-blue-950">
+          KP Global Shipping Inc. provides reliable ship agency and maritime
+          services throughout the Philippines, with extensive local expertise
+          and a global network of trusted partners across Asia, Europe, and
+          America. We support vessel owners, operators, and charterers with
+          professional port agency, crew change, husbandry, and marine
+          logistics services.
+        </p>
 
         <div className="mt-12 flex flex-col sm:flex-row justify-center gap-6">
 
@@ -43,8 +46,8 @@ export default function Hero() {
         </div>
 
         <p className="mt-12 text-lg italic text-white">
-  "Committed to Excellence in Every Port Call."
-</p>
+          "Committed to Excellence in Every Port Call."
+        </p>
 
       </div>
     </section>

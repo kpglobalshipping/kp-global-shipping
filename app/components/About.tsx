@@ -20,18 +20,18 @@ export default function About() {
 
             <h2 className="text-5xl font-extrabold text-blue-900 leading-tight">
 
-              Maritime Technology &
-              <br />
-              Shipping Service Platform
+  Maritime & Ship Agency
+  <br />
+  Services in the Philippines
 
-            </h2>
+</h2>
 
-            <p className="mt-8 text-lg leading-8 text-gray-700">
+<p className="mt-8 text-lg leading-8 text-gray-700">
 
-              KP Team provides maritime technology and shipping service
-              <strong> PLATFORM.</strong>
+  KP Global Shipping Inc. provides professional maritime and shipping
+  services throughout the Philippines.
 
-            </p>
+</p>
 
             <p className="mt-6 text-lg leading-8 text-gray-700">
 

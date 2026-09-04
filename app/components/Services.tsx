@@ -10,14 +10,14 @@ const services = [
     icon: "🛡️",
     title: "Owner's Protective Agency",
     description:
-  "Independent representation of vessel owners, safeguarding their interests and ensuring proper coordination, cost control and operational support throughout the vessel’s port stay.",
+      "Independent representation of vessel owners, safeguarding their interests and ensuring proper coordination, cost control and operational support throughout the vessel's port stay.",
     href: "/services/protective-agency",
   },
   {
     icon: "👨‍✈️",
     title: "Crew Change",
     description:
-      "Professional crew embarkation, disembarkation, immigration, visa and airport coordination.",
+      "Professional crew embarkation, disembarkation, immigration and airport coordination.",
     href: "/services/crew-change",
   },
   {
