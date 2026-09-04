@@ -1,16 +1,16 @@
 export const portAgency = {
   hero: {
-    title: "Port Agency Services",
-    subtitle:
-      "Professional port agency services ensuring efficient vessel operations from arrival to departure throughout the Philippines.",
-  },
+  title: "Port Agency Services in the Philippines",
+  subtitle:
+    "Professional port agency services supporting efficient vessel operations from arrival to departure at major ports throughout the Philippines.",
+},
 
-  overview: {
-    subtitle: "Professional Port Agency",
-    title: "Complete Port Agency Solutions",
-    description:
-      "KP Global Shipping Inc. provides comprehensive port agency services for vessel owners, operators, charterers, and ship managers calling at Philippine ports. Our experienced operations team ensures efficient vessel turnaround while maintaining full compliance with local regulations and port requirements.",
-  },
+overview: {
+  subtitle: "Professional Port Agency",
+  title: "Complete Port Agency Solutions for Philippine Ports",
+  description:
+    "KP Global Shipping Inc. provides comprehensive port agency services for vessel owners, operators, charterers, and ship managers calling at Philippine ports. Our experienced operations team coordinates every stage of the vessel port call, from pre-arrival arrangements and port entry clearance to vessel attendance, husbandry support, and departure formalities, ensuring efficient turnaround and compliance with local regulations and port requirements.",
+},
 
   features: [
     {
