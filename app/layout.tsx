@@ -14,9 +14,46 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "KP Global Shipping Inc.",
+  title: {
+    default: "KP Global Shipping Inc. | Ship Agency & Maritime Services Philippines",
+    template: "%s | KP Global Shipping Inc.",
+  },
+
   description:
-    "Quick, Prompt, and Stand-beside YOU. Reliable maritime services throughout the Philippines.",
+    "KP Global Shipping Inc. provides reliable ship agency, port agency, protective agency, crew change, husbandry, marine logistics, customs coordination, and offshore support services throughout the Philippines.",
+
+  keywords: [
+    "ship agency Philippines",
+    "port agency Philippines",
+    "ship agent Philippines",
+    "ship agency Manila",
+    "port agent Manila",
+    "protective agency Philippines",
+    "crew change Philippines",
+    "husbandry services Philippines",
+    "marine logistics Philippines",
+    "customs clearance Philippines",
+    "Philippine port services",
+    "KP Global Shipping",
+  ],
+
+  authors: [{ name: "KP Global Shipping Inc." }],
+  creator: "KP Global Shipping Inc.",
+  publisher: "KP Global Shipping Inc.",
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: "KP Global Shipping Inc. | Ship Agency & Maritime Services Philippines",
+    description:
+      "Quick, Prompt, and Stand-beside YOU. Reliable maritime and ship agency services throughout the Philippines.",
+    type: "website",
+    locale: "en_PH",
+    siteName: "KP Global Shipping Inc.",
+  },
 };
 
 export default function RootLayout({
