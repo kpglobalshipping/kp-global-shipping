@@ -21,8 +21,8 @@ export default function ProtectiveAgencyPage() {
     <main className="min-h-screen bg-slate-100">
 
       <ServiceHero
-        title="Protective Agency Services"
-        subtitle="Independent representation protecting the interests of shipowners, operators, and charterers throughout every Philippine port call."
+        title="Owner's Protective Agency Services in the Philippines"
+subtitle="Independent representation safeguarding the interests of shipowners, operators, and charterers throughout every Philippine port call."
       image="/images/protective-agency.jpg"
       />
 

@@ -1,10 +1,10 @@
 export const protectiveAgencyOverview = {
   subtitle: "Independent Owner Representation",
 
-  title: "Professional Protective Agency Services",
+  title: "Professional Protective Agency Services for Shipowners",
 
   description:
-    "KP Global Shipping Inc. acts as an independent Protective Agent, safeguarding the interests of shipowners, operators, charterers, and managers throughout every port call in the Philippines. We provide unbiased supervision, operational monitoring, and transparent reporting to ensure efficient port operations and cost control.",
+    "KP Global Shipping Inc. acts as an independent Owner's Protective Agent, safeguarding the interests of shipowners, operators, charterers, and managers throughout every port call in the Philippines. We provide unbiased supervision, operational monitoring, government coordination, and transparent reporting to support efficient port operations, cost control, and proper representation of the owner's interests.",
 };
 
 export const protectiveAgencyProcess = [
