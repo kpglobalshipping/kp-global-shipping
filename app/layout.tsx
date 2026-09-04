@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kp-global-shipping.vercel.app"),
   title: {
     default: "KP Global Shipping Inc. | Ship Agency & Maritime Services Philippines",
     template: "%s | KP Global Shipping Inc.",
@@ -49,13 +50,22 @@ verification: {
     follow: true,
   },
 
-  openGraph: {
+    openGraph: {
     title: "KP Global Shipping Inc. | Ship Agency & Maritime Services Philippines",
     description:
       "Quick, Prompt, and Stand-beside YOU. Reliable maritime and ship agency services throughout the Philippines.",
     type: "website",
     locale: "en_PH",
     siteName: "KP Global Shipping Inc.",
+
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "KP Global Shipping Inc. - Ship Agency & Maritime Services Philippines",
+      },
+    ],
   },
 };
 
