@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import FloatingButton from "./components/FloatingButton";
-
+import Navbar from "./components/Navbar";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -30,8 +30,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full pb-12">
-        {children}
+  <Navbar />
 
+  <main className="pt-[89px]">
+    {children}
+  </main>
         {/* Floating Request Quote */}
         <FloatingButton />
 

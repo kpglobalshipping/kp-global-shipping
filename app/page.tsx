@@ -21,15 +21,15 @@ import WhyKP from "./components/WhyKP";
 export default function Home() {
   return (
     <>
-      <Announcement />
-      <Navbar />
+  <Navbar />
 
-      <main
-  className="min-h-screen bg-cover bg-center bg-fixed"
+  <main
+    className="min-h-screen bg-cover bg-center bg-fixed"
   style={{
     backgroundImage: "url('/images/hero-ship.jpg')",
   }}
 >
+
         <Hero />
         <WhyKP />
         <About />

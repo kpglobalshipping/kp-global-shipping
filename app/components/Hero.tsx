@@ -6,10 +6,7 @@ export default function Hero() {
         backgroundImage: "url('/images/hero-ship.jpg')",
       }}
     >
-      {/* Blue Overlay */}
-      <div className="absolute inset-0 bg-blue-950/50"></div>
-
-      <div className="relative z-10 text-center text-white px-6">
+      <div className="relative z-10 text-center text-blue-700 px-6">
 
         <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
           Your Trusted
@@ -20,13 +17,12 @@ export default function Hero() {
         <p className="mt-6 text-lg md:text-xl font-bold text-blue-900">
           Port Agency • Protective Agency • Crew Change • Husbandry Services
         </p>
-
-        <p className="mt-6 max-w-2xl mx-auto text-base md:text-lg leading-7 text-white">
-           KP Global Shipping Inc. delivers professional shipping agency services
+<p className="mt-6 max-w-2xl mx-auto text-base md:text-lg leading-7 text-blue-950">
+  KP Global Shipping Inc. delivers professional shipping agency services
   with extensive maritime expertise and a global network of trusted partners
   across Asia, Europe, and America, providing reliable support for vessel owners,
   operators, and charterers throughout the Philippines.
-        </p>
+</p>
 
         <div className="mt-12 flex flex-col sm:flex-row justify-center gap-6">
 
@@ -46,9 +42,9 @@ export default function Hero() {
 
         </div>
 
-        <p className="mt-12 text-lg italic text-gray-300">
-          "Committed to Excellence in Every Port Call."
-        </p>
+        <p className="mt-12 text-lg italic text-white">
+  "Committed to Excellence in Every Port Call."
+</p>
 
       </div>
     </section>

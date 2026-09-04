@@ -3,12 +3,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
+
   const [menuOpen, setMenuOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [portOpen, setPortOpen] = useState(false);
-
+  const isHomePage = pathname === "/";
   const ports = [
     { name: "Manila", href: "/ports/manila" },
     { name: "Batangas", href: "/ports/batangas" },
@@ -24,12 +27,24 @@ export default function Navbar() {
     { name: "Pagbilao", href: "/ports/pagbilao" },
   ];
 
-  const navItems = [
-    { name: "Home", href: "#" },
-    { name: "Services", href: "#services" },
-    { name: "Technical", href: "#technical" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "Contact", href: "#contact" },
+    const navItems = [
+    { name: "Home", href: "/" },
+    {
+      name: "Services",
+      href: isHomePage ? "#services" : "/#services",
+    },
+    {
+      name: "Technical",
+      href: isHomePage ? "#technical" : "/#technical",
+    },
+    {
+      name: "Gallery",
+      href: isHomePage ? "#gallery" : "/#gallery",
+    },
+    {
+      name: "Contact",
+      href: isHomePage ? "#contact" : "/#contact",
+    },
   ];
 
   return (
@@ -62,11 +77,11 @@ export default function Navbar() {
 
           {/* Home */}
           <a
-            href="#"
-            className="text-white hover:text-yellow-400 transition font-medium"
-          >
-            Home
-          </a>
+  href="/"
+  className="text-white hover:text-yellow-400 transition font-medium"
+>
+  Home
+</a>
 
           {/* About Dropdown */}
           <div className="relative">
@@ -343,13 +358,12 @@ export default function Navbar() {
           {/* Other Mobile Navigation */}
           {navItems.slice(1).map((item) => (
             <a
-              key={item.name}
-              href={item.href}
-              className="block px-6 py-4 text-white hover:bg-blue-900"
-              onClick={() => setMenuOpen(false)}
-            >
-              {item.name}
-            </a>
+  href="/"
+  className="block px-6 py-4 text-white hover:bg-blue-900"
+  onClick={() => setMenuOpen(false)}
+>
+  Home
+</a>
           ))}
 
         </div>
