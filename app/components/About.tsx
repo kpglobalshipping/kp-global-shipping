@@ -108,7 +108,7 @@ export default function About() {
   width={700}
   height={400}
   loading="eager"
-  className="w-full h-auto object-contain rounded-2xl"
+  className="w-full h-auto object-contain rounded-2xl transition-transform duration-500 ease-in-out hover:-translate-y-2 hover:scale-[1.03] cursor-pointer"
 />
   </div>
 </div>

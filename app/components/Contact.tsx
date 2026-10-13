@@ -1,51 +1,44 @@
+
 "use client";
 
 import { FormEvent } from "react";
 
 export default function Contact() {
-  
-
-      function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const form = new FormData(event.currentTarget);
-
     const company = String(form.get("company") ?? "").trim();
     const email = String(form.get("email") ?? "").trim();
     const requirements = String(form.get("requirements") ?? "").trim();
 
     const subject = `Quote Request from ${company}`;
-
     const message =
       `Dear KP Global Shipping,\n\n` +
       `Company Name: ${company}\n` +
       `Email Address: ${email}\n\n` +
       `Vessel Requirements:\n${requirements}\n\n` +
       `Thank you.\n\n` +
-      `Best Regards,\n` +
-      `${company}\n\n` +
-      `---\n` +
-      `Submitted through KP Global Shipping website`;
+      `Best Regards,\n${company}\n\n` +
+      `---\nSubmitted through KP Global Shipping website`;
 
     const gmailUrl =
-  `https://mail.google.com/mail/?view=cm` +
-  `&to=${encodeURIComponent("agent@kp-smt.com,kp.agent22@gmail.com")}` +
-  `&su=${encodeURIComponent(subject)}` +
-  `&body=${encodeURIComponent(message)}`;
+      `https://mail.google.com/mail/?view=cm` +
+      `&to=${encodeURIComponent("agent@kp-smt.com,kp.agent22@gmail.com")}` +
+      `&su=${encodeURIComponent(subject)}` +
+      `&body=${encodeURIComponent(message)}`;
 
-window.open(gmailUrl, "_blank");
+    window.open(gmailUrl, "_blank");
   }
 
   return (
     <section id="contact" className="py-24 bg-blue-900 text-white">
       <div className="max-w-6xl mx-auto px-6">
-
         <h2 className="text-4xl font-bold text-center mb-12">
           Contact Us
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12">
-
           <div>
             <h3 className="text-2xl font-bold mb-6">
               KP GLOBAL SHIPPING INC.
@@ -63,12 +56,36 @@ window.open(gmailUrl, "_blank");
               Philippines
             </p>
 
+            <p className="mb-3">📞 +63 2 8801 4753</p>
+
+            <p className="mb-3">📱 MP: +63 931 011 6362</p>
+
             <p className="mb-3">
-              📞 +63 2 8801 4753
+              📧{" "}
+              <a href="mailto:agent@kp-smt.com" className="hover:text-yellow-400 transition">
+                agent@kp-smt.com
+              </a>
             </p>
 
             <p className="mb-3">
-              📧 agent@kp-smt.com
+              📧{" "}
+              <a href="mailto:kp.marine22@gmail.com" className="hover:text-yellow-400 transition">
+                kp.marine22@gmail.com
+              </a>
+            </p>
+
+            <p className="mb-3">
+              📧{" "}
+              <a href="mailto:marine@kp-smt.com" className="hover:text-yellow-400 transition">
+                marine@kp-smt.com
+              </a>
+            </p>
+
+            <p className="mb-3">
+              📧{" "}
+              <a href="mailto:astridengcorp@gmail.com" className="hover:text-yellow-400 transition">
+                astridengcorp@gmail.com
+              </a>
             </p>
 
             <p className="mb-3">
@@ -76,14 +93,27 @@ window.open(gmailUrl, "_blank");
             </p>
 
             <a
-              href="https://maps.google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-6 bg-yellow-400 text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-300"
-            >
-              View Office Location
-            </a>
-
+  href="https://www.google.com/maps/place/KP+GLOBAL+SHIPPING+INC./@14.5252284,121.0432307,1052m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3397c94f62d743eb:0xbf49d62e4514fdf2!8m2!3d14.5252284!4d121.0458056!16s%2Fg%2F11zxf97vs3?entry=ttu"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block mt-6 bg-yellow-400 text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-300"
+>
+  View Office Location
+</a>
+```tsx
+<div className="mt-6 overflow-hidden rounded-xl border-2 border-blue-200 shadow-lg">
+  <iframe
+    title="KP Global Shipping Office Location"
+    src="https://maps.google.com/maps?q=KP%20GLOBAL%20SHIPPING%20INC.%2C%20Taguig%2C%20Philippines&z=17&output=embed"
+    width="100%"
+    height="320"
+    style={{ border: 0 }}
+    loading="lazy"
+    allowFullScreen
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+</div>
+```
             <p className="mt-6 text-blue-200">
               Serving vessels at major commercial, industrial, and offshore
               ports throughout the Philippines.
@@ -91,7 +121,6 @@ window.open(gmailUrl, "_blank");
           </div>
 
           <div className="bg-white text-black rounded-xl p-8 shadow-xl">
-
             <h3 className="text-2xl font-bold mb-6">
               Request a Quote
             </h3>
@@ -102,15 +131,10 @@ window.open(gmailUrl, "_blank");
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
-
               <div>
-                <label
-                  htmlFor="quote-company"
-                  className="mb-2 block text-sm font-semibold text-blue-950"
-                >
+                <label htmlFor="quote-company" className="mb-2 block text-sm font-semibold text-blue-950">
                   Company name
                 </label>
-
                 <input
                   id="quote-company"
                   name="company"
@@ -121,13 +145,9 @@ window.open(gmailUrl, "_blank");
               </div>
 
               <div>
-                <label
-                  htmlFor="quote-email"
-                  className="mb-2 block text-sm font-semibold text-blue-950"
-                >
+                <label htmlFor="quote-email" className="mb-2 block text-sm font-semibold text-blue-950">
                   Email address
                 </label>
-
                 <input
                   id="quote-email"
                   name="email"
@@ -139,13 +159,9 @@ window.open(gmailUrl, "_blank");
               </div>
 
               <div>
-                <label
-                  htmlFor="quote-requirements"
-                  className="mb-2 block text-sm font-semibold text-blue-950"
-                >
+                <label htmlFor="quote-requirements" className="mb-2 block text-sm font-semibold text-blue-950">
                   Vessel requirements
                 </label>
-
                 <textarea
                   id="quote-requirements"
                   name="requirements"
@@ -164,30 +180,18 @@ window.open(gmailUrl, "_blank");
               </button>
 
               <div className="rounded-lg bg-blue-50 border border-blue-200 p-4 text-sm text-blue-950">
-                <p className="font-semibold mb-2">
-                  Send your request to:
-                </p>
-
-                <p>
-                  📧 agent@kp-smt.com
-                </p>
-
-                <p>
-                  📧 kp.agent22@gmail.com
-                </p>
+                <p className="font-semibold mb-2">Send your request to:</p>
+                <p>📧 agent@kp-smt.com</p>
+                <p>📧 kp.agent22@gmail.com</p>
               </div>
 
               <p className="text-center text-xs text-gray-500 leading-5">
-                Clicking the button will open your default email application
-                with the quote request already prepared.
+                Clicking the button will open Gmail with the quote request
+                already prepared.
               </p>
-
             </form>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );

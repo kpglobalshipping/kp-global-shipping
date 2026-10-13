@@ -33,6 +33,7 @@ export default function Gallery() {
             >
               <Image
                 src={photo}
+                unoptimized
                 alt={`Gallery ${index + 1}`}
                 width={600}
                 height={400}

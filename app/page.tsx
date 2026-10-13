@@ -1,50 +1,36 @@
-import Announcement from "./components/Announcement";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import TrustedBy from "./components/TrustedBy";
 import About from "./components/About";
-import Leadership from "./components/Leadership";
-import Gallery from "./components/Gallery";
 import Services from "./components/Services";
-import WhyChooseUs from "./components/WhyChooseUs";
+import TechnicalServices from "./components/TechnicalServices";
 import Coverage from "./components/Coverage";
-import Clients from "./components/Clients";
-import Highlights from "./components/Highlights";
+import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingButton from "./components/FloatingButton";
-import KPGroup from "./components/KPGroup";
-import ExecutiveLeadership from "./components/ExecutiveLeadership";
-import TechnicalServices from "./components/TechnicalServices";
-import WhyKP from "./components/WhyKP";
 
 export default function Home() {
   return (
     <>
-  <Navbar />
+      <Navbar />
 
-  <main
-    className="min-h-screen bg-cover bg-center bg-fixed"
-  style={{
-    backgroundImage: "url('/images/hero-ship.jpg')",
-  }}
->
-
+      <main className="min-h-screen pt-[89px] bg-[#EAF1F8]">
         <Hero />
-        <WhyKP />
+
         <About />
-<Leadership />
+
+        <Services />
+
+        <TechnicalServices />
+
+        
 <Gallery />
-<Services />
-<TechnicalServices />
-<KPGroup />
-<ExecutiveLeadership />
-<Coverage />
-<Clients />
-<Contact />
-<Footer />
-        <FloatingButton />
+        <Contact />
+
+        <Footer />
       </main>
+
+      <FloatingButton />
     </>
   );
 }
