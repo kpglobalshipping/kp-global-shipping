@@ -56,9 +56,9 @@ export default function Navbar() {
           <Image
             src="/images/kp-logo.png"
             alt="KP Global Shipping"
-            width={65}
-            height={65}
-            className="w-[65px] h-[65px] object-cover rounded-full"
+            width={55}
+            height={35}
+            className="w-[55px] h-[35px] object-cover rectangular-full"
           />
 
           <div>
