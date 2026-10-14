@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <Navbar />
 
-      <main className="min-h-screen pt-[89px] bg-[#EAF1F8]">
+      <main className="min-h-screen bg-[#EAF1F8]">
         <Hero />
 
         <About />
