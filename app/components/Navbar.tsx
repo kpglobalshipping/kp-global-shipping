@@ -55,7 +55,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <Image
             src="/images/kp-logo.png"
-            alt="KP Global Shipping"
+            alt="KP Global Shipping Inc"
             width={55}
             height={35}
             className="w-[55px] h-[35px] object-cover rectangular-full"
@@ -63,7 +63,7 @@ export default function Navbar() {
 
           <div>
             <h1 className="text-white font-bold text-xl">
-              KP GLOBAL SHIPPING
+              KP GLOBAL SHIPPING INC
             </h1>
 
             <p className="text-yellow-400 text-xs tracking-widest uppercase">
