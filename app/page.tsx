@@ -8,7 +8,7 @@ import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingButton from "./components/FloatingButton";
-
+import UsefulLinks from "./components/UsefulLinks";
 export default function Home() {
   return (
     <>
@@ -26,7 +26,7 @@ export default function Home() {
         
 <Gallery />
         <Contact />
-
+<UsefulLinks />
         <Footer />
       </main>
 
