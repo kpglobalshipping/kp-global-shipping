@@ -19,7 +19,7 @@ export default function About() {
       />
 
       {/* DARK OVERLAY FOR READABILITY */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-950/95 via-blue-950/80 to-blue-950/35" />
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-950/65 via-blue-950/40 to-blue-950/10" />
 
       {/* LEFT-SIDE COMPANY INFORMATION */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-16 sm:px-10 sm:py-20 lg:px-12 lg:py-24">

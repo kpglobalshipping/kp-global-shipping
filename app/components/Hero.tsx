@@ -17,7 +17,7 @@ export default function Hero() {
       />
 
       {/* DARK OVERLAY FOR READABLE TEXT */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-blue-950/60 to-blue-950/10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-950/65 via-blue-950/30 to-blue-950/5" />
 
       {/* HERO TEXT - UPPER LEFT */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-20 pt-16 sm:px-10 sm:pt-20 md:pt-24 lg:px-12 lg:pt-28">
